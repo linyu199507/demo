@@ -1,0 +1,192 @@
+// 没有限制的,全局的
+@color: #666;
+@fontStyleOfTitle: 0.4rem;
+@fontSize: 20px;
+@backgroundColor: rgb(45, 161, 223);
+
+span {
+    color: @color;
+}
+
+.provider {
+    .title {
+        border-bottom: 1px solid #d9d9d9;
+        font-size: 0.53rem;
+        display: flex;
+        align-items: center;
+        padding-bottom: 5px;
+
+        span {
+            display: block;
+            width: 5px;
+            background: #666;
+            height: 0.53rem;
+            margin-right: 0.266667rem;
+        }
+    }
+}
+
+ul {
+    li {
+        list-style: none;
+    }
+}
+
+.fontStyle {
+    width: 100%;
+    display: block;
+    white-space: initial;
+}
+
+.registerInfo {
+    background: #fff;
+    width: 90%;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 20px;
+}
+
+.detail {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.dispatchedWhole {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: #eee 2px 2px 5px 2px;
+    font-size: @fontStyleOfTitle;
+    padding: 20px 0 0 40px;
+
+    .header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 2px solid #d9d9d9;
+
+        span {
+            display: inline-block;
+            width: 5px;
+            height: 40px;
+            margin-right: 20px;
+            background: @color;
+            vertical-align: middle;
+        }
+
+        .title {
+            vertical-align: middle;
+            font-size: 40px;
+        }
+    }
+}
+
+.tabs {
+    height: 100px;
+    line-height: 100px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 2px solid @backgroundColor;
+    margin-bottom: 50px;
+}
+
+.vux-popup-header-right,
+.weui-search-bar__cancel-btn {
+    color: @backgroundColor !important;
+}
+
+.weui-cells_radio .weui-check:checked+.weui-icon-checked:before {
+    color: @backgroundColor !important;
+}
+
+.mb100 {
+    margin-bottom: 300px;
+}
+.mt100 {
+    margin-top: 100px;
+}
+.weui-btn_primary {
+    background: @backgroundColor !important;
+}
+
+.li-tab {
+    flex: 1;
+    text-align: center;
+    background: @backgroundColor;
+}
+
+.weui-wepay-flow__li_done .weui-wepay-flow__state {
+    background: @backgroundColor !important;
+}
+
+.weui-wepay-flow__process {
+    background: @backgroundColor !important;
+}
+
+.active {
+    background: #fff;
+    color: @backgroundColor;
+    font-weight: 600;
+}
+
+.weui-cells {
+    font-size: 30px !important;
+    margin-top: 0 !important;
+    margin-bottom: 30px;
+    left: 0 !important;
+}
+
+.vux-cell-box:not(:first-child):before {
+    left: 0 !important;
+}
+
+.weui-cell:before {
+    left: 0 !important;
+}
+
+.weui-cells:before {
+    border-top: none !important;
+}
+
+.weui-wepay-flow,
+.weui-wepay-flow-auto {
+    padding: 150px 40px 20px 40px !important;
+}
+
+.weui-wepay-flow_vertical .weui-wepay-flow__bd {
+    width: 10px;
+}
+
+.weui-cell__ft {
+    text-align: left !important;
+}
+
+.detail {
+    text-align: center;
+    margin-top: 100px;
+}
+.dp-header .dp-item.dp-right {
+    color: @backgroundColor!important;
+}
+
+.processContent {
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    width: 500px;
+    font-size: @fontStyleOfTitle;
+    color: @color;
+  
+    ul {
+      li {
+        span {
+          color: #000;
+        }
+      }
+    }
+  }

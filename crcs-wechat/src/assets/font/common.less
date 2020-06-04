@@ -1,0 +1,154 @@
+@color: #666;
+@fontStyleOfTitle: 0.4rem;
+@fontSize: 20px;
+@backgroundColor: rgb(45, 161, 223);
+// 局部的
+.mt30px {
+    margin-top: 30px;
+}
+.mb100 {
+ margin-top: 100px;
+}
+// Tab
+.active {
+    background: #fff;
+    color: @backgroundColor;
+    font-weight: 600;
+  }
+  .tabs {
+    height: 100px;
+    line-height: 100px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top: 2px solid @backgroundColor;
+    margin-bottom: 50px;
+  }
+  .li-tab {
+    flex: 1;
+    text-align: center;
+  }
+
+.registerInfo {
+    background: #fff;
+    width: 90%;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 20px;
+
+    .provider {
+        .title {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            font-size: 40px;
+        }
+
+        .content {
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    // align-items: center;
+                    font-size: 0.4rem;
+                    margin-bottom: 5px;
+
+                    .Protitle {
+                        flex: 1;
+                        text-align: left;
+                    }
+
+                    .Procontent {
+                        flex: 1;
+                        text-align: right;
+                        color: @color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.dispatchedWhole {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: #eee 2px 2px 5px 2px;
+    font-size: @fontStyleOfTitle;
+    padding: 20px 0 0 40px;
+
+    .header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 2px solid #d9d9d9;
+
+        span {
+            display: inline-block;
+            width: 5px;
+            height: 40px;
+            margin-right: 20px;
+            background: @color;
+            vertical-align: middle;
+        }
+
+        .title {
+            vertical-align: middle;
+            font-size: 40px;
+        }
+    }
+}
+
+// 处理反馈
+.subJectInvolved {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: #eee 2px 2px 5px 2px;
+    .header {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      border-bottom: 1px solid #d9d9d9;
+      span {
+        display: inline-block;
+        width: 6px;
+        height: 40px;
+        margin-right: 20px;
+        background: @color;
+        vertical-align: middle;
+      }
+      .title {
+        vertical-align: middle;
+        font-size: @fontStyleOfTitle;
+      }
+      font-size: @fontStyleOfTitle;
+      padding: 20px 0 0 40px;
+    }
+  }
+
+  .detail {
+    width: 80%;
+    margin: 100px auto;
+  }
+  // 附件下载
+  .Procontent {
+    ul{
+      li {
+      }
+      li:hover {
+        text-decoration: underline;
+      }
+    }
+  }
