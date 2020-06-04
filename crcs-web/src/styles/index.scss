@@ -1,0 +1,71 @@
+// 居中
+.centered{
+    text-align: center
+}
+
+.text_bold{
+    font-weight: bold
+}
+//手风琴
+.accordion{
+    
+   .el-collapse-item__header .el-collapse-item__header__arrow {
+        position: absolute;
+        top: 15px;
+        right: 10px;
+        z-index: 10;
+        transform: rotate(90deg);
+    }
+    .is-active > .el-collapse-item__header .el-collapse-item__header__arrow {
+        transform: rotate(-90deg);
+    }
+
+    .el-collapse-item__header {
+        position: relative;
+    }
+    .right{
+        color: #48576a;
+        text-align:right;
+    }
+    .accordion_title{
+        cursor: auto;
+        font-weight: bold;
+        color: #20a0ff;
+        margin-left: -15px;
+        padding-left: 15px;
+    }
+    .el-tabs__item{
+        font-size: 13px
+    }
+    .min_title {
+        font-weight: bold;
+        color: #1e1f20;
+        cursor: auto;
+    }
+}
+//el-cascader
+$text-color:#1f2d3d;
+.cascader_placeholder input:-ms-input-placeholder{
+  color:$text-color
+}
+.cascader_placeholder input:-ms-input-placeholder {
+    color:$text-color
+}/* Internet Explorer 10+ */
+
+.cascader_placeholder input::-webkit-input-placeholder {
+    color: $text-color
+}/* WebKit browsers */
+
+.cascader_placeholder input::-moz-placeholder {
+    color:$text-color
+}/* Mozilla Firefox 4 to 18 */
+
+.cascader_placeholder input:-moz-placeholder {
+    color: $text-color
+}/* Mozilla Firefox 19+ */
+
+// Tooltip 文字提示
+.el-tooltip__popper{
+    max-width: 80%;
+}
+// 

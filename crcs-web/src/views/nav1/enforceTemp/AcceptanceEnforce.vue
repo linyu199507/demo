@@ -1,0 +1,716 @@
+<template>
+    <section class="backLog">
+        <el-row style="margin-top: 30px;margin-bottom: 15px">
+            <el-col>
+                <el-steps :active="1" align-center center space="22%">
+                    <el-step title="受理登记"></el-step>
+                    <el-step title="受理"></el-step>
+                    <el-step title="受理审查"></el-step>
+                    <el-step title="受理审批"></el-step>
+                    <el-step title="受理结果"></el-step>
+                </el-steps>
+            </el-col>
+        </el-row>
+        <el-tabs type="border-card" style="width: 99%;min-height: 400px;">
+            <el-tab-pane label="基本信息">
+                <el-form :model="basicForm" label-width="150px" ref="basicForm" :rules="basicFormRules">
+                    <el-row>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="问题分类:">
+                                <el-select v-model="basicForm.problem" placeholder="请选择分类" class="input-text">
+                                    <el-option label="投诉类" value="complain"></el-option>
+                                    <el-option label="资询类" value="consult"></el-option>
+                                    <el-option label="执法类" value="enforcement"></el-option>
+                                </el-select>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="登记人:">
+                                <el-input v-model="basicForm.registrar" placeholder="请输入" class="input-text"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="登记日期:">
+                                <el-date-picker
+                                        v-model="basicForm.registrarDate"
+                                        type="date"
+                                        class="input-text"
+                                        placeholder="选择日期">
+                                </el-date-picker>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="表单类型:">
+                                <el-select v-model="basicForm.formType" placeholder="请输入" class="input-text">
+                                    <el-option label="消费投诉" value="complain"></el-option>
+                                    <el-option label="售后投诉" value="consult"></el-option>
+                                    <el-option label="其他投诉" value="enforcement"></el-option>
+                                </el-select>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="工单分类:">
+                                <el-select v-model="basicForm.word" placeholder="请输入" class="input-text">
+                                    <el-option label="普通" value="complain"></el-option>
+                                    <el-option label="特殊" value="consult"></el-option>
+                                </el-select>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="发生地:">
+                                <el-input v-model="basicForm.addr" placeholder="请输入" class="input-text"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="反映类型:">
+                                <el-select v-model="basicForm.reflectType" placeholder="请选择类型" class="input-text">
+                                    <el-option label="企业" value="complain"></el-option>
+                                    <el-option label="个人" value="consult"></el-option>
+                                    <el-option label="机构" value="enforcement"></el-option>
+                                </el-select>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="回复方式:">
+                                <el-select v-model="basicForm.reply" placeholder="请选择类型" class="input-text">
+                                    <el-option label="电话" value="complain"></el-option>
+                                    <el-option label="网络" value="consult"></el-option>
+                                    <el-option label="信件" value="enforcement"></el-option>
+                                </el-select>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :span="16">
+                            <el-form-item label="标题:">
+                                <el-input v-model="basicForm.title" placeholder="请输入" class="input-text"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="24" :lg="24">
+                            <el-form-item label="投诉内容:">
+                                <el-input
+                                        type="textarea"
+                                        :autosize="{ minRows: 6, maxRows: 8}"
+                                        placeholder="请输入内容"
+                                        v-model="providerForm.text">
+                                </el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col>
+                            <el-form-item style="float: right;">
+                                <el-button type="primary">
+                                    保存
+                                </el-button>
+                            </el-form-item>
+                        </el-col>
+                    </el-row>
+                </el-form>
+            </el-tab-pane>
+            <el-tab-pane label="提供方">
+                <el-form :model="offerForm" label-width="150px" ref="offerForm">
+                    <el-row>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="姓名:">
+                                <el-input v-model="offerForm.name" placeholder="请输入" class="input-text"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="性别:">
+                                <el-select v-model="offerForm.sex" placeholder="请选择分类" class="input-text">
+                                    <el-option label="男" value="complain"></el-option>
+                                    <el-option label="女" value="consult"></el-option>
+                                </el-select>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="联系电话:">
+                                <el-input v-model="offerForm.registrar" placeholder="请输入" class="input-text"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="证件类型:">
+                                <el-select v-model="offerForm.type" placeholder="请选择分类" class="input-text">
+                                    <el-option label="身份证" value="complain"></el-option>
+                                    <el-option label="军官证" value="consult"></el-option>
+                                    <el-option label="其他" value="enforcement"></el-option>
+                                </el-select>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="证件号码:">
+                                <el-input v-model="offerForm.number" placeholder="请输入" class="input-text"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="电子邮箱:">
+                                <el-input v-model="offerForm.email" placeholder="请输入" class="input-text"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="16" :lg="16">
+                            <el-form-item label="联系地址:">
+                                <el-input v-model="offerForm.addr" placeholder="请输入" class="input-text"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col>
+                            <el-form-item style="float: right;">
+                                <el-button type="primary">
+                                    保存
+                                </el-button>
+                            </el-form-item>
+                        </el-col>
+                    </el-row>
+                </el-form>
+            </el-tab-pane>
+
+            <el-tab-pane label="主体信息">
+                <el-form :model="mainForm" label-width="150px" ref="entForm">
+                    <el-row>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="主体名称:">
+                                <el-input v-model="mainForm.name" placeholder="请输入" class="input-text"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8" style="height: 48px;">
+                            <el-form-item label="统一社会信用代码/注册号:">
+                                <el-input v-model="mainForm.code" placeholder="请输入" class="input-text"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="主体类型:">
+                                <el-select v-model="mainForm.type" placeholder="请选择分类" class="input-text">
+                                    <el-option label="身份证" value="complain"></el-option>
+                                    <el-option label="军官证" value="consult"></el-option>
+                                    <el-option label="其他" value="enforcement"></el-option>
+                                </el-select>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="联系电话:">
+                                <el-input v-model="mainForm.phone" placeholder="请输入" class="input-text"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="法定代表人:">
+                                <el-select v-model="mainForm.legal" placeholder="请选择分类" class="input-text">
+                                    <el-option label="企业" value="complain"></el-option>
+                                    <el-option label="个人" value="consult"></el-option>
+                                    <el-option label="机构" value="enforcement"></el-option>
+                                </el-select>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="核查名称:">
+                                <el-input v-model="mainForm.verification" placeholder="请输入"
+                                          class="input-text"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="客体名称:">
+                                <el-input v-model="mainForm.keTi" placeholder="请输入" class="input-text"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="涉及金额:">
+                                <el-input v-model="mainForm.registrar" placeholder="请输入" class="input-text"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="品牌:">
+                                <el-input v-model="mainForm.brand" placeholder="请输入" class="input-text"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="类别:">
+                                <el-select v-model="mainForm.type" placeholder="请选择分类" class="input-text">
+                                    <el-option label="食品" value="complain"></el-option>
+                                    <el-option label="家电" value="consult"></el-option>
+                                    <el-option label="家具" value="enforcement"></el-option>
+                                    <el-option label="数码产品" value="enforcement"></el-option>
+                                </el-select>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="生产企业:">
+                                <el-input v-model="mainForm.registrar" placeholder="请输入" class="input-text"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :xs="24" :sm="24" :md="12" :lg="8">
+                            <el-form-item label="数量:">
+                                <el-input v-model="mainForm.registrar" placeholder="请输入" class="input-text"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :span="16">
+                            <el-form-item label="注册地址:">
+                                <el-input v-model="mainForm.registrar" placeholder="请输入" class="input-text"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :span="16">
+                            <el-form-item label="经营地址:">
+                                <el-input v-model="mainForm.registrar" placeholder="请输入" class="input-text"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col :span="16">
+                            <el-form-item label="经营地址:">
+                                <el-input v-model="mainForm.registrar" placeholder="请输入" class="input-text"></el-input>
+                            </el-form-item>
+                        </el-col>
+                        <el-col>
+                            <el-form-item style="float: right;">
+                                <el-button type="primary">
+                                    保存
+                                </el-button>
+                            </el-form-item>
+                        </el-col>
+                    </el-row>
+                </el-form>
+            </el-tab-pane>
+            <!--材料上传开始-->
+            <el-tab-pane label="材料上传">
+                <el-tabs v-model="activeName" class="file-tabs">
+                    <el-tab-pane label="文档" name="word">
+                        <el-button size="small" @click="toUploadOpen('word')"><i class="fa fa-upload"></i> 上传
+                        </el-button>
+                        <el-button size="small"><i class="fa fa-download"></i> 下载</el-button>
+                        <el-button size="small"><i class="fa fa-remove"></i> 删除</el-button>
+                        <br/>
+                        <br/>
+                        <el-table :data="wordList" border style="width: 100%">
+                            <el-table-column prop="selection" width="50" type="selection"></el-table-column>
+                            <el-table-column prop="index" width="65" type="index" label="序号"></el-table-column>
+                            <el-table-column prop="filename" label="文件名" min-width="200"></el-table-column>
+                            <el-table-column prop="author" label="上传人" width="180"></el-table-column>
+                            <el-table-column prop="fileDate" label="上传时间" min-width="150"></el-table-column>
+                            <el-table-column prop="describe" label="描述" min-width="250"></el-table-column>
+                        </el-table>
+                        <div class="pagination" style="float: right;">
+                            <el-pagination
+                                    :page-size="fileWordPagination.size"
+                                    :total="fileWordPagination.total"
+                                    :page-sizes="[10, 20, 30, 40,50]"
+                                    layout="slot,total, sizes, prev, pager, next, jumper"
+                            >
+                                <span>
+                                  第 {{fileWordPagination.page}} 页 /
+                                  共 {{(parseInt((fileWordPagination.total + fileWordPagination.size - 1)/fileWordPagination.size))}} 页
+                                </span>
+                            </el-pagination>
+                        </div>
+                    </el-tab-pane>
+                    <el-tab-pane label="图片" name="image">
+                        <el-button size="small" @click="toUploadOpen('image')"><i class="fa fa-upload"></i> 上传
+                        </el-button>
+                        <el-button size="small"><i class="fa fa-download"></i> 下载</el-button>
+                        <el-button size="small"><i class="fa fa-remove"></i> 删除</el-button>
+                        <br/>
+                        <br/>
+                        <el-table :data="wordList" border style="width: 100%">
+                            <el-table-column prop="selection" width="50" type="selection"></el-table-column>
+                            <el-table-column prop="index" width="65" type="index" label="序号"></el-table-column>
+                            <el-table-column prop="filename" label="文件名" min-width="200"></el-table-column>
+                            <el-table-column prop="author" label="上传人" width="180"></el-table-column>
+                            <el-table-column prop="fileDate" label="上传时间" min-width="150"></el-table-column>
+                            <el-table-column prop="describe" label="描述" min-width="250"></el-table-column>
+                        </el-table>
+                        <div class="pagination" style="float: right;">
+                            <el-pagination
+                                    :page-size="fileWordPagination.size"
+                                    :total="fileWordPagination.total"
+                                    :page-sizes="[10, 20, 30, 40,50]"
+                                    layout="slot,total, sizes, prev, pager, next, jumper"
+                            >
+                                <span>
+                                  第 {{fileWordPagination.page}} 页 /
+                                  共 {{(parseInt((fileWordPagination.total + fileWordPagination.size - 1)/fileWordPagination.size))}} 页
+                                </span>
+                            </el-pagination>
+                        </div>
+                    </el-tab-pane>
+                    <el-tab-pane label="视频" name="video">
+                        <el-button size="small" @click="toUploadOpen('video')"><i class="fa fa-upload"></i> 上传
+                        </el-button>
+                        <el-button size="small"><i class="fa fa-download"></i> 下载</el-button>
+                        <el-button size="small"><i class="fa fa-remove"></i> 删除</el-button>
+                        <br/>
+                        <br/>
+                        <el-table :data="wordList" border style="width: 100%">
+                            <el-table-column prop="selection" width="50" type="selection"></el-table-column>
+                            <el-table-column prop="index" width="65" type="index" label="序号"></el-table-column>
+                            <el-table-column prop="filename" label="文件名" min-width="200"></el-table-column>
+                            <el-table-column prop="author" label="上传人" width="180"></el-table-column>
+                            <el-table-column prop="fileDate" label="上传时间" min-width="150"></el-table-column>
+                            <el-table-column prop="describe" label="描述" min-width="250"></el-table-column>
+                        </el-table>
+                        <div class="pagination" style="float: right;">
+                            <el-pagination
+                                    :page-size="fileWordPagination.size"
+                                    :total="fileWordPagination.total"
+                                    :page-sizes="[10, 20, 30, 40,50]"
+                                    layout="slot,total, sizes, prev, pager, next, jumper"
+                            >
+                                <span>
+                                  第 {{fileWordPagination.page}} 页 /
+                                  共 {{(parseInt((fileWordPagination.total + fileWordPagination.size - 1)/fileWordPagination.size))}} 页
+                                </span>
+                            </el-pagination>
+                        </div>
+                    </el-tab-pane>
+                    <el-tab-pane label="其他" name="other">
+                        <el-button size="small" @click="toUploadOpen('other')"><i class="fa fa-upload"></i> 上传
+                        </el-button>
+                        <el-button size="small"><i class="fa fa-download"></i> 下载</el-button>
+                        <el-button size="small"><i class="fa fa-remove"></i> 删除</el-button>
+                        <br/>
+                        <br/>
+                        <el-table :data="wordList" border style="width: 100%">
+                            <el-table-column prop="selection" width="50" type="selection"></el-table-column>
+                            <el-table-column prop="index" width="65" type="index" label="序号"></el-table-column>
+                            <el-table-column prop="filename" label="文件名" min-width="200"></el-table-column>
+                            <el-table-column prop="author" label="上传人" width="180"></el-table-column>
+                            <el-table-column prop="fileDate" label="上传时间" min-width="150"></el-table-column>
+                            <el-table-column prop="describe" label="描述" min-width="250"></el-table-column>
+                        </el-table>
+                        <div class="pagination" style="float: right;">
+                            <el-pagination
+                                    :page-size="fileWordPagination.size"
+                                    :total="fileWordPagination.total"
+                                    :page-sizes="[10, 20, 30, 40,50]"
+                                    layout="slot,total, sizes, prev, pager, next, jumper"
+                            >
+                                <span>
+                                  第 {{fileWordPagination.page}} 页 /
+                                  共 {{(parseInt((fileWordPagination.total + fileWordPagination.size - 1)/fileWordPagination.size))}} 页
+                                </span>
+                            </el-pagination>
+                        </div>
+                    </el-tab-pane>
+                </el-tabs>
+            </el-tab-pane>
+            <!--材料上传结束-->
+
+            <el-tab-pane label="流程跟踪">
+                <el-table
+                        :data="tableData5" border
+                        style="width: 100%">
+                    <el-table-column type="expand">
+                        <template scope="props">
+                            <el-form inline class="demo-table-expand" label-width="100px">
+                                <el-form-item label="步骤">
+                                    <span>{{ props.row.id }}</span>
+                                </el-form-item>
+                                <el-form-item label="处理部门">
+                                    <span>{{ props.row.dept }}</span>
+                                </el-form-item>
+                                <el-form-item label="处理人员">
+                                    <span>{{ props.row.person }}</span>
+                                </el-form-item>
+                                <el-form-item label="操作">
+                                    <span>{{ props.row.operation}}</span>
+                                </el-form-item>
+                                <el-form-item label="处理时间">
+                                    <span>{{ props.row.time }}</span>
+                                </el-form-item>
+                                <el-form-item label="处理意见">
+                                    <span>{{ props.row.opinion }}</span>
+                                </el-form-item>
+                            </el-form>
+                        </template>
+                    </el-table-column>
+                    <el-table-column type="index" label="序号" width="70"></el-table-column>
+                    <el-table-column
+                            label="步骤"
+                            prop="id">
+                    </el-table-column>
+                    <el-table-column
+                            label="处理部门"
+                            prop="dept">
+                    </el-table-column>
+                    <el-table-column
+                            label="处理人员"
+                            prop="person">
+                    </el-table-column>
+                    <el-table-column
+                            label="操作"
+                            prop="operation">
+                    </el-table-column>
+                    <el-table-column
+                            label="处理时间"
+                            prop="time">
+                    </el-table-column>
+                    <el-table-column
+                            label="处理意见"
+                            prop="opinion"
+                            show-overflow-tooltip>
+                    </el-table-column>
+                </el-table>
+            </el-tab-pane>
+
+            <el-tab-pane label="下一步">
+                <table style="width:100%;border-color: #fbfdff;" cellspacing="0" cellpadding="0" border>
+                    <tr style="width: 100%;height:35px;background-color: #ececec;">
+                        <th colspan="4">意 见</th>
+                    </tr>
+                    <tr style="width: 100%;height: 65px;">
+                        <td style="width: 20%;height:120px;text-align: center;"><span style="color: #e64242">*</span>意见：
+                        </td>
+                        <td style="width: 80%"><input style="width: 100%;height: 120px;" placeholder="请输入内容"></td>
+                    </tr>
+                </table>
+                <el-col style="height: 15px;"></el-col>
+                <el-col>
+                    <el-col :span="4">
+                        <el-select v-model="value6" clearable placeholder="默认意见">
+                            <el-option
+                                    v-for="item in cities"
+                                    :key="item.value"
+                                    :label="item.label"
+                                    :value="item.value">
+                            </el-option>
+                        </el-select>
+                    </el-col>
+                    <el-col :span="2" style="padding: 3px 15px;"><span style="color: #e64242">*</span>日期：</el-col>
+                    <el-col :span="4">
+                        <el-date-picker type="date" placeholder="选择日期" v-model="form.date1"
+                                        style="width: 100%;"></el-date-picker>
+                    </el-col>
+                    <el-col :span="5" style="padding: 3px 24px;"><span style="color: #e64242">*</span>选择下一步处理部门：
+                    </el-col>
+                    <el-col :span="4">
+                        <el-select v-model="value7" placeholder="请选择">
+                            <el-option
+                                    v-for="item in dept"
+                                    :key="item.value"
+                                    :label="item.label"
+                                    :value="item.value">
+                            </el-option>
+                        </el-select>
+                    </el-col>
+                </el-col>
+                <el-col style="height: 25px;"></el-col>
+                <el-col style="text-align: right;">
+                    <el-button type="primary" @click="nextStep">
+                        <router-link to="/wddb/tsldb_temp/qtsl" style="color: #fff;text-decoration: none;">发送</router-link>
+                    </el-button>
+                </el-col>
+            </el-tab-pane>
+        </el-tabs>
+        <el-dialog
+                :title="fileUploadText"
+                :visible.sync="fileUploadVisible"
+                size="tiny">
+            <el-upload :auto-upload="false" :file-list="fileList" ref="upload"
+                       action="https://jsonplaceholder.typicode.com/posts/"
+            >
+                <div slot="tip" class="el-upload__tip">已选取的文件，等待上传</div>
+                <el-button slot="trigger" size="small" type="primary">选取文件</el-button>
+                <el-button size="small" type="success" @click="submitUpload">确认上传
+                </el-button>
+            </el-upload>
+        </el-dialog>
+    </section>
+</template>
+
+<script>
+    export default {
+        data() {
+            return {
+                form: {
+                    name: '',
+                    region: '',
+                    date1: '',
+                    date2: '',
+                    delivery: false,
+                    type: [],
+                    resource: '',
+                    desc: ''
+                },
+                textarea: '',
+
+                sex: [{
+                    value: '1',
+                    label: '男'
+                }, {
+                    value: '2',
+                    label: '女'
+                }],
+                value6: '',
+
+                cities: [{
+                    value: '同意受理',
+                    label: '同意受理'
+                }, {
+                    value: '驳回',
+                    label: '驳回'
+                }, {
+                    value: '转移',
+                    label: '转移'
+                }],
+
+                dept: [{
+                    value: 'consent',
+                    label: '企管科'
+                }, {
+                    value: 'reject',
+                    label: '消保科'
+                }, {
+                    value: 'transfer',
+                    label: '广告科'
+                }],
+                value7: '',
+
+                activeName: 'word',
+                wordList: [{
+                    filename: '新建文档.docx',
+                    author: '王小虎',
+                    fileDate: '2019-07-12 20:00',
+                    describe: '重要的文档，包含某某'
+                }, {
+                    filename: '新建文档.docx',
+                    author: '王小虎',
+                    fileDate: '2019-07-12 19:00',
+                    describe: '重要的文档，包含某某'
+                }, {
+                    filename: '新建文档.docx',
+                    author: '王小虎',
+                    fileDate: '2019-07-12 19:11',
+                    describe: '重要的文档，包含某某'
+                }, {
+                    filename: '新建文档.docx',
+                    author: '王小虎',
+                    fileDate: '2019-07-12 19:33',
+                    describe: '重要的文档，包含某某'
+                }],
+                fileWordPagination: {
+                    page: 1,
+                    size: 10,
+                    total: 4,
+                },
+                fileUploadVisible: false,
+                fileList: [],
+                fileUploadText: '',
+                type: '',
+                receivingMode: '',
+                flows: true,
+                tableData5: [{
+                    id: '受理登记',
+                    dept: '企管科',
+                    person: '柳逐浪',
+                    operation: '送部门',
+                    time: '2019-07-30',
+                    opinion: '同意受理'
+                }, {
+                    id: '受理',
+                    dept: '企管科',
+                    person: '林修崖',
+                    operation: '送审核',
+                    time: '2019-07-30',
+                    opinion: '同意受理'
+                }, {
+                    id: '受理审查',
+                    dept: '企管科',
+                    person: '林破天',
+                    operation: '送审批',
+                    time: '2019-07-30',
+                    opinion: '同意受理'
+                }, {
+                    id: '受理审批',
+                    dept: '局领导',
+                    person: '陆云',
+                    operation: '下级处理',
+                    time: '2019-07-30',
+                    opinion: '同意受理'
+                }, {
+                    id: '受理结果',
+                    dept: '企管科',
+                    person: '柳逐浪',
+                    operation: '意见反馈',
+                    time: '2019-07-30',
+                    opinion: '经协调，双方达成和解'
+                }],
+                offerForm: {},
+                basicForm: {},
+                sourceForm: {},
+                providerForm: {},
+                mainForm: {},
+            };
+        },
+        methods: {
+            arraySpanMethod({row, column, rowIndex, columnIndex}) {
+                if (rowIndex % 2 === 0) {
+                    if (columnIndex === 0) {
+                        return [1, 2];
+                    } else if (columnIndex === 1) {
+                        return [0, 0];
+                    }
+                }
+            },
+
+            objectSpanMethod({row, column, rowIndex, columnIndex}) {
+                if (columnIndex === 0) {
+                    if (rowIndex % 2 === 0) {
+                        return {
+                            rowspan: 2,
+                            colspan: 1
+                        };
+                    } else {
+                        return {
+                            rowspan: 0,
+                            colspan: 0
+                        };
+                    }
+                }
+            },
+
+            toUploadOpen(type) {
+                if (type === 'word') {
+                    this.fileUploadText = '文档上传'
+                } else if (type === 'image') {
+                    this.fileUploadText = '图片上传'
+                } else if (type === 'video') {
+                    this.fileUploadText = '视频上传'
+                } else if (type === 'other') {
+                    this.fileUploadText = '其他文件上传'
+                }
+                this.fileUploadVisible = true
+            },
+            submitUpload() {
+                this.$refs.upload.submit();
+            },
+
+            //显示新增界面
+            nextStep: function () {
+                this.addFormVisible = true;
+                this.addForm = {};
+            },
+            flow(visible) {
+                if (visible.index == "5") {
+                    this.flows = false;
+                } else {
+                    this.flows = true;
+                }
+            }
+        }
+
+    };
+</script>
+<style lang="scss" scoped>
+    .input-text {
+        width: 100%;
+    }
+
+    .backLog {
+        overflow-x: hidden;
+    }
+
+    .demo-table-expand {
+        font-size: 0;
+    }
+
+    .demo-table-expand label {
+        width: 90px;
+        color: #99a9bf;
+    }
+
+    .demo-table-expand .el-form-item {
+        margin-right: 0;
+        margin-bottom: 0;
+        width: 50%;
+    }
+</style>
