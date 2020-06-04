@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.sdcs.crcs.business.mapper.SearchBusinessMapper">
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.business.entity.SearchBusiness">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="caseguid" property="caseguid" jdbcType="VARCHAR"/>
+        <result column="focus" property="focus" jdbcType="VARCHAR"/>
+        <result column="serialnum" property="serialnum" jdbcType="VARCHAR"/>
+        <result column="tserialnum" property="tserialnum" jdbcType="VARCHAR"/>
+        <result column="rqsttitle" property="rqsttitle" jdbcType="VARCHAR"/>
+        <result column="accordtype" property="accordtype" jdbcType="VARCHAR"/>
+        <result column="labelname" property="labelname" jdbcType="VARCHAR"/>
+        <result column="assigndate" property="assigndate" jdbcType="TIMESTAMP"/>
+        <result column="expiredate" property="expiredate" jdbcType="TIMESTAMP"/>
+        <result column="resulttimemin" property="resulttimemin" jdbcType="VARCHAR"/>
+        <result column="systemsource" property="systemsource" jdbcType="VARCHAR"/>
+        <result column="issignin" property="issignin" jdbcType="VARCHAR"/>
+        <result column="signinaccount" property="signinaccount" jdbcType="VARCHAR"/>
+        <result column="signinname" property="signinname" jdbcType="VARCHAR"/>
+        <result column="signinuserid" property="signinuserid" jdbcType="VARCHAR"/>
+        <result column="signindeptid" property="signindeptid" jdbcType="VARCHAR"/>
+        <result column="signdate" property="signdate" jdbcType="TIMESTAMP"/>
+        <result column="formtype" property="formtype" jdbcType="VARCHAR"/>
+        <result column="operate" property="operate" jdbcType="VARCHAR"/>
+        <result column="state" property="state" jdbcType="VARCHAR"/>
+        <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, caseguid, focus,
+        serialnum, tserialnum, rqsttitle,
+        accordtype, labelname, assigndate,
+        expiredate, resulttimemin, systemsource,
+        issignin, signinaccount, signinname,
+        signinuserid, signindeptid, signdate, formtype,
+        operate, state, updatedate
+    </sql>
+</mapper>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinaweal.sdcs.crcs.system.mapper.EconomySituationMapper">
+
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.system.entity.EconomySituation">
+        <id column="region" property="region" jdbcType="VARCHAR"/>
+        <id column="bustype" property="bustype" jdbcType="VARCHAR"/>
+        <result column="accepttotal" property="accepttotal" jdbcType="INTEGER"/>
+        <result column="endtotal" property="endtotal" jdbcType="INTEGER"/>
+        <result column="recordtotal" property="recordtotal" jdbcType="INTEGER"/>
+    </resultMap>
+
+
+    <select id="selectEconomydataByMap" parameterType="java.util.List" resultMap="BaseResultMap">
+        select
+        count(case when a.isaccept='1' then 1 else null end) as accepttotal, --已受理举报案件（件）
+        count(case when a.nextnodeid='end' then 1 else null end) as endtotal, --已办结举报案件（件）
+        count(case when a.isregistercase='是' then 1 else null end) as recordtotal --已立案案件（件）
+        from tasklist a
+        inner join economyform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and b.updatedate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and b.updatedate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.region != null and map.region !=''">
+                    and a.handleregion = #{map.region}
+                </if>
+            </if>
+        </where>
+    </select>
+
+
+    <select id="selectEconomyIllegalByMap" parameterType="java.util.List" resultMap="BaseResultMap">
+        select
+        sum(recordtotal) as recordtotal
+        from
+        (select b.illegalrulescodeid, count(*) as recordtotal   from economyform b
+        inner join tasklist a on a.caseguid = b.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.type != null and map.type !=''">
+                    and b.illegalrulescodeid like #{map.type}||'%'
+                </if>
+            </if>
+        </where>
+        group by b.illegalrulescodeid) a
+    </select>
+
+
+
+
+
+
+
+</mapper>

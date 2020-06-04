@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinaweal.sdcs.crcs.system.mapper.StatisticsDataMapper">
+
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.system.entity.StatisticsDate">
+        <id column="region" property="region" jdbcType="VARCHAR"/>
+        <id column="transferred" property="transferred" jdbcType="VARCHAR"/>
+        <id column="mediation" property="mediation" jdbcType="VARCHAR"/>
+        <id column="monthstart" property="monthstart" jdbcType="VARCHAR"/>
+        <id column="monthend" property="monthend" jdbcType="VARCHAR"/>
+        <result column="regiontotal" property="regiontotal" jdbcType="INTEGER"/>
+        <result column="complaint" property="complaint" jdbcType="INTEGER"/>
+        <result column="economy" property="economy" jdbcType="INTEGER"/>
+        <result column="commom" property="commom" jdbcType="INTEGER"/>
+        <result column="applealtocase" property="applealtocase" jdbcType="INTEGER"/>
+        <result column="monthsData" property="monthsData" jdbcType="INTEGER"/>
+    </resultMap>
+
+
+    <select id="getStatisticsDateByMap" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        sum(regiontotal) as regiontotal
+        from
+        (select
+        count(1) as regiontotal
+        from tasklist a inner join complaintform b on a.caseguid=b.caseguid
+        left join caseprocesform c on a.caseguid=c.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.assigndate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.assigndate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.region != null and map.region !=''">
+                    and a.handleregion = #{map.region}
+                </if>
+            </if>
+        </where>
+        group by handleregion
+        union all
+        select
+        count(1) as regiontotal
+        from tasklist a inner join commomform b on a.caseguid=b.caseguid
+        left join caseprocesform c on a.caseguid=c.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.assigndate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.assigndate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.region != null and map.region !=''">
+                    and a.handleregion = #{map.region}
+                </if>
+            </if>
+        </where>
+        group by handleregion
+        union all
+        select
+        count(1) as regiontotal
+        from tasklist a inner join economyform b on a.caseguid=b.caseguid
+        left join caseprocesform c on a.caseguid=c.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.assigndate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.assigndate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.region != null and map.region !=''">
+                    and a.handleregion = #{map.region}
+                </if>
+            </if>
+        </where>
+        group by handleregion) a
+    </select>
+
+
+    <select id="getFormTotalsByMap" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        sum(commom) as commom,
+        sum(complaint) as complaint,
+        sum(economy) as economy
+        from
+        (select
+        systemsource, --途径
+        0 as commom, --咨询
+        count(1) as complaint, --投诉
+        0 as economy --举报
+        from tasklist a inner join complaintform b on a.caseguid=b.caseguid
+        <where>
+            1=1 and a.state='0'
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.assigndate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.assigndate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+            </if>
+        </where>
+        group by systemsource
+        union all
+        select
+        systemsource, --途径
+        count(1) as commom, --咨询
+        0 as complaint, --投诉
+        0 as economy --举报
+        from tasklist a inner join commomform b on a.caseguid=b.caseguid
+        <where>
+            1=1 and a.state='0'
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.assigndate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.assigndate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+            </if>
+        </where>
+        group by systemsource
+        union all
+        select
+        systemsource, --途径
+        0 as commom, --咨询
+        0 as complaint, --投诉
+        count(1) as economy --举报
+        from tasklist a inner join economyform b on a.caseguid=b.caseguid
+        <where>
+            1=1 and a.state='0'
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.assigndate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.assigndate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+            </if>
+        </where>
+        group by systemsource) a
+    </select>
+
+
+    <!--投诉热点行业-->
+    <select id="getComplaintRankingByMap" parameterType="java.util.List" resultMap="BaseResultMap">
+        select a.industryname as region,
+        a.count as regiontotal
+        from
+        (
+        -- select entname,count(*) as count from commomform
+        -- WHERE entname is not null group by entname
+
+        -- union all
+        select b.industryname,count(*) as count from complaintform b
+        inner join tasklist a on a.caseguid = b.caseguid
+        <where>
+            b.industryname is not null
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+            </if>
+        </where>
+        group by b.industryname
+        union all
+        select b.industryname,count(*) as count from economyform b
+        inner join tasklist a on a.caseguid = b.caseguid
+        <where>
+            b.industryname is not null
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+            </if>
+        </where>
+        group by b.industryname
+        ) a order by count desc
+    </select>
+
+
+    <!--投诉热点商家-->
+    <select id="getTenBusinessByMap" parameterType="java.util.List" resultMap="BaseResultMap">
+
+
+
+
+        SELECT
+        a.subjectname AS region,
+        sum(a.count) AS regiontotal
+        FROM
+        (
+        SELECT
+        subjectname,
+        count( * ) AS count
+        FROM
+        commomform b
+        INNER JOIN tasklist a ON a.caseguid = b.caseguid
+        WHERE
+        subjectname IS NOT NULL
+        <if test="map != null">
+            <if test="map.begindate != null and map.begindate !=''">
+                <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+            <if test="map.enddate != null and map.enddate !=''">
+                <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+        </if>
+        GROUP BY
+        subjectname UNION ALL
+        SELECT
+        subjectname,
+        count( * ) AS count
+        FROM
+        complaintform b
+        INNER JOIN tasklist a ON a.caseguid = b.caseguid
+        WHERE
+        subjectname IS NOT NULL
+        <if test="map != null">
+            <if test="map.begindate != null and map.begindate !=''">
+                <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+            <if test="map.enddate != null and map.enddate !=''">
+                <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+        </if>
+        GROUP BY
+        subjectname UNION ALL
+        SELECT
+        subjectname,
+        count( * ) AS count
+        FROM
+        economyform b
+        INNER JOIN tasklist a ON a.caseguid = b.caseguid
+        WHERE
+        subjectname IS NOT NULL
+        <if test="map != null">
+            <if test="map.begindate != null and map.begindate !=''">
+                <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+            <if test="map.enddate != null and map.enddate !=''">
+                <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+        </if>
+        GROUP BY
+        subjectname
+        ) a
+
+        GROUP BY region
+
+        ORDER BY
+        regiontotal DESC
+    </select>
+
+
+    <!--投诉热点地区-->
+    <select id="getComplaintsAreaByMap" parameterType="java.util.Map" resultMap="BaseResultMap">
+        select
+        sum(regiontotal) as regiontotal
+        from
+        (select
+        b.subjectaddress as subjectaddress,
+        count(1) as regiontotal
+        from complaintform b
+        inner join tasklist a on a.caseguid = b.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.region != null and map.region !=''">
+                    and b.subjectaddress like '%'||#{map.region}||'%'
+                </if>
+            </if>
+        </where>
+        group by b.subjectaddress
+        union all
+        select
+        b.address as address,
+        count(1) as regiontotal
+        from commomform b
+        inner join tasklist a on a.caseguid = b.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.region != null and map.region !=''">
+                    and b.address like '%' || #{map.region} || '%'
+                </if>
+            </if>
+        </where>
+        group by b.address
+        union all
+        select
+        b.subjectaddress as subjectaddress,
+        count(1) as regiontotal
+        from economyform b
+        inner join tasklist a on a.caseguid = b.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.region != null and map.region !=''">
+                    and b.subjectaddress like '%' || #{map.region} || '%'
+                </if>
+            </if>
+        </where>
+        group by b.subjectaddress) a
+    </select>
+
+
+    <!--各地区办结率统计-->
+    <select id="getRegionCompleteByMap" parameterType="java.util.Map" resultMap="BaseResultMap">
+
+    select
+      sum(regiontotal)  as regiontotal,  --案件总数
+      sum(complaint)  as complaint,      --已办结案件数
+      sum(economy)  as economy,      --调解成功数
+      sum(commom)  as commom       --挽回经济损失
+
+     from
+     (select
+        '投诉' as category, --类别
+        count(1) as regiontotal, --受理申诉件数（件）
+        count(case when a.nextnodeid='end' then 1 else null end) as complaint, --已办结案件（件）
+        count(case when  a.nextnodeid='end' and  c.resultsofmediation='达成调解协议' or c.resultsofmediation='1'  or c.resultsofmediation='2' or c.resultsofmediation='3'  then 1 else null end) as economy, --调解成功件数（件）
+        sum(c.disputemoney) as controversyMoney, --争议金额（万元）
+        sum(c.financialloss) as commom --挽回经济损失（万元）
+        from tasklist a
+        inner join complaintform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and b.updatedate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and b.updatedate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.region != null and map.region !=''">
+                    and a.handleregion = #{map.region}
+                </if>
+            </if>
+        </where>
+		union all
+		select
+          '举报' as category, --类别
+          count(1) as regiontotal, --受理申诉件数（件）
+          count(case when a.nextnodeid='end' then 1 else null end) as complaint, --已办结案件（件）
+          count(case when  a.nextnodeid='end' and  c.resultsofmediation='达成调解协议' or c.resultsofmediation='1'  or c.resultsofmediation='2' or c.resultsofmediation='3'  then 1 else null end) as economy, --调解成功件数（件）
+          sum(c.disputemoney) as controversyMoney, --争议金额（万元）
+          sum(c.financialloss) as commom --挽回经济损失（万元）
+        from tasklist a
+        inner join economyform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and b.updatedate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and b.updatedate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.region != null and map.region !=''">
+                    and a.handleregion = #{map.region}
+                </if>
+            </if>
+        </where>
+		union all
+		select
+          '咨询' as category, --类别
+          count(1) as regiontotal, --受理申诉件数（件）
+          count(case when a.nextnodeid='end' then 1 else null end) as complaint, --已办结案件（件）
+          count(case when  a.nextnodeid='end' and c.resultsofmediation='达成调解协议' or c.resultsofmediation='1'  or c.resultsofmediation='2' or c.resultsofmediation='3'  then 1 else null end) as economy, --调解成功件数（件）
+          sum(c.disputemoney) as controversyMoney, --争议金额（万元）
+          sum(c.financialloss) as commom --挽回经济损失（万元）
+        from tasklist a
+        inner join commomform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and b.updatedate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and b.updatedate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.region != null and map.region !=''">
+                    and a.handleregion = #{map.region}
+                </if>
+            </if>
+        </where>
+        ) a
+
+    </select>
+
+
+    <!--投投诉举报性质统计分析(客体分类)基础数据分类二级统计-->
+    <select id="getNatureAnalysis" parameterType="java.util.Map" resultMap="BaseResultMap">
+        SELECT
+        SUM(regiontotal) AS regiontotal
+        FROM
+        (SELECT  objclassifycodeid AS region,
+        a.count AS regiontotal
+        FROM
+        (
+        SELECT b.objclassifycodeid,COUNT(*) AS COUNT FROM complaintform b
+        INNER JOIN tasklist a ON a.caseguid = b.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ AND a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ AND a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.type != null and map.type !=''">
+                    AND b.objclassifycodeid LIKE #{map.type}||'%'
+                </if>
+            </if>
+        </where>
+        GROUP BY b.objclassifycodeid
+        UNION ALL
+        SELECT b.objectcategorycodeid,COUNT(*) AS COUNT FROM economyform b
+        INNER JOIN tasklist a ON a.caseguid = b.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ AND a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ AND a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.type != null and map.type !=''">
+                    AND b.objectcategorycodeid LIKE #{map.type}||'%'
+                </if>
+            </if>
+        </where>
+        GROUP BY b.objectcategorycodeid
+        ) a ORDER BY COUNT DESC) b
+    </select>
+
+
+    <!--投诉举报性质统计分析(涉嫌违法分类)基础数据分类一级统计-->
+    <select id="getIllegalBehaviorByMap" parameterType="java.util.Map" resultMap="BaseResultMap">
+       select
+        sum(regiontotal) as regiontotal
+        from
+        (select b.illegalrulescodeid, count(*) as regiontotal   from economyform b
+        inner join tasklist a on a.caseguid = b.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.type != null and map.type !=''">
+                    and b.illegalrulescodeid like #{map.type}||'%'
+                </if>
+            </if>
+        </where>
+        group by b.illegalrulescodeid) a
+
+    </select>
+
+
+    <!--投诉举报热点事件(问题分类)基础数据分类一级统计-->
+    <select id="getHotQuestionByMap" parameterType="java.util.List" resultMap="BaseResultMap">
+       select
+        sum(regiontotal) as regiontotal
+        from
+        (select b.complaintstypecodeid,count(*) as regiontotal from complaintform b
+        inner join tasklist a on a.caseguid = b.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.type != null and map.type !=''">
+                    and b.complaintstypecodeid like #{map.type}||'%'
+                </if>
+            </if>
+        </where>
+        group by b.complaintstypecodeid
+        union all
+        select b.problemtypecodeid,count(*) as regiontotal from economyform b
+        inner join tasklist a on a.caseguid = b.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.type != null and map.type !=''">
+                    and b.problemtypecodeid like #{map.type}||'%' or b.reportprovidelbcodeid like #{map.type}||'%'
+                </if>
+            </if>
+        </where>
+        group by b.problemtypecodeid
+
+        ) a
+    </select>
+
+
+    <!--投诉举报案件数据对比查询-->
+    <select id="getOverallBusinessByMap" parameterType="java.util.List" resultMap="BaseResultMap">
+      select
+		 sum(regiontotal) as regiontotal ,   --案件总数（件）
+		 sum(complaint) as complaint ,    --受理总数（件）
+		 sum(economy) as economy ,      --立案总数（件）
+		 sum(commom) as commom ,       --办结总数（件）
+		 sum(applealtocase) as applealtocase   --诉转案总数（件）
+	  from
+	  ( select
+        count(1) as regiontotal, --案件总数（件）
+        count(case when a.isaccept='1' then 1 else null end) as complaint, --受理总数（件）
+        count(case when c.isregister='是' then 1 else null end) as economy, --立案总数（件）
+        count(case when a.nextnodeid='end' then 1 else null end) as commom, --办结总数（件）
+        0 as applealtocase --诉转案总数（件）
+        from tasklist a
+        inner join economyform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        where 1=1
+        <if test="map != null">
+            <if test="map.begindate != null and map.begindate !=''">
+                <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+            <if test="map.enddate != null and map.enddate !=''">
+                <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+        </if>
+        group by a.isaccept
+	  union all
+	  select
+        count(1) as total, --案件总数（件）
+        count(case when a.isaccept='1' then 1 else null end) as totals, --受理总数（件）
+        0 as subtotal, --立案总数（件）
+		count(case when a.nextnodeid='end' then 1 else null end) as ends, --办结总数（件）
+		count(case when c.applealtocase='1' then 1 else null end) as applealtocase --诉转案总数（件）
+        from tasklist a
+        inner join complaintform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        where 1=1
+        <if test="map != null">
+            <if test="map.begindate != null and map.begindate !=''">
+                <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+            <if test="map.enddate != null and map.enddate !=''">
+                <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+        </if>
+        group by a.isaccept
+	  union all
+	  select
+        count(1) as total, --案件总数（件）
+        count(case when a.isaccept='1' then 1 else null end) as totals, --受理总数（件）
+        0 as subtotal, --立案总数（件）
+		count(case when a.nextnodeid='end' then 1 else null end) as ends, --办结总数（件）
+		0 as applealtocase --诉转案总数（件）
+        from tasklist a
+        inner join commomform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        where 1=1
+        <if test="map != null">
+            <if test="map.begindate != null and map.begindate !=''">
+                <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+            <if test="map.enddate != null and map.enddate !=''">
+                <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+        </if>
+        group by a.isaccept
+				) b
+    </select>
+
+
+    <!--(三大表单)同类型案件数量-->
+    <select id="getBusinessTotal" parameterType="java.util.List" resultMap="BaseResultMap">
+      select
+		sum(complaint) as complaint,
+		sum(economy) as economy,
+		sum(commom) as commom
+      from (select count(1) as complaint, 0 as commom, 0 as economy
+	    from complaintform b inner join tasklist a on a.caseguid = b.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+            </if>
+        </where>
+	  union all
+	  select 0 as complaint, count(1) as commom, 0 as economy
+	    from commomform b inner join tasklist a on a.caseguid = b.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+            </if>
+        </where>
+	union all
+	  select 0 as complaint, 0 as commom, count(1) as economy
+	     from economyform b inner join tasklist a on a.caseguid = b.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+            </if>
+        </where>
+        ) a
+    </select>
+
+
+</mapper>

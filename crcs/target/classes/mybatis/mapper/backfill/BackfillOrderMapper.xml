@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.sdcs.crcs.crawler.backfill.mapper.BackfillOrderMapper">
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.crawler.backfill.entity.BackfillOrder">
+        <id column="uuid" property="uuid" jdbcType="VARCHAR"/>
+        <result column="request_address" property="request_address" jdbcType="VARCHAR"/>
+        <result column="storage_time" property="storage_time" jdbcType="TIMESTAMP"/>
+        <result column="update_time" property="update_time" jdbcType="TIMESTAMP"/>
+        <result column="form_number" property="form_number" jdbcType="VARCHAR"/>
+        <result column="step" property="step" jdbcType="VARCHAR"/>
+        <result column="failed_marks" property="failed_marks" jdbcType="VARCHAR"/>
+        <result column="system" property="system" jdbcType="VARCHAR"/>
+        <result column="total" property="total" jdbcType="INTEGER"/>
+        <result column="total_changeTime" property="total_changeTime" jdbcType="TIMESTAMP"/>
+        <result column="confirm" property="confirm" jdbcType="VARCHAR"/>
+
+
+    </resultMap>
+    <sql id="Base_Column_List">
+        uuid, request_address, storage_time,
+        update_time, form_number, step,failed_marks,system,total_changeTime,confirm
+    </sql>
+
+
+    <select id="searchBackOrderByMap" resultMap="BaseResultMap">
+        SELECT uuid,request_address,storage_time,update_time,form_number,step,failed_marks,confirm
+        FROM backfill_call_log
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and update_time  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and update_time <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.state != null and map.state !=''">
+                    and failed_marks = #{map.state} or confirm = '1'
+                </if>
+            </if>
+        </where>
+    </select>
+
+    <select id="searchBackOrder12345" resultMap="BaseResultMap">
+        SELECT uuid,request_address,storage_time,update_time,b.serialnum as form_number,step,failed_marks,a.confirm
+        FROM backfill_call_log a
+        INNER JOIN tasklist b ON a.form_number = b.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.uuid != null and map.uuid !=''">
+                    uuid =  #{map.uuid}
+                </if>
+            </if>
+        </where>
+    </select>
+
+    <select id="searchBackOrderOfHomeByMap" resultMap="BaseResultMap">
+        SELECT count(1) as total
+        FROM backfill_call_log
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and update_time  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and update_time <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.state != null and map.state !=''">
+                    and failed_marks = #{map.state} or confirm = '1'
+                </if>
+            </if>
+        </where>
+    </select>
+
+    <select id="selectByUuid" resultMap="BaseResultMap">
+        SELECT uuid,request_address,storage_time,update_time,form_number,step,failed_marks,confirm
+        FROM backfill_call_log
+        <where>
+                <if test="uuid != null and uuid !=''">
+                    and uuid = #{uuid}
+                </if>
+        </where>
+    </select>
+
+
+    <select id="updateByUuid" resultMap="BaseResultMap">
+        update  backfill_call_log
+        set
+        failed_marks = #{data.failed_marks} ,
+        total_changeTime = #{data.total_changeTime},
+        confirm = #{data.confirm}
+        where
+                     uuid = #{data.uuid}
+
+    </select>
+
+</mapper>

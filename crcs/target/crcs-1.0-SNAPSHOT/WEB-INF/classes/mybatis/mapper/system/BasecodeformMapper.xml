@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinaweal.sdcs.crcs.system.mapper.BasecodeformMapper">
+
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.system.entity.Basecodeform">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="type" property="type" jdbcType="VARCHAR"/>
+        <result column="codeid" property="codeid" jdbcType="VARCHAR"/>
+        <result column="comment" property="comment" jdbcType="VARCHAR"/>
+        <result column="orglevel" property="orglevel" jdbcType="VARCHAR"/>
+        <result column="parentid" property="parentid" jdbcType="CHAR"/>
+        <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP"/>
+        <result column="flcode" property="flcode" jdbcType="VARCHAR"/>
+        <collection property="basecodeforms" column="{type=type,codeid=codeid}"
+                    ofType="com.chinaweal.sdcs.crcs.system.entity.Basecodeform"
+                    select="findBasecodeformByParentid"/>
+    </resultMap>
+
+    <resultMap id="ResultMap" type="com.chinaweal.sdcs.crcs.system.entity.Basecodeform">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="type" property="type" jdbcType="VARCHAR"/>
+        <result column="codeid" property="codeid" jdbcType="VARCHAR"/>
+        <result column="comment" property="comment" jdbcType="VARCHAR"/>
+        <result column="orglevel" property="orglevel" jdbcType="VARCHAR"/>
+        <result column="parentid" property="parentid" jdbcType="CHAR"/>
+        <result column="flcode" property="flcode" jdbcType="VARCHAR"/>
+        <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, type,codeid,comment
+        ,parentid,updatedate,orglevel,flcode
+    </sql>
+
+    <select id="findBasecodeformByParentid" resultMap="BaseResultMap">
+        select *
+        from basecodeform
+        where type = #{type}
+          and parentid = #{codeid}
+    </select>
+
+    <select id="findBasecodeformByMap" resultMap="ResultMap">
+        select * from basecodeform a where 1=1
+        <if test="map != null">
+            <if test="map.orglevel != null and map.orglevel !=''">
+                and a.orglevel = #{map.orglevel}
+            </if>
+            <if test="map.parentid != null and map.parentid !=''">
+                and a.parentid = #{map.parentid}
+            </if>
+            <if test="map.comment != null and map.comment !=''">
+                and a.comment like '%' || #{map.comment} || '%'
+            </if>
+        </if>
+        order by a.type, a.codeid, a.orglevel
+    </select>
+
+    <select id="findDistinctType" resultType="string">
+        select distinct type
+        from basecodeform
+    </select>
+    <select id="getMaxLevelByType" resultType="integer">
+        SELECT max(orglevel)
+        FROM basecodeform
+        WHERE type = #{type}
+    </select>
+
+
+    <select id="getbasecodeformByComment" resultMap="ResultMap">
+        select * from basecodeform
+        <where>
+          <if test="map != null">
+            <if test="map.type != null and map.type !=''">
+                and type = #{map.type}
+            </if>
+            <if test="map.comment != null and map.comment !=''">
+                and comment = #{map.comment}
+            </if>
+          </if>
+        </where>
+    </select>
+
+
+</mapper>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinaweal.sdcs.crcs.bigScreenDisplay.mapper.ScreenDisplayMapper">
+
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.bigScreenDisplay.entity.ScreenDisplayVO">
+        <result column="content" property="content" jdbcType="VARCHAR"/>
+        <result column="value" property="value" jdbcType="INTEGER"/>
+        <!--<result column="endtotal" property="endtotal" jdbcType="INTEGER"/>-->
+        <!--<result column="toeconomytotal" property="toeconomytotal" jdbcType="INTEGER"/>-->
+        <!--<result column="recovermoney" property="recovermoney" jdbcType="NUMERIC"/>-->
+    </resultMap>
+
+
+    <select id="searchBusTOP10ByMap" parameterType="java.util.List" resultMap="BaseResultMap">
+        SELECT
+        b.subjectname as content,
+        count( * ) as value
+        FROM
+        complaintform b
+        INNER JOIN tasklist a ON a.caseguid = b.caseguid
+        WHERE
+        b.subjectname IS NOT NULL
+        and   b.subjectname !=''
+        <if test="map != null">
+            <if test="map.begindate != null and map.begindate !=''">
+                <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+            <if test="map.enddate != null and map.enddate !=''">
+                <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+        </if>
+        GROUP BY b.subjectname ORDER BY value DESC
+    </select>
+
+
+</mapper>

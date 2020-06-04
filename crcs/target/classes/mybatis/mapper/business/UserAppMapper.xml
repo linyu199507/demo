@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.sdcs.crcs.business.mapper.UsersAppMapper">
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.business.entity.UsersApp">
+        <id column="userid" property="userid" jdbcType="VARCHAR"/>
+        <result column="gender" property="gender" jdbcType="VARCHAR"/>
+        <result column="phonenumber" property="phonenumber" jdbcType="VARCHAR"/>
+        <result column="mobile" property="mobile" jdbcType="VARCHAR"/>
+        <result column="email" property="email" jdbcType="VARCHAR"/>
+        <result column="address" property="address" jdbcType="VARCHAR"/>
+        <result column="workno" property="workno" jdbcType="VARCHAR"/>
+        <result column="worktype" property="worktype" jdbcType="VARCHAR"/>
+        <result column="birthday" property="birthday" jdbcType="TIMESTAMP"/>
+        <result column="hiredate" property="hiredate" jdbcType="TIMESTAMP"/>
+        <result column="leavedate" property="leavedate" jdbcType="TIMESTAMP"/>
+        <result column="identityno" property="identityno" jdbcType="VARCHAR"/>
+        <result column="remark" property="remark" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+      userid,gender,phonenumber,mobile,email,address,workno,worktype,birthday,hiredate,leavedate,identityno,remark
+    </sql>
+    <!--<select id="selectById" resultType="com.chinaweal.sdcs.crcs.business.entity.UsersApp">-->
+        <!--SELECT * FROM t_usersapp WHERE userid= #{userid}-->
+    <!--</select>-->
+    <!--<select id="selectList" resultType="com.chinaweal.sdcs.crcs.business.entity.UsersApp">-->
+        <!--select * from t_usersapp-->
+    <!--</select>-->
+    <!--受理登记预警短信相关查询-->
+    <select id="selectAcceptMessage" resultType="java.util.HashMap">
+        select
+        *
+        from (
+        select
+        a.caseguid,a.tserialnum,a.systemsource,a.formtype,a.sdexpirationdate,c.userid,c.realname,e.mobile,c.username,a.bustype
+        from tasklist a
+        inner join commomform d on d.caseguid=a.caseguid
+        left join processinfo b on a.caseguid = b.caseguid
+        inner join t_users c on b.handleruserid = c.userid
+				inner join t_usersapp e on c.userid=e.userid
+        where a.state ='0' and b.status = '0' and (a.isSignIn = '0' or a.issignin = null or a.signinaccount = null or
+        (a.issignin = '1' and a.signinaccount = c.username)) and a.systemsource='01'
+        union all
+        select
+        a.caseguid,a.tserialnum,a.systemsource,a.formtype,a.sdexpirationdate,c.userid,c.realname,e.mobile,c.username,a.bustype
+        from tasklist a
+        inner join consultationform d on d.caseguid=a.caseguid
+        left join processinfo b on a.caseguid = b.caseguid
+        inner join t_users c on b.handleruserid = c.userid
+				inner join t_usersapp e on c.userid=e.userid
+        where a.state ='0' and b.status = '0' and (a.isSignIn = '0' or a.issignin = null or a.signinaccount = null or
+        (a.issignin = '1' and a.signinaccount = c.username)) and a.systemsource='01'
+        union all
+        select
+        a.caseguid,a.tserialnum,a.systemsource,a.formtype,a.sdexpirationdate,c.userid,c.realname,e.mobile,c.username,a.bustype
+        from tasklist a
+        inner join economyform d on d.caseguid=a.caseguid
+        left join processinfo b on a.caseguid = b.caseguid
+        inner join t_users c on b.handleruserid = c.userid
+				inner join t_usersapp e on c.userid=e.userid
+        where a.state ='0' and b.status = '0' and (a.isSignIn = '0' or a.issignin = null or a.signinaccount = null or
+        (a.issignin = '1' and a.signinaccount = c.username)) and a.systemsource='01'
+        union all
+        select
+       a.caseguid,a.tserialnum,a.systemsource,a.formtype,a.sdexpirationdate,c.userid,c.realname,e.mobile,c.username,a.bustype
+        from tasklist a
+        inner join complaintform d on d.caseguid=a.caseguid
+        left join processinfo b on a.caseguid = b.caseguid
+        inner join t_users c on b.handleruserid = c.userid
+				inner join t_usersapp e on c.userid=e.userid
+        where a.state ='0' and b.status = '0' and (a.isSignIn = '0' or a.issignin = null or a.signinaccount = null or
+        (a.issignin = '1' and a.signinaccount = c.username)) and a.systemsource='01'
+        )t
+		where t.username in(select b.username from t_usersapp a inner join t_users b on a.userid=b.userid where a.mark='01' and b.locked='0' and b.deleted='0')
+		and age(t.sdexpirationdate,now())&lt;INTERVAL '48 hour' and t.sdexpirationdate&gt;now()
+    </select>
+
+    <!--<select id="selectUserid" resultType="string">-->
+
+      <!--select userid from t_usersapp where mobile=#{phone}-->
+    <!--</select>-->
+
+    <select id="selectUserid" resultType="string">
+
+       select a.userid from t_usersapp a left join t_users b on a.userid=b.userid where b.locked='0' and b.deleted='0' and a.mobile=#{phone}
+    </select>
+
+
+    <select id="selectMobile" resultType="string">
+
+        select mobile from t_usersapp where userid=#{userid}
+    </select>
+</mapper>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinaweal.sdcs.crcs.analyse.mapper.QuestionMapper">
+
+    <select id="listCompByCreateDateAndComCodeId" resultType="java.util.HashMap">
+        select * from(
+        select t.caseguid,t.createdate,c.complaintstypecodeid code_id,(CASE
+        WHEN govlabeloutput is not null THEN
+        govlabeloutput
+        ELSE
+        report
+        END) lable from tasklist t
+        right JOIN complaintform c ON t.caseguid = c.caseguid) a
+        <where>
+            a.caseguid is not null
+            and a.code_id like #{codeId}||'%'
+            and a.createdate >= #{begin}
+            and a.createdate <![CDATA[ < ]]> #{end}
+            and a.lable is not null
+        </where>
+        order by createdate
+    </select>
+    <select id="listEconByCreateDateAndComCodeId" resultType="java.util.HashMap">
+        select * from (select t.caseguid,t.createdate,e.problemtypecodeid code_id,e.govlabel lable from tasklist t
+        right JOIN economyform e ON t.caseguid = e.caseguid) a
+        <where>
+            a.caseguid is not null
+            and a.code_id like #{codeId}||'%'
+            and a.createdate >= #{begin}
+            and a.createdate <![CDATA[ < ]]> #{end}
+            and a.lable is not null
+        </where>
+        order by createdate
+    </select>
+
+    <select id="listOpinionLabelTop" resultType="java.util.HashMap">
+        SELECT label,count(*) FROM analyse_question
+        <where>
+            <if test="question!=null">
+                question = #{question}
+            </if>
+        </where>
+        GROUP BY label ORDER BY count desc LIMIT 15
+    </select>
+
+    <select id="countCompRerSumByDate" resultType="Integer">
+        select count(*) from (
+        select t.caseguid,
+        (CASE
+        WHEN e.problemtypecodeid is not null THEN
+        e.problemtypecodeid
+        ELSE
+        c.complaintstypecodeid
+        END) code_id,t.createdate from tasklist t left join economyform e on t.caseguid = e.caseguid left join
+        complaintform c on t.caseguid=c.caseguid) a
+        <where>
+            <if test="codeId!=null">
+                a.code_id like #{codeId}||'%'
+            </if>
+            <if test="codeId==null">
+                a.code_id is not null
+            </if>
+            <if test="begin!=null">
+                and a.createdate >= #{begin}
+            </if>
+            <if test="end!=null">
+                and a.createdate <![CDATA[ < ]]>  #{end}
+            </if>
+        </where>
+    </select>
+
+    <select id="countCompRerMediateSum" resultType="Integer">
+        select count(*) from (
+        select t.caseguid,t.nextnodeid,
+        (CASE
+        WHEN e.problemtypecodeid is not null THEN
+        e.problemtypecodeid
+        ELSE
+        c.complaintstypecodeid
+        END) code_id,cf.resultsofmediation from tasklist t left join economyform e on t.caseguid = e.caseguid left
+        join
+        complaintform c on t.caseguid=c.caseguid left join caseprocesform cf on t.caseguid = cf.caseguid) a
+        <where>
+            a.nextnodeid='end'
+            and (a.resultsofmediation='达成调解协议' or a.resultsofmediation='1' or a.resultsofmediation='2' or
+            a.resultsofmediation='3')
+            <if test="codeId!=null">
+                and a.code_id like #{codeId}||'%'
+            </if>
+            <if test="codeId==null">
+                and a.code_id is not null
+            </if>
+            <if test="begin!=null">
+                and a.createdate >= #{begin}
+            </if>
+            <if test="end!=null">
+                and a.createdate <![CDATA[ < ]]>  #{end}
+            </if>
+        </where>
+    </select>
+    <select id="listCountGroupLabel" resultType="java.util.HashMap">
+        select label,
+        count(date_time >=#{currMonthBegin} and date_time <![CDATA[ < ]]> #{currMonthEnd} or null) curr_count,
+        count(date_time >=#{lastMonthBegin} and date_time <![CDATA[ < ]]> #{lastMonthEnd} or null) last_count
+        from analyse_question GROUP BY label order by
+        curr_count desc LIMIT 15
+    </select>
+</mapper>

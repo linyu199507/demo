@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.sdcs.crcs.business.mapper.StatisticsinfoMapper">
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.business.entity.Statisticsinfo">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="caseguid" property="caseguid" jdbcType="VARCHAR"/>
+        <result column="filetype" property="filetype" jdbcType="VARCHAR"/>
+        <result column="amount" property="amount" jdbcType="NUMERIC"/>
+        <result column="filesavepath" property="filesavepath" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="VARCHAR"/>
+        <result column="uploadtime" property="uploadtime"/>
+        <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP"/>
+        <result column="filename" property="filename" jdbcType="VARCHAR"/>
+        <result column="handler" property="handler" jdbcType="VARCHAR"/>
+        <result column="handleruserid" property="handleruserid" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, caseguid, filetype,
+        amount, filesavepath, status,
+        uploadtime, updatedate,filename,
+        handler,handleruserid
+    </sql>
+    <select id="searchStatisticsinfos" resultMap="BaseResultMap">
+        select
+        a.id,
+        a.caseguid,
+        a.filetype,
+        a.amount,
+        a.filesavepath,
+        a.status,
+        a.uploadtime,
+        a.updatedate,
+        a.filename,
+        a.handler,
+        a.handleruserid
+        from statisticsinfo a where a.status = '0'
+    </select>
+</mapper>

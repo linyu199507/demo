@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.sdcs.crcs.crawler.ywcl.mapper.YwclfeedbackformMapper">
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.crawler.ywcl.entity.Ywclfeedbackform">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="caseguid" property="caseguid" jdbcType="VARCHAR"/>
+        <result column="caseid" property="caseid" jdbcType="VARCHAR"/>
+        <result column="feedbacktime" property="feedbacktime" jdbcType="TIMESTAMP"/>
+        <result column="operationstaff" property="operationstaff" jdbcType="VARCHAR"/>
+        <result column="business" property="business" jdbcType="VARCHAR"/>
+        <result column="operationchoice" property="operationchoice" jdbcType="VARCHAR"/>
+        <result column="content" property="content" jdbcType="VARCHAR"/>
+        <result column="record" property="record" jdbcType="VARCHAR"/>
+        <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, caseguid, caseid, 
+        feedbacktime, operationstaff, business, 
+        operationchoice, content, record, 
+        updatedate
+    </sql>
+</mapper>

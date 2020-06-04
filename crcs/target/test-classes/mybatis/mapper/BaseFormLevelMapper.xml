@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.mapper.BaseFormLevelMapper">
+    <resultMap id="baseFormLevelMap" type="com.chinaweal.entity.BaseFormLevel">
+        <id column="id" property="id"/>
+        <result property="type" column="type"/>
+        <result property="codeid" column="codeid"/>
+        <result property="comment" column="comment"/>
+        <result property="orglevel" column="orglevel"/>
+        <result property="parentid" column="parentid"/>
+        <result property="updatedate" column="updatedate"/>
+        <collection property="baseFormLevels" column="id" ofType="com.chinaweal.entity.BaseFormLevel"
+                    select="findBaseFormLevelByParentid"/>
+    </resultMap>
+    <select id="findBaseFormLevelByParentid" resultMap="baseFormLevelMap">
+        select * from base_form_level where parentid=#{id}
+    </select>
+</mapper>

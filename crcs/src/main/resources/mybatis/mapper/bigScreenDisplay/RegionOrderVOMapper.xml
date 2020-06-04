@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinaweal.sdcs.crcs.bigScreenDisplay.mapper.RegionOrderVOMapper">
+
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.bigScreenDisplay.entity.RegionOrderVO">
+        <result column="id" property="id" jdbcType="INTEGER"/>
+        <result column="pr" property="pr" jdbcType="VARCHAR"/>
+        <result column="series1" property="series1" jdbcType="VARCHAR"/>
+        <result column="series2" property="series2" jdbcType="VARCHAR"/>
+        <result column="attribute" property="attribute" jdbcType="INTEGER"/>
+        <result column="series3" property="series3" jdbcType="VARCHAR"/>
+
+    </resultMap>
+
+
+
+    <select id="searchRegionOrderByMap" parameterType="java.util.List" resultMap="BaseResultMap">
+        select
+        sum(series1) as series1,
+        sum(series2) as series2,
+        sum(attribute) as attribute,
+        sum(series3) as series3
+        from (
+        SELECT
+        count(case when c.applealtocase='1' then 1 else null end) as series1, -- 诉转案数
+        count(case when a.nextnodeid='end' or a.nextnodeid='backForward' then 1 else null end) as series2, -- 办结数
+        count( * ) as attribute, -- 总数
+        0 as series3
+        FROM
+        complaintform b
+        INNER JOIN tasklist a ON a.caseguid = b.caseguid
+        LEFT JOIN caseprocesform c on b.caseguid = c.caseguid
+        where state = '0'
+        <if test="map != null">
+            <if test="map.begindate != null and map.begindate !=''">
+                <![CDATA[ and createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+            <if test="map.enddate != null and map.enddate !=''">
+                <![CDATA[ and createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+              <if test="map.region != null and map.region !=''">and a.handleregion = #{map.region}
+              </if>
+          </if>
+        UNION ALL
+        SELECT
+        0 as series1,   -- 诉转案数
+        0 as series2,   -- 办结数
+        0 as attribute,      -- 总数
+        count(case when  a.isregistercase='是'  then 1 else null end) as series3
+        FROM
+        economyform b
+        INNER JOIN tasklist a ON a.caseguid = b.caseguid
+        LEFT JOIN caseprocesform c on b.caseguid = c.caseguid
+        where state = '0'
+        <if test="map != null">
+            <if test="map.begindate != null and map.begindate !=''">
+                <![CDATA[ and createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+            <if test="map.enddate != null and map.enddate !=''">
+                <![CDATA[ and createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+            <if test="map.region != null and map.region !=''">
+                and   a.handleregion  = #{map.region}
+            </if>
+        </if>
+
+        ) a
+
+    </select>
+
+
+
+
+</mapper>

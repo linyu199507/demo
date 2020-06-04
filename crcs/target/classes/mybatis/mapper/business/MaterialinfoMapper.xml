@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.sdcs.crcs.business.mapper.MaterialinfoMapper">
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.business.entity.Materialinfo">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="caseguid" property="caseguid" jdbcType="VARCHAR"/>
+        <result column="materialtype" property="materialtype" jdbcType="VARCHAR"/>
+        <result column="amount" property="amount" jdbcType="NUMERIC"/>
+        <result column="filesavepath" property="filesavepath" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="VARCHAR"/>
+        <result column="uploadtime" property="uploadtime"/>
+        <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP"/>
+        <result column="attachfilename" property="attachfilename" jdbcType="VARCHAR"/>
+        <result column="backfill_state" property="backfillState" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, caseguid, materialtype,
+        amount, filesavepath, status,
+        uploadtime, updatedate,attachfilename,backfill_state
+    </sql>
+
+    <select id="searchFilesInfo" resultType="com.chinaweal.sdcs.crcs.business.entity.Tasklist" >
+       select a.tserialnum, a.rqsttitle, a.assigndate, a.caseguid
+       from tasklist a where EXISTS (select 1 from materialinfo b where a.caseguid = b.caseguid)
+        <if test="map != null">
+            <if test="map.tserialnum != null and map.tserialnum !=''">
+                and a.tserialnum like '%' || #{map.tserialnum} || '%'
+            </if>
+            <if test="map.rqsttitle != null and map.rqsttitle !=''">
+                and a.rqsttitle like '%' || #{map.rqsttitle} || '%'
+            </if>
+            <if test="map.begindate != null and map.begindate !=''">
+                <![CDATA[ and a.assigndate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+            <if test="map.enddate != null and map.enddate !=''">
+                <![CDATA[ and a.assigndate  >=  to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+        </if>
+       ORDER BY a.assigndate
+    </select>
+
+    <!--按tasklist条件查询caseguid用于文件查询-->
+    <select id="selectTasklistVo" parameterType="String" resultType="com.chinaweal.sdcs.crcs.business.entity.vo.MaterialinfoVo" >
+        select
+        a.tserialnum,
+        a.rqsttitle,
+        a.assigndate,
+        b.id,
+        b.caseguid,
+        b.materialtype,
+        b.uploadtime,
+        b.updatedate,
+        b.status,
+        b.filesavepath,
+        b.amount
+        from tasklist a
+        left join materialinfo b on a.caseguid = b.caseguid
+        where a.caseguid in
+        <foreach collection="caseguids" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+        order by a.caseguid
+    </select>
+
+    <delete id="deletematerialinfo">
+        delete from materialinfo where filesavepath=#{map.fileurl} and attachfilename=#{map.filename}
+    </delete>
+</mapper>

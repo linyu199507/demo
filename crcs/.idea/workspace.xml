@@ -1,0 +1,2831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="crcs:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/TasklistController.java" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java" line="1568" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/util/CreateEntityInfoUtil.java" line="362" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/util/CreateEntityInfoUtil.java" line="363" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/RegionOrderVOServiceImpl.java" line="60" />
+    <bookmark url="file://$PROJECT_DIR$/target/crcs-1.0-SNAPSHOT-p1.1.zip" />
+    <bookmark url="jar://C:/java/apache-maven-3.5.3/repository/com/chinaweal/chinaweal-publibv2/2.0-SNAPSHOT/chinaweal-publibv2-2.0-20151210.075213-50-sources.jar!/com/chinaweal/aicorg/services/OrgUMImpl.java" line="397" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/RegionOrderVOServiceImpl.java" line="53" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="bb0b44c8-6753-4911-bece-3990df30f919" name="Default" comment="你这个是不是改过?有问题哦&#10;那我用svn回复一下看看恢复">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/NewassignServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/NewassignServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/UsersAppServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/UsersAppServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/config/IntervalometerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/config/IntervalometerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/config/ScheduleConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/config/ScheduleConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/jdbc.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/jdbc.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/properties/common.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/properties/common.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/spring/spring-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring/spring-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/chinaweal/test/ExportBusinessDataTestFour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/chinaweal/test/ExportBusinessDataTestFour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/chinaweal/test/ExportBusinessDataTestTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/chinaweal/test/ExportBusinessDataTestTwo.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/crcs$Unnamed.ic" NAME="Unnamed Coverage Results" MODIFIED="1575625127666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="crcs" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="RightsdetailsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/RightsdetailsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2622">
+              <caret line="165" column="57" selection-start-line="165" selection-start-column="57" selection-end-line="165" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="193" column="46" selection-start-line="193" selection-start-column="46" selection-end-line="193" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RightsDetails.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/entity/RightsDetails.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3363">
+              <caret line="181" column="11" selection-start-line="181" selection-start-column="11" selection-end-line="181" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>协同处理</find>
+      <find>初步反馈</find>
+      <find>searchTasklist</find>
+      <find>feedback</find>
+      <find>list&quot;</find>
+      <find>受理</find>
+      <find>tasklistMapper</find>
+      <find>tasklistMapper.update</find>
+      <find>ismain</find>
+      <find>getNumericCellValue</find>
+      <find>定时</find>
+      <find>@</find>
+      <find>ResponseBody</find>
+      <find>parameterType</find>
+      <find>selectEnterpriseByRegion</find>
+      <find>insert</find>
+      <find>maptoen</find>
+      <find>mapToEntity</find>
+      <find>RequestUtil.mapToEntity</find>
+      <find>save(</find>
+      <find>rqsttitle</find>
+      <find>setTserialnum</find>
+      <find>vendoradress</find>
+      <find>vendor</find>
+      <find>vendoraddress</find>
+      <find>paramMap</find>
+      <find>updatedate</find>
+      <find>uuidUtil.getCurAcceptNo()</find>
+      <find>orderField</find>
+      <find>&quot;list&quot;</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>C:\Users\lin99\Desktop\SDCS\trunk\crcs\src</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/test/java/word/newTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/entity/DoubleVO.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/chinaweal/test/ExportBusinessDataTestFour.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/TOrgunitsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/entity/BusinessSearchVO.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/business/BusinessSearchMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/TasklistServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/BusinessSearchController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ExportComprehensiveImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/bigScreenDisplay/DataMapMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/mapper/DataMapMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/entity/MapVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/entity/MapChangeVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/IDataMapService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/AppliancesVOServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/bigScreenDisplay/ScreenDisplayMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/jdbc.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/mapper/TasklistMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/IDataMapOneService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/DataMapOneServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/mapper/DataMapOneMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/bigScreenDisplay/DataMapOneMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/BrandVOServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/DataMapServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/controller/ScreenDisplayController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/IEachTypeVOService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/EachTypeVOServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/TOrgunitsController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/bigScreenDisplay/RegionOrderVOMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/entity/RegionOrderVO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/RegionOrderVOServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/GeneralServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/util/BaseDataUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/entity/Tasklist.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/business/TasklistMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/ProcessinfoController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/entity/Rights.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/chinaweal/test/ExportRights.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/IRightsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/mapper/RightsMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/RightsController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/system/RightsMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/RightsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/mapper/RightsDetailsMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/RightsDetailsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/IRightsDetailsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/entity/RightsDetails.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis/mapper/system/RightsDetailsMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/RightsdetailsController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="C:\java\apache-maven-3.5.3\repository" />
+        <option name="mavenHome" value="C:/java/apache-maven-3.5.3" />
+        <option name="userSettingsFile" value="C:\java\apache-maven-3.5.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Profiles" type="6783ec58:MavenProjectsStructure$ProfilesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Complaints Report Comprehensive System" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="Complaints Report Comprehensive System" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="15" />
+    <option name="y" value="20" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="crcs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crcs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crcs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crcs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crcs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crcs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crcs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crcs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crcs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crcs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crcs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crcs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="bigScreenDisplay" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crcs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="business" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crcs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crcs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crcs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crcs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="chinaweal" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crcs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="chinaweal" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crcs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="word" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crcs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crcs" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder5" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="242" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="242" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="242" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="242" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="243" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="242" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="242" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="242" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="242" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="242" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="243" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth5" value="242" />
+    <property name="SearchEverywhereHistoryKey" value="StatisticsDateServiceImpl&#9;FILE&#9;file://C:/Users/lin99/Desktop/SDCS/trunk/crcs/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/StatisticsDateServiceImpl.java&#10;StatisticsDateMapper&#9;FILE&#9;file://C:/Users/lin99/Desktop/SDCS/trunk/crcs/src/main/resources/mybatis/mapper/system/StatisticsDateMapper.xml" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../crcs-web" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.chinaweal.sdcs.crcs.system.service.impl" />
+      <recent name="com.chinaweal.sdcs.crcs.system.service" />
+      <recent name="com.chinaweal.sdcs.crcs.system.mapper" />
+      <recent name="com.chinaweal.sdcs.crcs.system.entity" />
+      <recent name="com.chinaweal.sdcs.crcs.system.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lin99\Desktop\SDCS\trunk\crcs\src\main\resources\mybatis\mapper\system" />
+      <recent name="C:\Users\lin99\Desktop\SDCS\trunk\crcs\src\test\resources\mybatis\mapper" />
+      <recent name="C:\Users\lin99\Desktop\SDCS\trunk\crcs\src\main\resources\mybatis\mapper\bigScreenDisplay" />
+      <recent name="C:\Users\lin99\Desktop\SDCS\trunk\crcs\src\main\resources\mybatis\mapper" />
+      <recent name="C:\Users\lin99\Desktop\SDCS\trunk\crcs\src\main\java\com\chinaweal\sdcs\crcs\crawler\backfill" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Unnamed">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="ExportBusinessDataTestFour.test9" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="crcs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chinaweal.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.chinaweal.test" />
+      <option name="MAIN_CLASS_NAME" value="com.chinaweal.test.ExportBusinessDataTestFour" />
+      <option name="METHOD_NAME" value="test9" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ExportBusinessDataTestOf12345.test9" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="crcs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chinaweal.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.chinaweal.test" />
+      <option name="MAIN_CLASS_NAME" value="com.chinaweal.test.ExportBusinessDataTestOf12345" />
+      <option name="METHOD_NAME" value="test9" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ExportBusinessDataTestTwo.test9" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="crcs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chinaweal.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.chinaweal.test" />
+      <option name="MAIN_CLASS_NAME" value="com.chinaweal.test.ExportBusinessDataTestTwo" />
+      <option name="METHOD_NAME" value="test9" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ExportRights.test9" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="crcs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chinaweal.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.chinaweal.test" />
+      <option name="MAIN_CLASS_NAME" value="com.chinaweal.test.ExportRights" />
+      <option name="METHOD_NAME" value="test9" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="newTest.dateTwe1234" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="crcs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="word.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="word" />
+      <option name="MAIN_CLASS_NAME" value="word.newTest" />
+      <option name="METHOD_NAME" value="dateTwe1234" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="newTest.selectNatureAnalysis" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="crcs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="word.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="word" />
+      <option name="MAIN_CLASS_NAME" value="word.newTest" />
+      <option name="METHOD_NAME" value="selectNatureAnalysis" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.27" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="hot-swap-classes" />
+      <deployment>
+        <artifact name="crcs:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/crcs" />
+          </settings>
+        </artifact>
+        <file path="$PROJECT_DIR$/../download">
+          <settings>
+            <option name="CONTEXT_PATH" value="/crcs-upload" />
+          </settings>
+        </file>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_crcs_3" />
+        <option name="HTTP_PORT" value="8081" />
+        <option name="JNDI_PORT" value="1098" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61981" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="crcs:war" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.newTest.selectNatureAnalysis" />
+      <item itemvalue="Tomcat Server.Unnamed" />
+      <item itemvalue="JUnit.ExportBusinessDataTestTwo.test9" />
+      <item itemvalue="JUnit.ExportBusinessDataTestOf12345.test9" />
+      <item itemvalue="JUnit.ExportBusinessDataTestFour.test9" />
+      <item itemvalue="JUnit.newTest.dateTwe1234" />
+      <item itemvalue="JUnit.ExportRights.test9" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ExportRights.test9" />
+        <item itemvalue="JUnit.ExportBusinessDataTestFour.test9" />
+        <item itemvalue="JUnit.newTest.dateTwe1234" />
+        <item itemvalue="JUnit.ExportBusinessDataTestTwo.test9" />
+        <item itemvalue="JUnit.ExportBusinessDataTestOf12345.test9" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\lin99\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\Users\lin99\Desktop\SDCS\trunk\crcs" />
+          <option name="myCopyRoot" value="C:\Users\lin99\Desktop\SDCS\trunk\crcs" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="C:\Users\lin99\Desktop\SDCS\trunk\crcs" />
+          <option name="myCopyRoot" value="C:\Users\lin99\Desktop\SDCS\trunk\crcs" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb0b44c8-6753-4911-bece-3990df30f919" name="Default" comment="" />
+      <created>1569144287442</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569144287442</updated>
+      <workItem from="1569144294333" duration="412000" />
+      <workItem from="1569198492936" duration="4568000" />
+      <workItem from="1569206896867" duration="21919000" />
+      <workItem from="1569285312159" duration="11015000" />
+      <workItem from="1569311041330" duration="1043000" />
+      <workItem from="1569325059030" duration="2406000" />
+      <workItem from="1569372383270" duration="148000" />
+      <workItem from="1569372565539" duration="25929000" />
+      <workItem from="1569409229105" duration="2567000" />
+      <workItem from="1569458319969" duration="7775000" />
+      <workItem from="1569471712866" duration="4794000" />
+      <workItem from="1569486530531" duration="3283000" />
+      <workItem from="1569500454106" duration="1156000" />
+      <workItem from="1569544478179" duration="8776000" />
+      <workItem from="1569719747903" duration="28981000" />
+      <workItem from="1569804476755" duration="9039000" />
+      <workItem from="1569817871609" duration="14148000" />
+      <workItem from="1570289967182" duration="1168000" />
+      <workItem from="1570493917984" duration="25735000" />
+      <workItem from="1570540308748" duration="4165000" />
+      <workItem from="1570583188988" duration="2252000" />
+      <workItem from="1570585710368" duration="7096000" />
+      <workItem from="1570609439142" duration="1436000" />
+      <workItem from="1570668730955" duration="4533000" />
+      <workItem from="1570689078028" duration="5171000" />
+      <workItem from="1570708006269" duration="2898000" />
+      <workItem from="1570756044865" duration="2014000" />
+      <workItem from="1570762801701" duration="16168000" />
+      <workItem from="1570791836059" duration="977000" />
+      <workItem from="1570793031120" duration="6234000" />
+      <workItem from="1570800082918" duration="680000" />
+      <workItem from="1570801561691" duration="865000" />
+      <workItem from="1570842290966" duration="5563000" />
+      <workItem from="1570867649385" duration="1262000" />
+      <workItem from="1570932220344" duration="863000" />
+      <workItem from="1570937114905" duration="11873000" />
+      <workItem from="1570963558173" duration="1864000" />
+      <workItem from="1571022915031" duration="3068000" />
+      <workItem from="1571033010820" duration="8692000" />
+      <workItem from="1571100916454" duration="14591000" />
+      <workItem from="1571188652469" duration="14902000" />
+      <workItem from="1571274067225" duration="11744000" />
+      <workItem from="1571316406091" duration="4283000" />
+      <workItem from="1571357716711" duration="6814000" />
+      <workItem from="1571385448272" duration="2521000" />
+      <workItem from="1571550931746" duration="1047000" />
+      <workItem from="1571620920689" duration="10569000" />
+      <workItem from="1571644972649" duration="3486000" />
+      <workItem from="1571667293875" duration="758000" />
+      <workItem from="1571706459294" duration="31661000" />
+      <workItem from="1571792960490" duration="12803000" />
+      <workItem from="1571879229044" duration="10739000" />
+      <workItem from="1571965671484" duration="1395000" />
+      <workItem from="1572225409751" duration="9348000" />
+      <workItem from="1572270200688" duration="1761000" />
+      <workItem from="1572312607346" duration="17054000" />
+      <workItem from="1572397450180" duration="10921000" />
+      <workItem from="1572489256279" duration="4898000" />
+      <workItem from="1572572278425" duration="2195000" />
+      <workItem from="1572791338728" duration="597000" />
+      <workItem from="1572831498891" duration="7522000" />
+      <workItem from="1572857205570" duration="10000" />
+      <workItem from="1572857510223" duration="2103000" />
+      <workItem from="1572916568072" duration="5458000" />
+      <workItem from="1573001946423" duration="10337000" />
+      <workItem from="1573439386669" duration="17599000" />
+      <workItem from="1573521269257" duration="6536000" />
+      <workItem from="1573546768761" duration="8252000" />
+      <workItem from="1573607416300" duration="15467000" />
+      <workItem from="1573696248642" duration="11949000" />
+      <workItem from="1573779825943" duration="4234000" />
+      <workItem from="1574038148575" duration="19311000" />
+      <workItem from="1574125067119" duration="13313000" />
+      <workItem from="1574141664633" duration="15440000" />
+      <workItem from="1574212139375" duration="8244000" />
+      <workItem from="1574298984528" duration="35953000" />
+      <workItem from="1574347283297" duration="2598000" />
+      <workItem from="1574355582870" duration="1233000" />
+      <workItem from="1574385628363" duration="23842000" />
+      <workItem from="1574644361548" duration="10808000" />
+      <workItem from="1574665769686" duration="12347000" />
+      <workItem from="1574730275050" duration="21972000" />
+      <workItem from="1574816007210" duration="6796000" />
+      <workItem from="1574833026544" duration="11507000" />
+      <workItem from="1574854985747" duration="1683000" />
+      <workItem from="1574903079209" duration="2650000" />
+      <workItem from="1575089604703" duration="3156000" />
+      <workItem from="1575273049823" duration="9589000" />
+      <workItem from="1575297924035" duration="1278000" />
+      <workItem from="1575335274955" duration="9951000" />
+      <workItem from="1575383269494" duration="1090000" />
+      <workItem from="1575384899244" duration="1350000" />
+      <workItem from="1575421617374" duration="5757000" />
+      <workItem from="1575461656073" duration="1385000" />
+      <workItem from="1575467797508" duration="1064000" />
+      <workItem from="1575508342123" duration="3573000" />
+      <workItem from="1575594302415" duration="19784000" />
+      <workItem from="1575683796492" duration="5294000" />
+      <workItem from="1575725224995" duration="13177000" />
+      <workItem from="1575797032718" duration="1452000" />
+      <workItem from="1575853871488" duration="33153000" />
+      <workItem from="1575903446586" duration="987000" />
+      <workItem from="1575939705070" duration="13416000" />
+      <workItem from="1576025915705" duration="9246000" />
+      <workItem from="1576114575338" duration="12135000" />
+      <workItem from="1576207333542" duration="4926000" />
+      <workItem from="1576457111847" duration="2280000" />
+      <workItem from="1576459814619" duration="10238000" />
+      <workItem from="1576545376249" duration="4234000" />
+      <workItem from="1576567008889" duration="860000" />
+      <workItem from="1576630979190" duration="5655000" />
+      <workItem from="1576717868882" duration="3003000" />
+      <workItem from="1576803872165" duration="6984000" />
+      <workItem from="1577067416308" duration="3522000" />
+      <workItem from="1577110944069" duration="3362000" />
+      <workItem from="1577149569816" duration="9747000" />
+      <workItem from="1577235553082" duration="1934000" />
+      <workItem from="1577277309334" duration="820000" />
+      <workItem from="1577294006687" duration="629000" />
+      <workItem from="1577322244434" duration="2425000" />
+      <workItem from="1577375246434" duration="1116000" />
+      <workItem from="1577413250078" duration="1881000" />
+      <workItem from="1577427432604" duration="379000" />
+      <workItem from="1577496324943" duration="15991000" />
+      <workItem from="1577664646780" duration="15722000" />
+      <workItem from="1577754234365" duration="6421000" />
+      <workItem from="1577927158100" duration="8900000" />
+      <workItem from="1578014035923" duration="2811000" />
+      <workItem from="1578103889396" duration="4830000" />
+      <workItem from="1578269768018" duration="22582000" />
+      <workItem from="1578359600437" duration="3428000" />
+      <workItem from="1578446762530" duration="7266000" />
+      <workItem from="1578532223226" duration="307000" />
+      <workItem from="1578532688515" duration="15312000" />
+      <workItem from="1578618384971" duration="20765000" />
+      <workItem from="1578708572865" duration="17022000" />
+      <workItem from="1578876845753" duration="39713000" />
+      <workItem from="1578963859659" duration="22659000" />
+      <workItem from="1579001565082" duration="893000" />
+      <workItem from="1579050727268" duration="22535000" />
+      <workItem from="1579136811833" duration="16013000" />
+      <workItem from="1579222678761" duration="14951000" />
+      <workItem from="1579316679094" duration="645000" />
+      <workItem from="1579330850318" duration="5823000" />
+      <workItem from="1579398950700" duration="19191000" />
+      <workItem from="1579456190768" duration="1018000" />
+      <workItem from="1579481109425" duration="1730000" />
+      <workItem from="1580550868209" duration="229000" />
+      <workItem from="1580693669693" duration="24882000" />
+      <workItem from="1580778844882" duration="27045000" />
+      <workItem from="1580951831147" duration="14085000" />
+      <workItem from="1581038985626" duration="7608000" />
+      <workItem from="1581298795985" duration="21772000" />
+      <workItem from="1581560206510" duration="9326000" />
+      <workItem from="1581649645598" duration="9115000" />
+      <workItem from="1581904089523" duration="8383000" />
+      <workItem from="1581929767374" duration="2139000" />
+      <workItem from="1581932977511" duration="273000" />
+      <workItem from="1581936330594" duration="4364000" />
+      <workItem from="1581996083525" duration="11174000" />
+      <workItem from="1582077775854" duration="2701000" />
+      <workItem from="1582095117464" duration="6098000" />
+      <workItem from="1582169796890" duration="896000" />
+      <workItem from="1582257638783" duration="7826000" />
+      <workItem from="1582380468586" duration="2064000" />
+      <workItem from="1582437798522" duration="6019000" />
+      <workItem from="1582509067365" duration="13759000" />
+      <workItem from="1582549437741" duration="1014000" />
+      <workItem from="1582595843792" duration="13717000" />
+      <workItem from="1582640004060" duration="297000" />
+      <workItem from="1582682627328" duration="7228000" />
+      <workItem from="1582941702230" duration="11796000" />
+      <workItem from="1583029405542" duration="10868000" />
+      <workItem from="1583061435380" duration="123000" />
+      <workItem from="1583061575517" duration="2423000" />
+      <workItem from="1583112198738" duration="18779000" />
+      <workItem from="1583197394594" duration="3065000" />
+      <workItem from="1583202049170" duration="18310000" />
+      <workItem from="1583282996308" duration="14959000" />
+      <workItem from="1583513329775" duration="820000" />
+      <workItem from="1583545645524" duration="1358000" />
+      <workItem from="1583547043013" duration="1762000" />
+      <workItem from="1583549847477" duration="8343000" />
+      <workItem from="1583582175836" duration="2181000" />
+      <workItem from="1583629906464" duration="14638000" />
+      <workItem from="1583664130372" duration="2584000" />
+      <workItem from="1583717997248" duration="12743000" />
+      <workItem from="1583804281364" duration="4987000" />
+      <workItem from="1583888654317" duration="6693000" />
+      <workItem from="1583975329267" duration="15138000" />
+      <workItem from="1584061479966" duration="3131000" />
+      <workItem from="1584097140246" duration="3512000" />
+      <workItem from="1584153136901" duration="11575000" />
+      <workItem from="1584320973131" duration="24739000" />
+      <workItem from="1584407336840" duration="8233000" />
+      <workItem from="1584493962022" duration="1930000" />
+      <workItem from="1584539151440" duration="637000" />
+      <workItem from="1584590596018" duration="819000" />
+      <workItem from="1584683737104" duration="733000" />
+      <workItem from="1584758600141" duration="7545000" />
+      <workItem from="1584933948509" duration="18115000" />
+      <workItem from="1585014226211" duration="9454000" />
+      <workItem from="1585210234129" duration="2019000" />
+      <workItem from="1585229937956" duration="286000" />
+      <workItem from="1585272318474" duration="1446000" />
+      <workItem from="1585299385160" duration="2343000" />
+      <workItem from="1585367437816" duration="7447000" />
+      <workItem from="1585536864847" duration="18890000" />
+      <workItem from="1585570103250" duration="1172000" />
+      <workItem from="1585617096439" duration="13131000" />
+      <workItem from="1585703473788" duration="14089000" />
+      <workItem from="1585805075088" duration="12793000" />
+      <workItem from="1585836667288" duration="5704000" />
+      <workItem from="1585872044054" duration="1413000" />
+      <workItem from="1585892344605" duration="2793000" />
+      <workItem from="1586227096548" duration="12988000" />
+      <workItem from="1586265635827" duration="19946000" />
+      <workItem from="1586395679196" duration="21861000" />
+      <workItem from="1586486926892" duration="1999000" />
+      <workItem from="1586571023231" duration="13956000" />
+      <workItem from="1586745470236" duration="11897000" />
+      <workItem from="1586825902027" duration="1429000" />
+      <workItem from="1586913134061" duration="13369000" />
+      <workItem from="1586999582720" duration="18645000" />
+      <workItem from="1587086757124" duration="9293000" />
+      <workItem from="1587262632112" duration="1939000" />
+      <workItem from="1587347492961" duration="29171000" />
+      <workItem from="1587431103918" duration="12998000" />
+      <workItem from="1587518075474" duration="11058000" />
+      <workItem from="1587604066493" duration="11186000" />
+      <workItem from="1587690660992" duration="6830000" />
+      <workItem from="1587862165573" duration="22355000" />
+      <workItem from="1587949556657" duration="24758000" />
+      <workItem from="1587998085144" duration="1886000" />
+      <workItem from="1588036057187" duration="9821000" />
+      <workItem from="1588090236146" duration="1034000" />
+      <workItem from="1588122394236" duration="4926000" />
+      <workItem from="1588141397602" duration="1443000" />
+      <workItem from="1588207339710" duration="8930000" />
+      <workItem from="1588726379765" duration="12258000" />
+      <workItem from="1588813529851" duration="21663000" />
+      <workItem from="1588900291613" duration="11625000" />
+      <workItem from="1588989568100" duration="6488000" />
+      <workItem from="1589118311757" duration="3516000" />
+      <workItem from="1589160930350" duration="9014000" />
+      <workItem from="1589201517587" duration="4070000" />
+      <workItem from="1589245382478" duration="8562000" />
+      <workItem from="1589332024460" duration="1595000" />
+      <workItem from="1589349337798" duration="7939000" />
+      <workItem from="1589421872786" duration="525000" />
+      <workItem from="1589435608572" duration="3255000" />
+      <workItem from="1589480008763" duration="1145000" />
+      <workItem from="1589513302836" duration="659000" />
+      <workItem from="1589549215784" duration="1575000" />
+      <workItem from="1589607271489" duration="710000" />
+      <workItem from="1589765262368" duration="18374000" />
+      <workItem from="1589809378999" duration="3570000" />
+      <workItem from="1589857631868" duration="11343000" />
+      <workItem from="1589886279421" duration="1902000" />
+      <workItem from="1589936508197" duration="6738000" />
+      <workItem from="1590023468759" duration="10867000" />
+      <workItem from="1590336169387" duration="1726000" />
+      <workItem from="1590456749910" duration="9871000" />
+      <workItem from="1590541751333" duration="7470000" />
+      <workItem from="1590627845629" duration="9682000" />
+      <workItem from="1590714154108" duration="9559000" />
+      <workItem from="1590982227914" duration="10659000" />
+      <workItem from="1591060088837" duration="2771000" />
+      <workItem from="1591143798242" duration="3874000" />
+      <workItem from="1591182903143" duration="591000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ExportRights_test9 - 2020.05.26 at 14h 29m 29s.xml">
+      <configuration name="ExportRights.test9" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ExportRights_test9 - 2020.05.26 at 14h 31m 32s.xml">
+      <configuration name="ExportRights.test9" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ExportRights_test9 - 2020.05.26 at 14h 32m 15s.xml">
+      <configuration name="ExportRights.test9" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ExportRights_test9 - 2020.05.26 at 14h 33m 41s.xml">
+      <configuration name="ExportRights.test9" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ExportRights_test9 - 2020.05.26 at 14h 35m 51s.xml">
+      <configuration name="ExportRights.test9" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ExportRights_test9 - 2020.05.26 at 14h 36m 52s.xml">
+      <configuration name="ExportRights.test9" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ExportRights_test9 - 2020.05.26 at 14h 38m 38s.xml">
+      <configuration name="ExportRights.test9" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ExportRights_test9 - 2020.05.26 at 14h 42m 42s.xml">
+      <configuration name="ExportRights.test9" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ExportRights_test9 - 2020.05.26 at 14h 44m 14s.xml">
+      <configuration name="ExportRights.test9" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ExportRights_test9 - 2020.05.26 at 14h 58m 26s.xml">
+      <configuration name="ExportRights.test9" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="2215994000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1551" height="839" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50033534" side_tool="true" weight="0.863836" />
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.329429" />
+      <window_info anchor="right" id="Maven Projects" order="1" visible="true" weight="0.12072434" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="5" weight="0.3293092" />
+      <window_info id="Structure" order="1" sideWeight="0.5768322" side_tool="true" weight="0.24748491" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.24949698" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49966466" weight="0.40995607" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329429" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" weight="0.329429" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.45827234" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4275256" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.329429" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.22693998" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.42316785" visible="true" weight="0.27162978" />
+      <window_info anchor="right" id="Bean Validation" order="8" weight="0.3293092" />
+      <window_info id="Web" order="2" sideWeight="0.5753425" side_tool="true" weight="0.26559356" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info id="Favorites" order="2" sideWeight="0.5744681" side_tool="true" weight="0.27967808" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.28550512" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329429" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.19181757" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="Application Servers" order="7" weight="0.329429" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Spring" order="8" weight="0.329429" />
+      <window_info id="Image Layers" order="3" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27086383" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24949698" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" sideWeight="0.5744681" side_tool="true" weight="0.27967808" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.22693998" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32796487" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329429" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.329429" />
+      <window_info anchor="bottom" id="Database Changes" order="13" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.36310396" />
+      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.06505701" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.42553192" visible="true" weight="0.20724346" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3293092" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Web" order="7" sideWeight="0.5720621" side_tool="true" weight="0.26358148" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info id="Structure" order="1" sideWeight="0.56914896" side_tool="true" weight="0.277666" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.19181757" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329429" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.3293092" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.40849194" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/BusinessSearchController.java</url>
+          <line>510</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>91</line>
+          <properties />
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>137</line>
+          <properties />
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/TasklistServiceImpl.java</url>
+          <line>95</line>
+          <properties />
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/TasklistServiceImpl.java</url>
+          <line>92</line>
+          <properties />
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/TasklistServiceImpl.java</url>
+          <line>176</line>
+          <properties />
+          <option name="timeStamp" value="103" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/TasklistController.java</url>
+          <line>322</line>
+          <properties />
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/TasklistController.java</url>
+          <line>331</line>
+          <properties />
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/TasklistController.java</url>
+          <line>333</line>
+          <properties />
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/TasklistServiceImpl.java</url>
+          <line>71</line>
+          <properties />
+          <option name="timeStamp" value="111" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>150</line>
+          <properties />
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>170</line>
+          <properties />
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/TasklistServiceImpl.java</url>
+          <line>96</line>
+          <properties />
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/TasklistServiceImpl.java</url>
+          <line>94</line>
+          <properties />
+          <option name="timeStamp" value="116" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/TasklistServiceImpl.java</url>
+          <line>104</line>
+          <properties />
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/TasklistServiceImpl.java</url>
+          <line>102</line>
+          <properties />
+          <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>68</line>
+          <properties />
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>195</line>
+          <properties />
+          <option name="timeStamp" value="140" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>196</line>
+          <properties />
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>206</line>
+          <properties />
+          <option name="timeStamp" value="142" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>198</line>
+          <properties />
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>201</line>
+          <properties />
+          <option name="timeStamp" value="146" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/BasecodeformServiceImpl.java</url>
+          <line>77</line>
+          <properties />
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>1420</line>
+          <properties />
+          <option name="timeStamp" value="182" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>250</line>
+          <properties />
+          <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>257</line>
+          <properties />
+          <option name="timeStamp" value="200" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>258</line>
+          <properties />
+          <option name="timeStamp" value="201" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>234</line>
+          <properties />
+          <option name="timeStamp" value="208" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>240</line>
+          <properties />
+          <option name="timeStamp" value="209" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>243</line>
+          <properties />
+          <option name="timeStamp" value="210" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>245</line>
+          <properties />
+          <option name="timeStamp" value="211" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>216</line>
+          <properties />
+          <option name="timeStamp" value="212" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>219</line>
+          <properties />
+          <option name="timeStamp" value="213" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/TasklistController.java</url>
+          <line>370</line>
+          <properties />
+          <option name="timeStamp" value="229" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/TasklistController.java</url>
+          <line>393</line>
+          <properties />
+          <option name="timeStamp" value="230" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>1272</line>
+          <properties />
+          <option name="timeStamp" value="231" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>442</line>
+          <properties />
+          <option name="timeStamp" value="232" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/entity/vo/MaterialinfoVo.java</url>
+          <line>98</line>
+          <properties />
+          <option name="timeStamp" value="238" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/BusinessSearchController.java</url>
+          <line>263</line>
+          <properties />
+          <option name="timeStamp" value="242" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>121</line>
+          <properties />
+          <option name="timeStamp" value="245" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/UserController.java</url>
+          <line>151</line>
+          <properties />
+          <option name="timeStamp" value="249" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/UserController.java</url>
+          <line>187</line>
+          <properties />
+          <option name="timeStamp" value="251" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/UserController.java</url>
+          <line>197</line>
+          <properties />
+          <option name="timeStamp" value="253" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://C:/java/apache-maven-3.5.3/repository/com/chinaweal/chinaweal-publibv2/2.0-SNAPSHOT/chinaweal-publibv2-2.0-20151210.075213-50.jar!/com/chinaweal/aicorg/services/OrgUMImpl.class</url>
+          <line>411</line>
+          <properties />
+          <option name="timeStamp" value="254" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/TasklistController.java</url>
+          <line>149</line>
+          <properties />
+          <option name="timeStamp" value="255" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/TasklistController.java</url>
+          <line>148</line>
+          <properties />
+          <option name="timeStamp" value="256" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>266</line>
+          <properties />
+          <option name="timeStamp" value="257" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/TasklistServiceImpl.java</url>
+          <line>297</line>
+          <properties />
+          <option name="timeStamp" value="259" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/BusinessSearchController.java</url>
+          <line>449</line>
+          <properties />
+          <option name="timeStamp" value="262" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ExportComprehensiveImpl.java</url>
+          <line>172</line>
+          <properties />
+          <option name="timeStamp" value="275" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ExportComprehensiveImpl.java</url>
+          <line>209</line>
+          <properties />
+          <option name="timeStamp" value="282" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ExportComprehensiveImpl.java</url>
+          <line>208</line>
+          <properties />
+          <option name="timeStamp" value="283" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/BusinessSearchController.java</url>
+          <line>483</line>
+          <properties />
+          <option name="timeStamp" value="285" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/ProcessinfoController.java</url>
+          <line>120</line>
+          <properties />
+          <option name="timeStamp" value="295" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/TasklistServiceImpl.java</url>
+          <line>365</line>
+          <properties />
+          <option name="timeStamp" value="305" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/BusinessSearchController.java</url>
+          <line>337</line>
+          <properties />
+          <option name="timeStamp" value="307" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="309" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>335</line>
+          <properties />
+          <option name="timeStamp" value="311" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>321</line>
+          <properties />
+          <option name="timeStamp" value="313" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>622</line>
+          <properties />
+          <option name="timeStamp" value="315" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/BusinessSearchController.java</url>
+          <line>555</line>
+          <properties />
+          <option name="timeStamp" value="316" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/BusinessSearchController.java</url>
+          <line>589</line>
+          <properties />
+          <option name="timeStamp" value="320" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/BusinessSearchController.java</url>
+          <line>585</line>
+          <properties />
+          <option name="timeStamp" value="322" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="324" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>205</line>
+          <properties />
+          <option name="timeStamp" value="325" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/BusinessSearchController.java</url>
+          <line>203</line>
+          <properties />
+          <option name="timeStamp" value="326" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/TasklistController.java</url>
+          <line>126</line>
+          <properties />
+          <option name="timeStamp" value="330" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/statistical/common/controller/FilesUploadController.java</url>
+          <line>51</line>
+          <properties />
+          <option name="timeStamp" value="333" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/MaterialinfoServiceImpl.java</url>
+          <line>46</line>
+          <properties />
+          <option name="timeStamp" value="334" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/MaterialinfoServiceImpl.java</url>
+          <line>62</line>
+          <properties />
+          <option name="timeStamp" value="335" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>678</line>
+          <properties />
+          <option name="timeStamp" value="343" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>676</line>
+          <properties />
+          <option name="timeStamp" value="344" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>677</line>
+          <properties />
+          <option name="timeStamp" value="345" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ExportComprehensiveImpl.java</url>
+          <line>259</line>
+          <properties />
+          <option name="timeStamp" value="347" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ExportComprehensiveImpl.java</url>
+          <line>304</line>
+          <properties />
+          <option name="timeStamp" value="348" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>1059</line>
+          <properties />
+          <option name="timeStamp" value="354" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>1756</line>
+          <properties />
+          <option name="timeStamp" value="356" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>276</line>
+          <properties />
+          <option name="timeStamp" value="358" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>282</line>
+          <properties />
+          <option name="timeStamp" value="362" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/ProcessinfoController.java</url>
+          <line>131</line>
+          <properties />
+          <option name="timeStamp" value="364" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>856</line>
+          <properties />
+          <option name="timeStamp" value="365" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>1085</line>
+          <properties />
+          <option name="timeStamp" value="366" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>1174</line>
+          <properties />
+          <option name="timeStamp" value="367" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>1038</line>
+          <properties />
+          <option name="timeStamp" value="368" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>1077</line>
+          <properties />
+          <option name="timeStamp" value="369" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>404</line>
+          <properties />
+          <option name="timeStamp" value="370" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>1188</line>
+          <properties />
+          <option name="timeStamp" value="373" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://C:/java/apache-maven-3.5.3/repository/com/chinaweal/chinaweal-publibv2/2.0-SNAPSHOT/chinaweal-publibv2-2.0-20151210.075213-50-sources.jar!/com/chinaweal/aicorg/dao/impl/AICUserDaoImpl.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="380" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/ProcessinfoController.java</url>
+          <line>114</line>
+          <properties />
+          <option name="timeStamp" value="384" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/StatisticsDateServiceImpl.java</url>
+          <line>281</line>
+          <properties />
+          <option name="timeStamp" value="419" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/StatisticsDateServiceImpl.java</url>
+          <line>438</line>
+          <properties />
+          <option name="timeStamp" value="496" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/ProcessinfoController.java</url>
+          <line>80</line>
+          <properties />
+          <option name="timeStamp" value="497" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/StatisticsDateServiceImpl.java</url>
+          <line>167</line>
+          <properties />
+          <option name="timeStamp" value="504" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/StatisticsDateServiceImpl.java</url>
+          <line>214</line>
+          <properties />
+          <option name="timeStamp" value="505" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/ComplaintSituationServiceImpl.java</url>
+          <line>183</line>
+          <properties />
+          <option name="timeStamp" value="530" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/ComplaintSituationServiceImpl.java</url>
+          <line>181</line>
+          <properties />
+          <option name="timeStamp" value="531" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/ComplaintSituationServiceImpl.java</url>
+          <line>360</line>
+          <properties />
+          <option name="timeStamp" value="554" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/ComplaintSituationServiceImpl.java</url>
+          <line>374</line>
+          <properties />
+          <option name="timeStamp" value="555" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/ComplaintSituationServiceImpl.java</url>
+          <line>498</line>
+          <properties />
+          <option name="timeStamp" value="558" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>446</line>
+          <properties />
+          <option name="timeStamp" value="563" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>840</line>
+          <properties />
+          <option name="timeStamp" value="564" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/ComplaintSituationServiceImpl.java</url>
+          <line>713</line>
+          <properties />
+          <option name="timeStamp" value="568" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/ComplaintSituationServiceImpl.java</url>
+          <line>737</line>
+          <properties />
+          <option name="timeStamp" value="569" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/word/WoedTest.java</url>
+          <line>106</line>
+          <properties />
+          <option name="timeStamp" value="570" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/analyse/scheduled/HowWordScheduled.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="573" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/OverallSituationServiceImpl.java</url>
+          <line>121</line>
+          <properties />
+          <option name="timeStamp" value="574" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>1474</line>
+          <properties />
+          <option name="timeStamp" value="579" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>1534</line>
+          <properties />
+          <option name="timeStamp" value="581" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>1523</line>
+          <properties />
+          <option name="timeStamp" value="582" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>538</line>
+          <properties />
+          <option name="timeStamp" value="583" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>1448</line>
+          <properties />
+          <option name="timeStamp" value="584" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>1330</line>
+          <properties />
+          <option name="timeStamp" value="586" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/ComplaintSituationServiceImpl.java</url>
+          <line>750</line>
+          <properties />
+          <option name="timeStamp" value="587" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/ComplaintSituationServiceImpl.java</url>
+          <line>771</line>
+          <properties />
+          <option name="timeStamp" value="588" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/ComplaintSituationServiceImpl.java</url>
+          <line>793</line>
+          <properties />
+          <option name="timeStamp" value="589" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/ComplaintSituationServiceImpl.java</url>
+          <line>853</line>
+          <properties />
+          <option name="timeStamp" value="590" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/ComplaintSituationServiceImpl.java</url>
+          <line>976</line>
+          <properties />
+          <option name="timeStamp" value="592" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/ComplaintSituationServiceImpl.java</url>
+          <line>914</line>
+          <properties />
+          <option name="timeStamp" value="593" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/ComplaintSituationServiceImpl.java</url>
+          <line>931</line>
+          <properties />
+          <option name="timeStamp" value="594" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/word/newTest.java</url>
+          <line>126</line>
+          <properties />
+          <option name="timeStamp" value="596" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/util/CreateEntityInfoUtil.java</url>
+          <line>372</line>
+          <properties />
+          <option name="timeStamp" value="602" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/crawler/backfill/server/impl/BackfillOrderServiceImpl.java</url>
+          <line>74</line>
+          <properties />
+          <option name="timeStamp" value="608" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/crawler/backfill/server/impl/BackfillOrderServiceImpl.java</url>
+          <line>58</line>
+          <properties />
+          <option name="timeStamp" value="611" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/crawler/backfill/server/impl/BackfillOrderServiceImpl.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="613" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://C:/java/apache-maven-3.5.3/repository/com/chinaweal/chinaweal-publibv2/2.0-SNAPSHOT/chinaweal-publibv2-2.0-20151210.075213-50-sources.jar!/com/chinaweal/aicorg/services/CreateAIC.java</url>
+          <line>67</line>
+          <properties />
+          <option name="timeStamp" value="621" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/BusinessSearchController.java</url>
+          <line>233</line>
+          <properties />
+          <option name="timeStamp" value="622" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>1366</line>
+          <properties />
+          <option name="timeStamp" value="623" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/BusinessSearchController.java</url>
+          <line>219</line>
+          <properties />
+          <option name="timeStamp" value="624" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/BusinessSearchServiceImpl.java</url>
+          <line>62</line>
+          <properties />
+          <option name="timeStamp" value="626" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/TasklistController.java</url>
+          <line>375</line>
+          <properties />
+          <option name="timeStamp" value="629" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/TasklistServiceImpl.java</url>
+          <line>343</line>
+          <properties />
+          <option name="timeStamp" value="630" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/ScreenDisplayServiceImpl.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="631" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/ScreenDisplayServiceImpl.java</url>
+          <line>31</line>
+          <properties />
+          <option name="timeStamp" value="634" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>103</line>
+          <properties />
+          <option name="timeStamp" value="638" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/DataMapOneServiceImpl.java</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="641" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/DataMapOneServiceImpl.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="642" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/DataMapOneServiceImpl.java</url>
+          <line>71</line>
+          <properties />
+          <option name="timeStamp" value="646" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/DataMapOneServiceImpl.java</url>
+          <line>83</line>
+          <properties />
+          <option name="timeStamp" value="647" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/DataMapOneServiceImpl.java</url>
+          <line>70</line>
+          <properties />
+          <option name="timeStamp" value="648" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/controller/ScreenDisplayController.java</url>
+          <line>235</line>
+          <properties />
+          <option name="timeStamp" value="649" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/BasecodeformController.java</url>
+          <line>180</line>
+          <properties />
+          <option name="timeStamp" value="652" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/BasecodeformServiceImpl.java</url>
+          <line>108</line>
+          <properties />
+          <option name="timeStamp" value="653" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/BrandVOServiceImpl.java</url>
+          <line>107</line>
+          <properties />
+          <option name="timeStamp" value="655" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/BrandVOServiceImpl.java</url>
+          <line>150</line>
+          <properties />
+          <option name="timeStamp" value="660" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/BrandVOServiceImpl.java</url>
+          <line>158</line>
+          <properties />
+          <option name="timeStamp" value="662" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>697</line>
+          <properties />
+          <option name="timeStamp" value="663" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/GeneralServiceImpl.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="665" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/GeneralServiceImpl.java</url>
+          <line>94</line>
+          <properties />
+          <option name="timeStamp" value="672" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/crawler/backfill/controller/BackfillOrderController.java</url>
+          <line>59</line>
+          <properties />
+          <option name="timeStamp" value="676" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/crawler/backfill/server/impl/BackfillOrderServiceImpl.java</url>
+          <line>90</line>
+          <properties />
+          <option name="timeStamp" value="677" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/chinaweal/test/ExportBusinessDataTest.java</url>
+          <line>302</line>
+          <properties />
+          <option name="timeStamp" value="703" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/chinaweal/test/ExportBusinessDataTestOne.java</url>
+          <line>293</line>
+          <properties />
+          <option name="timeStamp" value="704" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/TasklistServiceImpl.java</url>
+          <line>671</line>
+          <properties />
+          <option name="timeStamp" value="705" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/BusinessSearchController.java</url>
+          <line>406</line>
+          <properties />
+          <option name="timeStamp" value="707" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>349</line>
+          <properties />
+          <option name="timeStamp" value="709" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/chinaweal/test/ExportBusinessDataTestTwo.java</url>
+          <line>537</line>
+          <properties />
+          <option name="timeStamp" value="722" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/chinaweal/test/ExportBusinessDataTestTwo.java</url>
+          <line>527</line>
+          <properties />
+          <option name="timeStamp" value="723" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/chinaweal/test/ExportBusinessDataTestTwo.java</url>
+          <line>533</line>
+          <properties />
+          <option name="timeStamp" value="726" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/chinaweal/test/ExportBusinessDataTestOf12345.java</url>
+          <line>642</line>
+          <properties />
+          <option name="timeStamp" value="734" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/chinaweal/test/ExportBusinessDataTestThree.java</url>
+          <line>622</line>
+          <properties />
+          <option name="timeStamp" value="737" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/chinaweal/test/ExportBusinessDataTestThree.java</url>
+          <line>242</line>
+          <properties />
+          <option name="timeStamp" value="739" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/chinaweal/test/ExportBusinessDataTestFour.java</url>
+          <line>515</line>
+          <properties />
+          <option name="timeStamp" value="740" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/BusinessSearchController.java</url>
+          <line>113</line>
+          <properties />
+          <option name="timeStamp" value="742" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/BusinessSearchController.java</url>
+          <line>145</line>
+          <properties />
+          <option name="timeStamp" value="744" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/EachTypeVOServiceImpl.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="751" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/EachTypeVOServiceImpl.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="752" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/EachTypeVOServiceImpl.java</url>
+          <line>79</line>
+          <properties />
+          <option name="timeStamp" value="756" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/OverallSituationServiceImpl.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="758" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/OverallSituationServiceImpl.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="759" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/controller/ScreenDisplayController.java</url>
+          <line>220</line>
+          <properties />
+          <option name="timeStamp" value="760" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>1228</line>
+          <properties />
+          <option name="timeStamp" value="768" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>783</line>
+          <properties />
+          <option name="timeStamp" value="769" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/BusinessSearchController.java</url>
+          <line>560</line>
+          <properties />
+          <option name="timeStamp" value="771" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/TasklistServiceImpl.java</url>
+          <line>202</line>
+          <properties />
+          <option name="timeStamp" value="772" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/DataMapServiceImpl.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="773" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/AppliancesVOServiceImpl.java</url>
+          <line>106</line>
+          <properties />
+          <option name="timeStamp" value="778" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/BrandVOServiceImpl.java</url>
+          <line>74</line>
+          <properties />
+          <option name="timeStamp" value="780" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/BrandVOServiceImpl.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="781" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/BrandVOServiceImpl.java</url>
+          <line>49</line>
+          <properties />
+          <option name="timeStamp" value="782" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/bigScreenDisplay/service/impl/EachTypeVOServiceImpl.java</url>
+          <line>102</line>
+          <properties />
+          <option name="timeStamp" value="785" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/TOrgunitsController.java</url>
+          <line>446</line>
+          <properties />
+          <option name="timeStamp" value="786" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java</url>
+          <line>373</line>
+          <properties />
+          <option name="timeStamp" value="791" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/ProcessinfoController.java</url>
+          <line>284</line>
+          <properties />
+          <option name="timeStamp" value="793" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/ProcessinfoController.java</url>
+          <line>271</line>
+          <properties />
+          <option name="timeStamp" value="794" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/chinaweal/test/ExportRights.java</url>
+          <line>111</line>
+          <properties />
+          <option name="timeStamp" value="795" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/chinaweal/test/ExportRights.java</url>
+          <line>94</line>
+          <properties />
+          <option name="timeStamp" value="796" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/chinaweal/test/ExportRights.java</url>
+          <line>101</line>
+          <properties />
+          <option name="timeStamp" value="797" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/chinaweal/test/ExportRights.java</url>
+          <line>100</line>
+          <properties />
+          <option name="timeStamp" value="798" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/UsersAppServiceImpl.java</url>
+          <line>159</line>
+          <properties />
+          <option name="timeStamp" value="799" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/RightsController.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="804" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/RightsServiceImpl.java</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="806" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/RightsdetailsController.java</url>
+          <line>72</line>
+          <properties />
+          <option name="timeStamp" value="807" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/RightsdetailsController.java</url>
+          <line>98</line>
+          <properties />
+          <option name="timeStamp" value="810" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/service/BaseServiceImpl.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="811" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/RightsdetailsController.java</url>
+          <line>138</line>
+          <properties />
+          <option name="timeStamp" value="812" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://C:/java/apache-maven-3.5.3/repository/com/chinaweal/chinaweal-publibv2/2.0-SNAPSHOT/chinaweal-publibv2-2.0-20151210.075213-50-sources.jar!/com/chinaweal/aicorg/dao/impl/AICUserDaoImpl.java</url>
+          <line>52</line>
+          <properties />
+          <option name="timeStamp" value="813" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="815" />
+    </breakpoint-manager>
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/system/EconomySituationMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/system/StatisticsDateMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2584">
+          <caret line="179" column="21" lean-forward="true" selection-start-line="179" selection-start-column="21" selection-end-line="179" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/crawler/backfill/controller/BackfillOrderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/MaterialinfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/mapper/RightsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/IRightsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/system/RightsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="55" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/apache-maven-3.5.3/repository/com/baomidou/mybatis-plus-extension/3.1.0/mybatis-plus-extension-3.1.0-sources.jar!/com/baomidou/mybatisplus/extension/service/IService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="48" column="12" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/BackfillServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="913" column="39" lean-forward="true" selection-start-line="913" selection-start-column="39" selection-end-line="913" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/apache-maven-3.5.3/repository/com/baomidou/mybatis-plus-extension/3.1.0/mybatis-plus-extension-3.1.0-sources.jar!/com/baomidou/mybatisplus/extension/service/impl/ServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="103" column="19" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/OverallSituationServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="23" column="4" selection-start-line="23" selection-start-column="4" selection-end-line="24" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/util/RequestUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/mapper/OverallSituationMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/system/BasecodeContrastMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/system/BackfillCallLogMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/system/BasecodeformMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="77" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/apache-maven-3.5.3/repository/org/springframework/spring-aop/5.1.5.RELEASE/spring-aop-5.1.5.RELEASE-sources.jar!/org/springframework/aop/aspectj/AbstractAspectJAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="650" selection-start-line="650" selection-end-line="650" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/business/CommomformMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://C:/java/apache-maven-3.5.3/repository/org/springframework/spring-aop/5.1.5.RELEASE/spring-aop-5.1.5.RELEASE-sources.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="162" selection-start-line="162" selection-end-line="162" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/apache-maven-3.5.3/repository/org/springframework/spring-aop/5.1.5.RELEASE/spring-aop-5.1.5.RELEASE-sources.jar!/org/springframework/aop/framework/CglibAopProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="748" selection-start-line="748" selection-end-line="748" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/apache-maven-3.5.3/repository/org/springframework/spring-core/5.1.5.RELEASE/spring-core-5.1.5.RELEASE-sources.jar!/org/springframework/cglib/proxy/MethodProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="217" selection-start-line="217" selection-end-line="217" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/entity/Caseprocesform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="107" column="22" selection-start-line="107" selection-start-column="12" selection-end-line="107" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/business/CaseprocesformMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="26" column="77" selection-start-line="26" selection-start-column="70" selection-end-line="26" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/chinaweal/test/ExportBusinessDataTestTwo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="460" column="25" selection-start-line="460" selection-start-column="20" selection-end-line="460" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/entity/Commomform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/util/UuidUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-70">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/ProcessinfoServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17309">
+          <caret line="934" column="104" selection-start-line="934" selection-start-column="79" selection-end-line="934" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/RightsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/mapper/RightsDetailsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/ProcessinfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1482">
+          <caret line="118" column="9" selection-start-line="118" selection-start-column="9" selection-end-line="118" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="46" lean-forward="true" selection-start-line="4" selection-start-column="46" selection-end-line="4" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/IRightsDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/service/impl/RightsDetailsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/RightsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-113">
+          <caret line="20" column="55" lean-forward="true" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/service/BaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/service/BaseServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/apache-maven-3.5.3/repository/io/swagger/swagger-annotations/1.5.13/swagger-annotations-1.5.13.jar!/io/swagger/annotations/ApiModelProperty.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/service/functions/CustomWrapperPackingFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/mapper/TasklistMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/apache-maven-3.5.3/repository/com/chinaweal/chinaweal-publibv2/2.0-SNAPSHOT/chinaweal-publibv2-2.0-20151210.075213-50-sources.jar!/com/chinaweal/aicorg/util/PasswordVerify.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/java/apache-maven-3.5.3/repository/com/chinaweal/chinaweal-publibv2/2.0-SNAPSHOT/chinaweal-publibv2-2.0-20151210.075213-50-sources.jar!/com/chinaweal/aicorg/dao/impl/AICUserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="62" column="48" lean-forward="true" selection-start-line="62" selection-start-column="48" selection-end-line="62" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/business/TasklistMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="249" column="58" selection-start-line="249" selection-start-column="58" selection-end-line="249" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/impl/TasklistServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="365" column="37" selection-start-line="365" selection-start-column="37" selection-end-line="365" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/service/ITasklistService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/entity/dto/page/PageRequestDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="72" column="30" selection-start-line="72" selection-start-column="30" selection-end-line="72" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/service/functions/CustomFilterFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/business/controller/TasklistController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="124" column="65" selection-start-line="124" selection-start-column="65" selection-end-line="124" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis/mapper/system/RightsDetailsMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="46" column="75" selection-start-line="46" selection-start-column="75" selection-end-line="46" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/entity/RightsDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3363">
+          <caret line="181" column="11" selection-start-line="181" selection-start-column="11" selection-end-line="181" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/chinaweal/sdcs/crcs/system/controller/RightsdetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2622">
+          <caret line="165" column="57" selection-start-line="165" selection-start-column="57" selection-end-line="165" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="193" column="46" selection-start-line="193" selection-start-column="46" selection-end-line="193" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>crcs:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>crcs</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: cglib:cglib:3.1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

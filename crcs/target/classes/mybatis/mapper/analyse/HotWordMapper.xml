@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinaweal.sdcs.crcs.analyse.mapper.HotWordMapper">
+    <select id="listComplaintContent" resultType="java.util.HashMap">
+        SELECT t.caseguid,
+               coalesce(e.keyword, comp.keyword) as keyword,
+               coalesce(e.problemtypecodeid,comp.complaintstypecodeid) as problemtypecodeid,
+               coalesce(e.objectcategorycodeid, comp.objclassifycodeid) as code_type,
+               t.formtype,
+               t.content,
+               t.assigndate as assigndate
+        FROM tasklist t
+                 LEFT JOIN economyform e ON t.caseguid = e.caseguid
+                 LEFT JOIN complaintform comp on t.caseguid = comp.caseguid
+        where (e.objectcategorycodeid is not null or comp.objclassifycodeid is not null)
+        and t.createdate >= #{begin}
+        and t.createdate <![CDATA[ < ]]> #{end}
+        order by createdate
+    </select>
+
+    <select id="listHowTop" resultType="com.chinaweal.sdcs.crcs.analyse.entity.HotWord">
+        select * from analyse_hot_word where length(keyword)>1 and keyword not in
+        <foreach item="item" index="index" collection="notWords"
+                 open="(" separator="," close=")">
+            #{item}
+        </foreach>
+        order by count desc
+        limit #{size}
+    </select>
+
+    <select id="listCommonTop" resultType="com.chinaweal.sdcs.crcs.analyse.entity.HotWord">
+        select * from analyse_hot_word
+        where length(keyword)>1
+        <if test="type=='0101'">
+            and code_type='0101'
+        </if>
+        <if test="type=='0106'">
+            and code_type='0106'
+        </if>
+        <if test="type=='0104'">
+            and code_type='0104'
+        </if>
+        <if test="type=='0108'">
+            and code_type='0108'
+        </if>
+        <if test="type=='0110'">
+            and code_type='0110'
+        </if>
+        <if test="type=='0105'">
+            and code_type='0105'
+        </if>
+        <if test="type=='0113'">
+            and code_type='0113'
+        </if>
+        <if test="type=='010407'">
+            and code_type='010407'
+        </if>
+        <if test="type=='0114'">
+            and code_type='0114'
+        </if>
+        <if test="type=='0112'">
+            and code_type='0112'
+        </if>
+        and keyword not in
+        <foreach item="item" index="index" collection="notWords"
+                 open="(" separator="," close=")">
+            #{item}
+        </foreach>
+        order by count desc
+        limit #{size}
+    </select>
+
+    <select id="listComplaintHotWord" resultType="com.chinaweal.sdcs.crcs.analyse.entity.HotWord">
+      select count,comment from analyse_hot_word where code_type=#{map.type}
+    </select>
+
+</mapper>

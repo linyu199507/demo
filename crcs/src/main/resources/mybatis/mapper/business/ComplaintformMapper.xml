@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.sdcs.crcs.business.mapper.ComplaintformMapper">
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.business.entity.Complaintform">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="caseguid" property="caseguid" jdbcType="VARCHAR"/>
+        <result column="formtype" property="formtype" jdbcType="VARCHAR"/>
+        <result column="rqsttitle" property="rqsttitle" jdbcType="VARCHAR"/>
+        <result column="rqstperson" property="rqstperson" jdbcType="VARCHAR"/>
+        <result column="gender" property="gender" jdbcType="VARCHAR"/>
+        <result column="rqstnumber" property="rqstnumber" jdbcType="VARCHAR"/>
+        <result column="linknumber" property="linknumber" jdbcType="VARCHAR"/>
+        <result column="usertype" property="usertype" jdbcType="VARCHAR"/>
+        <result column="answertype" property="answertype" jdbcType="VARCHAR"/>
+        <result column="providetype" property="providetype" jdbcType="VARCHAR"/>
+        <result column="providelb" property="providelb" jdbcType="VARCHAR"/>
+        <result column="focus" property="focus" jdbcType="VARCHAR"/>
+        <result column="region" property="region" jdbcType="VARCHAR"/>
+        <result column="age" property="age" jdbcType="VARCHAR"/>
+        <result column="nation" property="nation" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="VARCHAR"/>
+        <result column="complaintpaper" property="complaintpaper" jdbcType="VARCHAR"/>
+        <result column="disabilityidentification" property="disabilityidentification" jdbcType="VARCHAR"/>
+        <result column="certificate" property="certificate" jdbcType="VARCHAR"/>
+        <result column="codepostal" property="codepostal" jdbcType="VARCHAR"/>
+        <result column="idnumber" property="idnumber" jdbcType="VARCHAR"/>
+        <result column="career" property="career" jdbcType="VARCHAR"/>
+        <result column="company" property="company" jdbcType="VARCHAR"/>
+        <result column="subjectname" property="subjectname" jdbcType="VARCHAR"/>
+        <result column="linktype" property="linktype" jdbcType="VARCHAR"/>
+        <result column="subjectphone" property="subjectphone" jdbcType="VARCHAR"/>
+        <result column="aicstationid" property="aicstationid" jdbcType="VARCHAR"/>
+        <result column="postcode" property="postcode" jdbcType="VARCHAR"/>
+        <result column="jyareacode" property="jyareacode" jdbcType="VARCHAR"/>
+        <result column="subjectaddress" property="subjectaddress" jdbcType="VARCHAR"/>
+        <result column="zcareacode" property="zcareacode" jdbcType="VARCHAR"/>
+        <result column="subjectzcadd" property="subjectzcadd" jdbcType="VARCHAR"/>
+        <result column="cksubjectname" property="cksubjectname" jdbcType="VARCHAR"/>
+        <result column="ckjyareacode" property="ckjyareacode" jdbcType="VARCHAR"/>
+        <result column="cksubjectaddress" property="cksubjectaddress" jdbcType="VARCHAR"/>
+        <result column="objname" property="objname" jdbcType="VARCHAR"/>
+        <result column="brand" property="brand" jdbcType="VARCHAR"/>
+        <result column="objclassify" property="objclassify" jdbcType="VARCHAR"/>
+        <result column="objmoney" property="objmoney" jdbcType="NUMERIC"/>
+        <result column="producecompany" property="producecompany" jdbcType="VARCHAR"/>
+        <result column="isweb" property="isweb" jdbcType="VARCHAR"/>
+        <result column="importmark" property="importmark" jdbcType="VARCHAR"/>
+        <result column="typespecification" property="typespecification" jdbcType="VARCHAR"/>
+        <result column="quantity" property="quantity" jdbcType="VARCHAR"/>
+        <result column="measureunit" property="measureunit" jdbcType="VARCHAR"/>
+        <result column="price" property="price" jdbcType="NUMERIC"/>
+        <result column="purchasingdate" property="purchasingdate" jdbcType="TIMESTAMP"/>
+        <result column="problemtype" property="problemtype" jdbcType="VARCHAR"/>
+        <result column="problemdescribe" property="problemdescribe" jdbcType="VARCHAR"/>
+        <result column="keyword" property="keyword" jdbcType="VARCHAR"/>
+        <result column="govlabeloutput" property="govlabeloutput" jdbcType="VARCHAR"/>
+        <result column="differserv" property="differserv" jdbcType="VARCHAR"/>
+        <result column="briefing" property="briefing" jdbcType="VARCHAR"/>
+        <result column="anestimate" property="anestimate" jdbcType="NUMERIC"/>
+        <result column="economicloss" property="economicloss" jdbcType="NUMERIC"/>
+        <result column="tortclassify" property="tortclassify" jdbcType="VARCHAR"/>
+        <result column="personalinjury" property="personalinjury" jdbcType="VARCHAR"/>
+        <result column="injurydegree" property="injurydegree" jdbcType="VARCHAR"/>
+        <result column="injuries" property="injuries" jdbcType="VARCHAR"/>
+        <result column="consumptionsafety" property="consumptionsafety" jdbcType="VARCHAR"/>
+        <result column="consumptionsafetytype" property="consumptionsafetytype" jdbcType="VARCHAR"/>
+        <result column="even" property="even" jdbcType="VARCHAR"/>
+        <result column="reduction" property="reduction" jdbcType="VARCHAR"/>
+        <result column="report" property="report" jdbcType="VARCHAR"/>
+        <result column="isoutmall" property="isoutmall" jdbcType="VARCHAR"/>
+        <result column="attachfilename" property="attachfilename" jdbcType="VARCHAR"/>
+        <result column="appealsource" property="appealsource" jdbcType="VARCHAR"/>
+        <result column="informationopen" property="informationopen" jdbcType="VARCHAR"/>
+        <result column="businesstype" property="businesstype" jdbcType="VARCHAR"/>
+        <result column="eventlevel" property="eventlevel" jdbcType="VARCHAR"/>
+        <result column="rqstaddress" property="rqstaddress" jdbcType="VARCHAR"/>
+        <result column="registrationnumber" property="registrationnumber" jdbcType="VARCHAR"/>
+        <result column="recorddate" property="recorddate" jdbcType="TIMESTAMP"/>
+        <result column="receivemode" property="receivemode" jdbcType="VARCHAR"/>
+        <result column="linkaddress" property="linkaddress" jdbcType="VARCHAR"/>
+        <result column="emaiaddress" property="emaiaddress" jdbcType="VARCHAR"/>
+        <result column="registerno" property="registerno" jdbcType="VARCHAR"/>
+        <result column="entitytype" property="entitytype" jdbcType="VARCHAR"/>
+        <result column="shoppingmode" property="shoppingmode" jdbcType="VARCHAR"/>
+        <result column="servicetype" property="servicetype" jdbcType="VARCHAR"/>
+        <result column="complaintstype" property="complaintstype" jdbcType="VARCHAR"/>
+        <result column="contentrs" property="contentrs" jdbcType="VARCHAR"/>
+        <result column="disputedate" property="disputedate" jdbcType="TIMESTAMP"/>
+        <result column="ordernumber" property="ordernumber" jdbcType="VARCHAR"/>
+        <result column="tserialnum" property="tserialnum" jdbcType="VARCHAR"/>
+        <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP"/>
+        <result column="businesstypecodeid" property="businesstypecodeid" jdbcType="VARCHAR"/>
+        <result column="entitytypecodeid" property="entitytypecodeid" jdbcType="VARCHAR"/>
+        <result column="servicetypecodeid" property="servicetypecodeid" jdbcType="VARCHAR"/>
+        <result column="complaintstypecodeid" property="complaintstypecodeid" jdbcType="VARCHAR"/>
+        <result column="objclassifycodeid" property="objclassifycodeid" jdbcType="VARCHAR"/>
+        <result column="providetypecodeid" property="providetypecodeid" jdbcType="VARCHAR"/>
+        <result column="nationality" property="nationality" jdbcType="VARCHAR"/>
+        <result column="othercontacts" property="othercontacts" jdbcType="VARCHAR"/>
+        <result column="industryname" property="industryname" jdbcType="VARCHAR"/>
+        <result column="reportedcontact" property="reportedcontact" jdbcType="VARCHAR"/>
+        <result column="productname" property="productname" jdbcType="VARCHAR"/>
+        <result column="approvalnumber" property="approvalnumber" jdbcType="VARCHAR"/>
+        <result column="lotnumber" property="lotnumber" jdbcType="VARCHAR"/>
+        <result column="salesenterprise" property="salesenterprise" jdbcType="VARCHAR"/>
+        <result column="expirationdate" property="expirationdate" jdbcType="TIMESTAMP"/>
+        <result column="accsce" property="accsce" jdbcType="VARCHAR"/>
+        <result column="feedbacktime" property="feedbacktime" jdbcType="TIMESTAMP"/>
+        <result column="todealwithtime" property="todealwithtime" jdbcType="TIMESTAMP"/>
+        <result column="industrynamecodeid" property="industrynamecodeid" jdbcType="VARCHAR"/>
+        <result column="acceptdate" property="acceptdate" jdbcType="TIMESTAMP"/>
+        <result column="assignmentdate" property="assignmentdate" jdbcType="TIMESTAMP"/>
+        <result column="feedbackdate" property="feedbackdate" jdbcType="TIMESTAMP"/>
+        <result column="transfernumber" property="transfernumber" jdbcType="VARCHAR"/>
+        <result column="incommingtype" property="incommingtype" jdbcType="VARCHAR"/>
+        <result column="detailaddress" property="detailaddress" jdbcType="VARCHAR"/>
+        <result column="subordinateplate" property="subordinateplate" jdbcType="VARCHAR"/>
+        <result column="incomingcommpany" property="incomingcommpany" jdbcType="VARCHAR"/>
+        <result column="isprofessional" property="isprofessional" jdbcType="VARCHAR"/>
+        <result column="dealcompany" property="dealcompany" jdbcType="VARCHAR"/>
+        <result column="filed" property="filed" jdbcType="VARCHAR"/>
+        <result column="shoppingplatform" property="shoppingplatform" jdbcType="VARCHAR"/>
+        <result column="acceptancenumber" property="acceptancenumber" jdbcType="VARCHAR"/>
+        <result column="transferbooknumber" property="transferbooknumber" jdbcType="VARCHAR"/>
+        <result column="businesstypecodeidnew" property="businesstypecodeidnew" jdbcType="VARCHAR"/>
+        <result column="businesstypenew" property="businesstypenew" jdbcType="VARCHAR"/>
+        <result column="registration" property="registration" jdbcType="VARCHAR"/>
+        <result column="undertake" property="undertake" jdbcType="VARCHAR"/>
+        <result column="satisfied" property="satisfied" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <resultMap id="SubjectCount" type="com.chinaweal.sdcs.crcs.statistical.common.entity.BusinessTopCount">
+        <result column="subjectname" property="subjectname" jdbcType="VARCHAR"/>
+        <result column="count" property="count" jdbcType="INTEGER"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, caseguid, formtype,
+        rqsttitle, rqstperson, gender,
+        rqstnumber, linknumber, usertype,
+        answertype, providetype, providelb,
+        focus, region, age,
+        nation, status, complaintpaper,
+        disabilityidentification, certificate, codepostal,
+        idnumber, career, company,
+        subjectname, linktype, subjectphone,
+        aicstationid, postcode, jyareacode,
+        subjectaddress, zcareacode, subjectzcadd,
+        cksubjectname, ckjyareacode, cksubjectaddress,
+        objname, brand, objclassify,
+        objmoney, producecompany, isweb,
+        importmark, typespecification, quantity,
+        measureunit, price, purchasingdate,
+        problemtype, problemdescribe, keyword,
+        govlabeloutput, differserv, briefing,
+        anestimate, economicloss, tortclassify,
+        personalinjury, injurydegree, injuries,
+        consumptionsafety, consumptionsafetytype, even,
+        reduction, report, isoutmall, attachfilename,
+        appealsource, informationopen, businesstype,
+        eventlevel,rqstaddress,
+        registrationnumber,recorddate,receivemode,
+        linkaddress,emaiaddress,registerno,entitytype,
+        shoppingmode,servicetype,complaintstype,contentrs,
+        disputedate,ordernumber,tserialnum, businesstypecodeid,objclassifycodeid,providetypecodeid,
+        nationality,othercontacts,industryname,reportedcontact,productname,approvalnumber,lotnumber,
+        salesenterprise,expirationdate,entitytypecodeid, servicetypecodeid, complaintstypecodeid, updatedate,
+        accsce, feedbacktime, todealwithtime, industrynamecodeid,acceptdate,assignmentdate,feedbackdate,
+        transfernumber,incommingtype,detailaddress,subordinateplate,incomingcommpany,isprofessional,dealcompany,
+        filed,shoppingplatform,acceptancenumber,transferbooknumber,businesstypenew,businesstypecodeidnew,
+        registration,undertake,satisfied
+    </sql>
+
+    <select id="selectBySubjectname" resultMap="SubjectCount">
+        select a.subjectname,a.count from (select subjectname,count(*) as count from complaintform group by subjectname) a order by count desc
+    </select>
+
+    <select id="selectByEntnameAndDate" resultMap="SubjectCount">
+        select a.subjectname,a.count from
+        (select subjectname,count(*) as count from complaintform
+        WHERE subjectname is not null AND recorddate BETWEEN #{begindate} AND #{enddate} group by subjectname) a order by count desc
+    </select>
+
+    <select id="selectcountbyfinishregion" resultType="integer">
+        SELECT COUNT
+	( * )
+FROM
+	tasklist
+	A LEFT JOIN complaintform b ON A.caseguid = b.caseguid
+WHERE
+	A.formtype = '02'
+	AND nextnodeid = 'end'
+	AND b.region = #{regionstr}
+	AND A.updatedate BETWEEN #{begindate} and #{enddate}
+    </select>
+
+    <select id="searchComplaintformList" resultType="com.chinaweal.sdcs.crcs.business.entity.Complaintform">
+        select t.id, t.caseguid, t.formtype,
+        t.rqsttitle, t.rqstperson, t.gender,
+        t.rqstnumber, t.linknumber, t.usertype,
+        t.answertype, t.providetype, t.providelb,
+        t.focus, t.region, t.age,
+        t.nation, t.status, t.complaintpaper,
+        t.disabilityidentification, t.certificate, t.codepostal,
+        t.idnumber, t.career, t.company,
+        t.subjectname, t.linktype, t.subjectphone,
+        t.aicstationid, t.postcode, t.jyareacode,
+        t.subjectaddress, t.zcareacode, t.subjectzcadd,
+        t.cksubjectname, t.ckjyareacode, t.cksubjectaddress,
+        t.objname, t.brand, t.objclassify,
+        t.objmoney, t.producecompany, t.isweb,
+        t.importmark, t.typespecification, t.quantity,
+        t.measureunit, t.price, t.purchasingdate,
+        t.problemtype, t.problemdescribe, t.keyword,
+        t.govlabeloutput, t.differserv, t.briefing,
+        t.anestimate, t.economicloss, t.tortclassify,
+        t.personalinjury, t.injurydegree, t.injuries,
+        t.consumptionsafety, t.consumptionsafetytype, t.even,
+        t.reduction, t.report, t.isoutmall, t.attachfilename,
+        t.appealsource, t.informationopen, t.businesstype,
+        t.eventlevel,t.rqstaddress,
+        t.registrationnumber,t.recorddate,t.receivemode,
+        t.linkaddress,t.emaiaddress,t.registerno,t.entitytype,
+        t.shoppingmode,t.servicetype,t.complaintstype,t.contentrs,
+        t.disputedate,t.ordernumber,t.tserialnum, t.businesstypecodeid,t.objclassifycodeid,t.providetypecodeid,
+        t.nationality,t.othercontacts,t.industryname,t.reportedcontact,t.productname,t.approvalnumber,t.lotnumber,
+        t.salesenterprise,t.expirationdate,t.entitytypecodeid, t.servicetypecodeid, t.complaintstypecodeid, t.updatedate,
+        t.accsce, t.feedbacktime, t.todealwithtime, t.industrynamecodeid,t.acceptdate,t.assignmentdate,t.feedbackdate,
+        t.transfernumber,t.incommingtype,t.detailaddress,t.subordinateplate,t.incomingcommpany,t.isprofessional,t.dealcompany,
+        t.filed,t.shoppingplatform,t.acceptancenumber,t.transferbooknumber,t.updatedate
+        from complaintform t inner join taskList a on t.caseguid = a.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.rqsttitle != null and map.rqsttitle !=''">
+                    and t.rqsttitle like '%' || #{map.rqsttitle} || '%'
+                </if>
+                <if test="map.subjectname != null and map.subjectname !=''">
+                    and t.subjectname like '%' || #{map.subjectname} || '%'
+                </if>
+            </if>
+            and systemsource = '01'
+        </where>
+    </select>
+
+</mapper>

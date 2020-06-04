@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.sdcs.crcs.business.mapper.HandelresultMapper">
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.business.entity.Handelresult">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="caseguid" property="caseguid" jdbcType="VARCHAR"/>
+        <result column="finalresult" property="finalresult" jdbcType="VARCHAR"/>
+        <result column="handler" property="handler" jdbcType="VARCHAR"/>
+        <result column="handleruserid" property="handleruserid" jdbcType="VARCHAR"/>
+        <result column="handletime" property="handletime" jdbcType="TIMESTAMP"/>
+        <result column="isfeedback" property="isfeedback" jdbcType="CHAR"/>
+        <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, caseguid, finalresult,
+        handler, handleruserid, handletime,
+        isfeedback, updatedate
+    </sql>
+</mapper>

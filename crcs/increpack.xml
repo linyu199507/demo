@@ -1,0 +1,12 @@
+<increpack>
+    <!-- 配置需要打包的本地文件清单（打包方式为file时生效） -->
+    <include></include>
+    <!-- 本地化配置文件，不用打包，以手工操作的方式进行升级 -->
+    <exclude>
+        <file>/src/main/resources/config/fsmc.properties</file>
+        <file>/src/main/resources/config/jdbc.properties</file>
+        <file>/src/main/resources/config/log4j.properties</file>
+        <file>/src/main/resources/config/redis.properties</file>
+        <file>/src/main/webapp/WEB-INF/web.xml</file>
+    </exclude>
+</increpack>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.sdcs.crcs.crawler.bmfw.mapper.InrequestMapper">
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.crawler.bmfw.entity.Inrequest">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="caseguid" property="caseguid" jdbcType="VARCHAR"/>
+        <result column="opiniontimeshould" property="opiniontimeshould" jdbcType="TIMESTAMP"/>
+        <result column="opiniontimesurplus" property="opiniontimesurplus" jdbcType="TIMESTAMP"/>
+        <result column="opiniontime" property="opiniontime" jdbcType="TIMESTAMP"/>
+        <result column="accepttimeshould" property="accepttimeshould" jdbcType="TIMESTAMP"/>
+        <result column="accepttimesurplus" property="accepttimesurplus" jdbcType="TIMESTAMP"/>
+        <result column="accepttime" property="accepttime" jdbcType="TIMESTAMP"/>
+        <result column="caseputtimeshould" property="caseputtimeshould" jdbcType="TIMESTAMP"/>
+        <result column="caseputtimesurplus" property="caseputtimesurplus" jdbcType="TIMESTAMP"/>
+        <result column="caseputtime" property="caseputtime" jdbcType="TIMESTAMP"/>
+        <result column="resulttimeshould" property="resulttimeshould" jdbcType="TIMESTAMP"/>
+        <result column="resulttimesurplus" property="resulttimesurplus" jdbcType="TIMESTAMP"/>
+        <result column="resulttime" property="resulttime" jdbcType="TIMESTAMP"/>
+        <result column="opiniontimeminstr" property="opiniontimeminstr" jdbcType="VARCHAR"/>
+        <result column="accepttimeminstr" property="accepttimeminstr" jdbcType="VARCHAR"/>
+        <result column="caseputtimeminstr" property="caseputtimeminstr" jdbcType="VARCHAR"/>
+        <result column="resulttimeminstr" property="resulttimeminstr" jdbcType="VARCHAR"/>
+        <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, caseguid, opiniontimeshould,
+        opiniontimesurplus, opiniontime, accepttimeshould,
+        accepttimesurplus, accepttime, caseputtimeshould,
+        caseputtimesurplus, caseputtime, resulttimeshould,
+        resulttimesurplus, resulttime, opiniontimeminstr,
+        accepttimeminstr, caseputtimeminstr, resulttimeminstr,
+        updatedate
+    </sql>
+</mapper>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinaweal.sdcs.crcs.system.mapper.LoglistMapper">
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.system.mapper.LoglistMapper">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="operationid" property="operationid" jdbcType="VARCHAR"/>
+        <result column="operationname" property="operationname" jdbcType="VARCHAR"/>
+        <result column="operationinfo" property="operationinfo" jdbcType="VARCHAR"/>
+        <result column="processid" property="processid" jdbcType="VARCHAR"/>
+        <result column="caseguid" property="caseguid" jdbcType="VARCHAR"/>
+        <result column="operationtime" property="operationtime" jdbcType="TIMESTAMP"/>
+        <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, operationid, operationname, operationinfo,
+        processid, caseguid, operationtime, updatedate
+    </sql>
+</mapper>

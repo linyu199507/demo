@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinaweal.sdcs.crcs.bigScreenDisplay.mapper.BrandVOMapper">
+
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.bigScreenDisplay.entity.BrandVO">
+        <result column="x" property="x" jdbcType="VARCHAR"/>
+        <result column="y" property="y" jdbcType="INTEGER"/>
+        <result column="s" property="s" jdbcType="INTEGER"/>
+        <!--<result column="endtotal" property="endtotal" jdbcType="INTEGER"/>-->
+        <!--<result column="toeconomytotal" property="toeconomytotal" jdbcType="INTEGER"/>-->
+        <!--<result column="recovermoney" property="recovermoney" jdbcType="NUMERIC"/>-->
+    </resultMap>
+
+
+    <select id="searchBrandByMap" parameterType="java.util.List" resultMap="BaseResultMap">
+        SELECT
+        b.brand as x,
+        count( * ) AS y,
+        1 as s
+        FROM
+        complaintform b
+        INNER JOIN tasklist a ON a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        WHERE
+
+        b.brand IS NOT NULL and b.brand !='无' and b.brand != '' and b.brand != '其他' and b.brand != '无法提供' and b.brand != '不清楚'
+        <if test="map != null">
+            <if test="map.begindate != null and map.begindate !=''">
+                <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+            <if test="map.enddate != null and map.enddate !=''">
+                <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+        </if>
+        GROUP BY b.brand ORDER BY y DESC
+    </select>
+
+
+    <select id="searchIllegalTOP10ByMap" parameterType="java.util.List" resultMap="BaseResultMap">
+        select
+        sum(y) as y
+        from
+        (select b.illegalrulescodeid, count(*) as y   from economyform b
+        inner join tasklist a on a.caseguid = b.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.type != null and map.type !=''">
+                    and b.illegalrulescodeid like #{map.type}||'%'
+                </if>
+            </if>
+        </where>
+        group by b.illegalrulescodeid) a
+    </select>
+
+
+    <select id="searchProblemOfComplaintByMap" parameterType="java.util.List" resultMap="BaseResultMap">
+        select
+        count(1) as y --投诉总数（件）
+        from tasklist a
+        inner join complaintform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.type != null and map.type !=''">
+                    and  b.complaintstypecodeid LIKE #{map.type}||'%'
+                </if>
+            </if>
+        </where>
+    </select>
+
+
+    <select id="searchProblemOfEconomyByMap" parameterType="java.util.List" resultMap="BaseResultMap">
+        select
+        count(1) as y --举报总数（件）
+        from tasklist a
+        inner join economyform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.type != null and map.type !=''">
+                    and (   b.problemtypecodeid LIKE #{map.type}||'%'  or  b.reportprovidelbcodeid LIKE #{map.type}||'%'  )
+                </if>
+            </if>
+        </where>
+    </select>
+
+
+    <select id="searchObjectOfComplaint" parameterType="java.util.List" resultMap="BaseResultMap">
+        select
+        count(1) as y --举报总数（件）
+        from tasklist a
+        inner join complaintform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.type != null and map.type !=''">
+                    and   b.objclassifycodeid LIKE #{map.type}||'%'
+                </if>
+            </if>
+        </where>
+    </select>
+
+
+
+
+</mapper>

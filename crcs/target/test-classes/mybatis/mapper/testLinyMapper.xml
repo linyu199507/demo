@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.mapper.testLinyMapper">
+    <resultMap id="baseFormLevelMap" type="com.chinaweal.entity.testLiny">
+        <id column="id" property="id"/>
+        <result property="caseguid" column="caseguid"/>
+        <result property="sernumber" column="sernumber"/>
+        <result property="system" column="system"/>
+        <result property="type" column="type"/>
+        <result property="update" column="update"/>
+
+
+    </resultMap>
+    <select id="findBaseFormLevelByParentid" resultMap="baseFormLevelMap">
+        select * from base_form_level where parentid=#{id}
+    </select>
+</mapper>

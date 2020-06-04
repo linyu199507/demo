@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.sdcs.crcs.crawler.bmfw.mapper.AskdepthandleMapper">
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.crawler.bmfw.entity.Askdepthandle">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="caseguid" property="caseguid" jdbcType="VARCHAR"/>
+        <result column="serialnum" property="serialnum" jdbcType="VARCHAR"/>
+        <result column="activitytype" property="activitytype" jdbcType="VARCHAR"/>
+        <result column="operatorouname" property="operatorouname" jdbcType="VARCHAR"/>
+        <result column="operateusername" property="operateusername" jdbcType="VARCHAR"/>
+        <result column="opeartionstatus" property="opeartionstatus" jdbcType="VARCHAR"/>
+        <result column="handletime" property="handletime" jdbcType="TIMESTAMP"/>
+        <result column="handleopinion" property="handleopinion" jdbcType="VARCHAR"/>
+        <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, caseguid, serialnum,
+        activitytype, operatorouname, operateusername,
+        opeartionstatus, handletime, handleopinion,
+        updatedate
+    </sql>
+</mapper>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinaweal.sdcs.crcs.bigScreenDisplay.mapper.DataMapMapper">
+
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.bigScreenDisplay.entity.MapVO">
+        <result column="lng" property="lng" jdbcType="DOUBLE"/>
+        <result column="lat" property="lat" jdbcType="DOUBLE"/>
+        <result column="info" property="info" jdbcType="INTEGER"/>
+        <!--<result column="endtotal" property="endtotal" jdbcType="INTEGER"/>-->
+        <!--<result column="toeconomytotal" property="toeconomytotal" jdbcType="INTEGER"/>-->
+        <!--<result column="recovermoney" property="recovermoney" jdbcType="NUMERIC"/>-->
+    </resultMap>
+
+
+    <select id="searchDataMapByMap" parameterType="java.util.List" resultMap="BaseResultMap">
+        SELECT
+        count( * ) as info
+        FROM
+        tasklist
+        <where>
+          <if test="map != null">
+            <if test="map.begindate != null and map.begindate !=''">
+                <![CDATA[ and createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+            <if test="map.enddate != null and map.enddate !=''">
+                <![CDATA[ and createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+            <if test="map.region != null and map.region !=''">
+                and handleregion = #{map.region}
+            </if>
+          </if>
+        </where>
+    </select>
+
+
+    <select id="searchAllDataMapByMap" parameterType="java.util.List" resultMap="BaseResultMap">
+        SELECT
+        count( * ) as value
+        FROM
+        tasklist
+        where state = '0'
+          <if test="map != null">
+            <if test="map.begindate != null and map.begindate !=''">
+                <![CDATA[ and createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+            <if test="map.enddate != null and map.enddate !=''">
+                <![CDATA[ and createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+          </if>
+    </select>
+
+
+
+</mapper>

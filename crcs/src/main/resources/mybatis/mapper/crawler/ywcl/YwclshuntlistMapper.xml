@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.sdcs.crcs.crawler.ywcl.mapper.YwclshuntlistMapper">
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.crawler.ywcl.entity.Ywclshuntlist">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="caseid" property="caseid" jdbcType="VARCHAR"/>
+        <result column="infotype" property="infotype" jdbcType="VARCHAR"/>
+        <result column="regtime" property="regtime" jdbcType="TIMESTAMP"/>
+        <result column="providername" property="providername" jdbcType="VARCHAR"/>
+        <result column="invopt" property="invopt" jdbcType="VARCHAR"/>
+        <result column="regdeptname" property="regdeptname" jdbcType="VARCHAR"/>
+        <result column="accregpername" property="accregpername" jdbcType="VARCHAR"/>
+        <result column="applidique" property="applidique" jdbcType="VARCHAR"/>
+        <result column="clbmname" property="clbmname" jdbcType="VARCHAR"/>
+        <result column="regno" property="regno" jdbcType="VARCHAR"/>
+        <result column="runid" property="runid" jdbcType="VARCHAR"/>
+        <result column="listtype" property="listtype" jdbcType="VARCHAR"/>
+        <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP"/>
+        <result column="distwhiname" property="distwhiname" jdbcType="VARCHAR"/>
+        <result column="detailsurl" property="detailsurl" jdbcType="VARCHAR"/>
+        <result column="regidurl" property="regidurl" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="VARCHAR"/>
+        <result column="state" property="state" jdbcType="VARCHAR"/>
+        <result column="cwcs" property="cwcs" jdbcType="VARCHAR"/>
+        <result column="dubcs" property="dubcs" jdbcType="VARCHAR"/>
+        <result column="firstblqx" property="firstblqx" jdbcType="TIMESTAMP"/>
+        <result column="blqx" property="blqx" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, caseid, infotype,
+        regtime, providername, invopt,
+        regdeptname, accregpername, applidique,
+        clbmname, regno, runid,
+        listtype, updatedate, distwhiname,
+        detailsurl, regidurl, status,
+        state, cwcs, dubcs, firstblqx, blqx
+    </sql>
+</mapper>

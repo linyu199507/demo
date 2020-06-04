@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.sdcs.crcs.business.mapper.NewassignMapper">
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.business.entity.Newassign">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="caseguid" property="caseguid" jdbcType="VARCHAR"/>
+        <result column="serialnum" property="serialnum" jdbcType="VARCHAR"/>
+        <result column="rqsttitle" property="rqsttitle" jdbcType="VARCHAR"/>
+        <result column="content" property="content" jdbcType="VARCHAR"/>
+        <result column="createdate" property="createdate" jdbcType="TIMESTAMP"/>
+        <result column="iscp" property="iscp" jdbcType="VARCHAR"/>
+        <result column="state" property="state" jdbcType="VARCHAR"/>
+        <result column="assigndate" property="assigndate" jdbcType="TIMESTAMP"/>
+        <result column="nextnodeid" property="nextnodeid" jdbcType="VARCHAR"/>
+        <result column="fromnodeid" property="fromnodeid" jdbcType="VARCHAR"/>
+        <result column="bustype" property="bustype" jdbcType="VARCHAR"/>
+        <result column="systemsource" property="systemsource" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, caseguid, serialnum,rqsttitle,content,createdate,iscp,state,assigndate,nextnodeid,fromnodeid,bustype,systemsource
+    </sql>
+    <!--查询当天新派单-->
+    <select id="newAssign" resultMap="BaseResultMap">
+        select * from newassign where createdate&gt;=CURRENT_DATE
+    </select>
+</mapper>

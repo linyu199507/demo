@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.sdcs.crcs.crawler.bmfw.mapper.ComplaintmoduleMapper">
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.crawler.bmfw.entity.Complaintmodule">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="caseguid" property="caseguid" jdbcType="VARCHAR"/>
+        <result column="formtype" property="formtype" jdbcType="VARCHAR"/>
+        <result column="rqsttitle" property="rqsttitle" jdbcType="VARCHAR"/>
+        <result column="rqstperson" property="rqstperson" jdbcType="VARCHAR"/>
+        <result column="gender" property="gender" jdbcType="VARCHAR"/>
+        <result column="rqstnumber" property="rqstnumber" jdbcType="VARCHAR"/>
+        <result column="linknumber" property="linknumber" jdbcType="VARCHAR"/>
+        <result column="usertype" property="usertype" jdbcType="VARCHAR"/>
+        <result column="answertype" property="answertype" jdbcType="VARCHAR"/>
+        <result column="providetype" property="providetype" jdbcType="VARCHAR"/>
+        <result column="providelb" property="providelb" jdbcType="VARCHAR"/>
+        <result column="focus" property="focus" jdbcType="VARCHAR"/>
+        <result column="region" property="region" jdbcType="VARCHAR"/>
+        <result column="age" property="age" jdbcType="VARCHAR"/>
+        <result column="nation" property="nation" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="VARCHAR"/>
+        <result column="complaintpaper" property="complaintpaper" jdbcType="VARCHAR"/>
+        <result column="disabilityidentification" property="disabilityidentification" jdbcType="VARCHAR"/>
+        <result column="certificate" property="certificate" jdbcType="VARCHAR"/>
+        <result column="codepostal" property="codepostal" jdbcType="VARCHAR"/>
+        <result column="idnumber" property="idnumber" jdbcType="VARCHAR"/>
+        <result column="career" property="career" jdbcType="VARCHAR"/>
+        <result column="company" property="company" jdbcType="VARCHAR"/>
+        <result column="subjectname" property="subjectname" jdbcType="VARCHAR"/>
+        <result column="linktype" property="linktype" jdbcType="VARCHAR"/>
+        <result column="subjectphone" property="subjectphone" jdbcType="VARCHAR"/>
+        <result column="aicstationid" property="aicstationid" jdbcType="VARCHAR"/>
+        <result column="postcode" property="postcode" jdbcType="VARCHAR"/>
+        <result column="jyareacode" property="jyareacode" jdbcType="VARCHAR"/>
+        <result column="subjectaddress" property="subjectaddress" jdbcType="VARCHAR"/>
+        <result column="zcareacode" property="zcareacode" jdbcType="VARCHAR"/>
+        <result column="subjectzcadd" property="subjectzcadd" jdbcType="VARCHAR"/>
+        <result column="cksubjectname" property="cksubjectname" jdbcType="VARCHAR"/>
+        <result column="ckjyareacode" property="ckjyareacode" jdbcType="VARCHAR"/>
+        <result column="cksubjectaddress" property="cksubjectaddress" jdbcType="VARCHAR"/>
+        <result column="objname" property="objname" jdbcType="VARCHAR"/>
+        <result column="brand" property="brand" jdbcType="VARCHAR"/>
+        <result column="objclassify" property="objclassify" jdbcType="VARCHAR"/>
+        <result column="objmoney" property="objmoney" jdbcType="NUMERIC"/>
+        <result column="producecompany" property="producecompany" jdbcType="VARCHAR"/>
+        <result column="isweb" property="isweb" jdbcType="VARCHAR"/>
+        <result column="importmark" property="importmark" jdbcType="VARCHAR"/>
+        <result column="typespecification" property="typespecification" jdbcType="VARCHAR"/>
+        <result column="quantity" property="quantity" jdbcType="VARCHAR"/>
+        <result column="measureunit" property="measureunit" jdbcType="VARCHAR"/>
+        <result column="price" property="price" jdbcType="NUMERIC"/>
+        <result column="purchasingdate" property="purchasingdate" jdbcType="TIMESTAMP"/>
+        <result column="problemtype" property="problemtype" jdbcType="VARCHAR"/>
+        <result column="problemdescribe" property="problemdescribe" jdbcType="VARCHAR"/>
+        <result column="keyword" property="keyword" jdbcType="VARCHAR"/>
+        <result column="govlabeloutput" property="govlabeloutput" jdbcType="VARCHAR"/>
+        <result column="differserv" property="differserv" jdbcType="VARCHAR"/>
+        <result column="briefing" property="briefing" jdbcType="VARCHAR"/>
+        <result column="anestimate" property="anestimate" jdbcType="NUMERIC"/>
+        <result column="economicloss" property="economicloss" jdbcType="NUMERIC"/>
+        <result column="tortclassify" property="tortclassify" jdbcType="VARCHAR"/>
+        <result column="personalinjury" property="personalinjury" jdbcType="VARCHAR"/>
+        <result column="injurydegree" property="injurydegree" jdbcType="VARCHAR"/>
+        <result column="injuries" property="injuries" jdbcType="VARCHAR"/>
+        <result column="consumptionsafety" property="consumptionsafety" jdbcType="VARCHAR"/>
+        <result column="consumptionsafetytype" property="consumptionsafetytype" jdbcType="VARCHAR"/>
+        <result column="even" property="even" jdbcType="VARCHAR"/>
+        <result column="reduction" property="reduction" jdbcType="VARCHAR"/>
+        <result column="report" property="report" jdbcType="VARCHAR"/>
+        <result column="isoutmall" property="isoutmall" jdbcType="VARCHAR"/>
+        <result column="attachfilename" property="attachfilename" jdbcType="VARCHAR"/>
+        <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, caseguid, formtype, 
+        rqsttitle, rqstperson, gender, 
+        rqstnumber, linknumber, usertype, 
+        answertype, providetype, providelb, 
+        focus, region, age, 
+        nation, status, complaintpaper, 
+        disabilityidentification, certificate, codepostal, 
+        idnumber, career, company, 
+        subjectname, linktype, subjectphone, 
+        aicstationid, postcode, jyareacode, 
+        subjectaddress, zcareacode, subjectzcadd, 
+        cksubjectname, ckjyareacode, cksubjectaddress, 
+        objname, brand, objclassify, 
+        objmoney, producecompany, isweb, 
+        importmark, typespecification, quantity, 
+        measureunit, price, purchasingdate, 
+        problemtype, problemdescribe, keyword, 
+        govlabeloutput, differserv, briefing, 
+        anestimate, economicloss, tortclassify, 
+        personalinjury, injurydegree, injuries, 
+        consumptionsafety, consumptionsafetytype, even, 
+        reduction, report, isoutmall, 
+        attachfilename, updatedate
+    </sql>
+
+    <select id="selectBySubjectname" resultType="java.util.HashMap">
+        select a.subjectname,a.count from (select subjectname,count(*) as count from complaintmodule group by subjectname) a order by count desc
+    </select>
+
+    <select id="selectBySubjectnameAndDate" resultType="java.util.HashMap">
+        select a.subjectname,a.count from
+        (select subjectname,count(*) as count from complaintmodule
+        WHERE updatedate BETWEEN #{begindate} AND #{enddate} group by subjectname) a order by count desc
+    </select>
+</mapper>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.sdcs.crcs.business.mapper.Business12315VOMapper">
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.business.entity.Business12315VO">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="caseguid" property="caseguid" jdbcType="VARCHAR"/>
+        <result column="focus" property="focus" jdbcType="VARCHAR"/>
+        <result column="serialnum" property="serialnum" jdbcType="VARCHAR"/>
+        <result column="tserialnum" property="tserialnum" jdbcType="VARCHAR"/>
+        <result column="rqsttitle" property="rqsttitle" jdbcType="VARCHAR"/>
+        <result column="accordtype" property="accordtype" jdbcType="VARCHAR"/>
+        <result column="labelname" property="labelname" jdbcType="VARCHAR"/>
+        <result column="assigndate" property="assigndate" jdbcType="TIMESTAMP"/>
+        <result column="expiredate" property="expiredate" jdbcType="TIMESTAMP"/>
+        <result column="resulttimemin" property="resulttimemin" jdbcType="VARCHAR"/>
+        <result column="systemsource" property="systemsource" jdbcType="VARCHAR"/>
+        <result column="issignin" property="issignin" jdbcType="VARCHAR"/>
+        <result column="signinaccount" property="signinaccount" jdbcType="VARCHAR"/>
+        <result column="signinname" property="signinname" jdbcType="VARCHAR"/>
+        <result column="signinuserid" property="signinuserid" jdbcType="VARCHAR"/>
+        <result column="signindeptid" property="signindeptid" jdbcType="VARCHAR"/>
+        <result column="signdate" property="signdate" jdbcType="TIMESTAMP"/>
+        <result column="formtype" property="formtype" jdbcType="VARCHAR"/>
+        <result column="operate" property="operate" jdbcType="VARCHAR"/>
+        <result column="nextnodeid" property="nextnodeid" jdbcType="VARCHAR"/>
+        <result column="state" property="state" jdbcType="VARCHAR"/>
+        <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP"/>
+        <result column="fromnodeid" property="fromnodeid" jdbcType="VARCHAR"/>
+        <result column="ismain" property="ismain" jdbcType="VARCHAR"/>
+        <result column="isaccept" property="isaccept" jdbcType="VARCHAR"/>
+        <result column="senderid" property="senderid" jdbcType="VARCHAR"/>
+        <result column="sdexpirationdate" property="sdexpirationdate" jdbcType="TIMESTAMP"/>
+        <result column="worktype" property="worktype" jdbcType="VARCHAR"/>
+        <result column="regionid" property="regionid" jdbcType="VARCHAR"/>
+        <result column="bustype" property="bustype" jdbcType="VARCHAR"/>
+        <result column="complainant" property="complainant" jdbcType="VARCHAR"/>
+        <result column="complainanted" property="complainanted" jdbcType="VARCHAR"/>
+        <result column="phone" property="phone" jdbcType="VARCHAR"/>
+        <result column="address" property="address" jdbcType="VARCHAR"/>
+        <result column="content" property="content" jdbcType="VARCHAR"/>
+        <result column="results" property="results" jdbcType="VARCHAR"/>
+        <result column="classification" property="classification" jdbcType="VARCHAR"/>
+        <result column="handleregion" property="handleregion" jdbcType="VARCHAR"/>
+        <result column="handledeptid" property="handledeptid" jdbcType="VARCHAR"/>
+        <result column="handledeptname" property="handledeptname" jdbcType="VARCHAR"/>
+        <result column="regdeptname" property="regdeptname" jdbcType="VARCHAR"/>
+        <result column="registrant" property="registrant" jdbcType="VARCHAR"/>
+        <result column="applealtocase" property="applealtocase" jdbcType="VARCHAR"/>
+        <result column="jyareacode" property="jyareacode" jdbcType="VARCHAR"/>
+        <result column="financialloss" property="financialloss" jdbcType="NUMERIC"/>
+        <result column="doublemoney" property="doublemoney" jdbcType="NUMERIC"/>
+        <result column="brand" property="brand" jdbcType="VARCHAR"/>
+        <result column="problemtype" property="problemtype" jdbcType="VARCHAR"/>
+        <result column="keyword" property="keyword" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, caseguid, focus,
+        serialnum, tserialnum, rqsttitle,
+        accordtype, labelname, assigndate,
+        expiredate, resulttimemin, systemsource,
+        issignin, signinaccount, signinname,
+        signinuserid, signindeptid, signdate, formtype,
+        operate, nextnodeid, state, ismain,
+        fromnodeid, isaccept, senderid, updatedate,
+        sdexpirationdate,worktype, regionid, bustype,complainant,
+        complainanted,phone,address,content,results,classification,
+        handleregion, handledeptid,handledeptname,regdeptname,registrant,
+        applealtocase, jyareacode, doublemoney, brand, problemtype, keyword
+    </sql>
+
+    <!-- 综合查询-->
+    <select id="searchBusiness12315Info" resultMap="BaseResultMap">
+        select t.id, t.caseguid, t.focus, t.serialnum, t.tserialnum, t.rqsttitle, t.accordtype,
+        t.labelname, t.assigndate, t.expiredate, t.systemsource, t.formtype, t.bustype, t.contents, t.handleopinion,
+        t.complainant,t.complainanted,t.phone,t.address,t.content,t.results,t.classification,applealtocase, operate, jyareacode,
+        financialloss, doublemoney, brand, problemtype,keyword,t.handledeptname,t.sdexpirationdate
+        from
+        (select
+        a.id,a.caseguid,a.focus,a.serialnum,a.tserialnum,a.rqsttitle,a.accordtype,a.labelname,a.assigndate,a.expiredate,a.systemsource,
+        a.formtype,a.bustype,b.isweb as buyInInternet,b.rqstperson as serialName,b.rqstnumber as serialTel,b.rqstaddress as serialAddress,
+        b.appealsource as appealsource,b.businesstype as businesstype,b.subjectname as subjectname,b.objclassify as objectcategory,
+        b.brand as brand,b.servicetype as servicetype,c.resultsofmediation as resultsofmediation,b.region as region,b.keyword as keyword,
+        b.contentrs as contents,c.handleopinion,a.handleregion,a.handledeptid,b.rqstperson as complainant,b.subjectname as complainanted,
+        b.subjectphone as phone,b.subjectaddress as address,b.problemdescribe as content,c.handleopinion as results,b.entitytype as classification,
+        c.applealtocase as applealtocase,a.operate as operate,b.jyareacode as jyareacode,c.financialloss as financialloss,c.doublemoney as doublemoney,
+        b.problemtype as problemtype,a.handledeptname,a.sdexpirationdate
+        from tasklist a
+        inner join complaintform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        union all
+        select
+        a.id,a.caseguid,a.focus,a.serialnum,a.tserialnum,a.rqsttitle,a.accordtype,a.labelname,a.assigndate,a.expiredate,a.systemsource,
+        a.formtype,a.bustype,'0' as buyInInternet,b.name as serialName,b.linkphonenumber as serialTel,'' as serialAddress,
+        '' as appealsource,'' as businesstype,b.entname as subjectname,'' as objectcategory,
+        '' as brand,'' as servicetype,c.resultsofmediation as resultsofmediation,b.region as region,'' as keyword,
+        b.rqstcontent as contents,c.handleopinion,a.handleregion,a.handledeptid,b.name as complainant,'' as complainanted,
+        b.rqstphonenumber as phone,b.address as address,b.rqstcontent as content,c.handleopinion as results,b.usertype as classification,
+        c.applealtocase as applealtocase,a.operate as operate,b.region as jyareacode,c.financialloss as financialloss,c.doublemoney as doublemoney,
+        '' as problemtype,a.handledeptname,a.sdexpirationdate
+        from tasklist a
+        inner join commomform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        union all
+        select
+        a.id,a.caseguid,a.focus,a.serialnum,a.tserialnum,a.rqsttitle,a.accordtype,a.labelname,a.assigndate,a.expiredate,a.systemsource,
+        a.formtype,a.bustype,b.isweb as buyInInternet,b.rqstperson as serialName,b.rqstnumber as serialTel,b.rqstaddress as serialAddress,
+        b.appealsource as appealsource,b.businesstype as businesstype,b.subjectname as subjectname,b.objclassify as objectcategory,
+        b.brand as brand,b.objname as servicetype,c.resultsofmediation as resultsofmediation,b.region as region,b.keyword as keyword,
+        b.problemdescribe as contents,c.handleopinion,a.handleregion,a.handledeptid,b.rqstperson as complainant,b.subjectname as complainanted,
+        b.reportedcontactnumber as phone,b.subjectaddress as address,b.problemdescribe as content,c.handleopinion as results,b.objectcategory as classification,
+        c.applealtocase as applealtocase,a.operate as operate,b.jyareacode as jyareacode,c.financialloss as financialloss,c.doublemoney as doublemoney,
+        b.problemtype as problemtype,a.handledeptname,a.sdexpirationdate
+        from tasklist a
+        inner join economyform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        union all
+        select
+        a.id,a.caseguid,a.focus,a.serialnum,a.tserialnum,a.rqsttitle,a.accordtype,a.labelname,a.assigndate,a.expiredate,a.systemsource,
+        a.formtype,a.bustype,'0' as buyInInternet,b.name as serialName,b.linknumber as serialTel,b.address as serialAddress,
+        b.appealsource as appealsource,b.businesstype as businesstype,'' as subjectname,'' as objectcategory,
+        '' as brand,'' as servicetype,c.resultsofmediation as resultsofmediation,b.region as region,'' as keyword,
+        b.rqstcontent as contents,c.handleopinion,a.handleregion,a.handledeptid,b.name as complainant,'' as complainanted,
+        b.rqstnumber as phone,b.address as address,b.rqstcontent as content,c.handleopinion as results,b.category as classification,
+        c.applealtocase as applealtocase,a.operate as operate,b.region as jyareacode,c.financialloss as financialloss,c.doublemoney as doublemoney,
+        '' as problemtype,a.handledeptname,a.sdexpirationdate
+        from tasklist a
+        inner join consultationform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        ) t
+        <where>
+            <if test="map != null">
+                <if test="map.focus != null and map.focus !=''">
+                    and t.focus = #{map.focus}
+                </if>
+                <if test="map.serialnum != null and map.serialnum !=''">
+                    and t.serialnum like '%' || #{map.serialnum} || '%'
+                </if>
+                <if test="map.tserialnum != null and map.tserialnum !=''">
+                    and t.tserialnum like '%' || #{map.tserialnum} || '%'
+                </if>
+                <if test="map.rqsttitle != null and map.rqsttitle !=''">
+                    and t.rqsttitle like '%' || #{map.rqsttitle} || '%'
+                </if>
+                <if test="map.createdate != null and map.createdate !=''">
+                    <![CDATA[ and t.assigndate  >=  to_timestamp(#{map.createdate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.duetime != null and map.duetime !=''">
+                    <![CDATA[ and t.assigndate <= to_timestamp(#{map.duetime}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.buyInInternet != null and map.buyInInternet !=''">
+                    and t.isweb = #{map.buyInInternet}
+                </if>
+                <if test="map.serialName != null and map.serialName !=''">
+                    and t.serialName like '%' || #{map.serialName} || '%'
+                </if>
+                <if test="map.serialTel != null and map.serialTel !=''">
+                    and t.serialTel like '%' || #{map.serialTel} || '%'
+                </if>
+                <if test="map.serialAddress != null and map.serialAddress !=''">
+                    and t.serialAddress like '%' || #{map.serialAddress} || '%'
+                </if>
+                <if test="map.appealsource != null and map.appealsource !=''">
+                    and t.appealsource like '%' || #{map.appealsource} || '%'
+                </if>
+                <if test="map.businesstype != null and map.businesstype !=''">
+                    and t.businesstype = #{map.businesstype}
+                </if>
+                <if test="map.subjectname != null and map.subjectname !=''">
+                    and t.subjectname like '%' || #{map.subjectname} || '%'
+                </if>
+                <if test="map.objectcategory != null and map.objectcategory !=''">
+                    and t.objectcategory = #{map.objectcategory}
+                </if>
+                <if test="map.brand != null and map.brand !=''">
+                    and t.brand like '%' #{map.brand} || '%'
+                </if>
+                <if test="map.keyword != null and map.keyword !=''">
+                    and t.keyword like '%' #{map.keyword} || '%'
+                </if>
+                <if test="map.bustype != null and map.bustype !=''">
+                    and t.bustype = #{map.bustype}
+                </if>
+                <if test="map.content != null and map.content !=''">
+                    and t.contents like '%' || #{map.content} || '%'
+                </if>
+                <if test="map.handleopinion != null and map.handleopinion !=''">
+                    and t.handleopinion like '%' || #{map.handleopinion} || '%'
+                </if>
+                <if test="map.systemsource != null and map.systemsource !=''">
+                    and t.systemsource = #{map.systemsource}
+                </if>
+                <if test="map.servicetype != null and map.servicetype !=''">
+                    and t.servicetype like '%' || #{map.servicetype} || '%'
+                </if>
+                <!-- 选择处理单位的时候，既可能是机构也可能是部门 2019.11.06 -->
+                <if test="map.handleregion != null and map.handleregion !=''">
+                    and (t.handleregion = #{map.handleregion} or t.handledeptid = #{map.handleregion})
+                </if>
+                <if test="map.handledeptid != null and map.handledeptid !=''">
+                    and t.handledeptid = #{map.handledeptid}
+                </if>
+                <if test="map.applealtocase != null and map.applealtocase !=''">
+                    and t.applealtocase = #{map.applealtocase}
+                </if>
+                <if test="map.beginFinancialloss != null and map.beginFinancialloss !=''">
+                    <![CDATA[ and t.financialloss  >=  #{map.beginFinancialloss}]]>
+                </if>
+                <if test="map.endFinancialloss != null and map.endFinancialloss !=''">
+                    <![CDATA[ and t.financialloss  <=  #{map.endFinancialloss}]]>
+                </if>
+                <if test="map.beginDoublemoney != null and map.beginDoublemoney !=''">
+                    <![CDATA[ and t.doublemoney  >=  #{map.beginDoublemoney}]]>
+                </if>
+                <if test="map.endDoublemoney != null and map.endDoublemoney !=''">
+                    <![CDATA[ and t.doublemoney  <=  #{map.endDoublemoney}]]>
+                </if>
+                <if test="map.jyareacode != null and map.jyareacode !=''">
+                    and t.jyareacode like '%' || #{map.jyareacode} || '%'
+                </if>
+                <if test="map.problemtype != null and map.problemtype !=''">
+                    and t.problemtype like '%' || #{map.problemtype} || '%'
+                </if>
+                <if test="map.caseguid != null and map.caseguid !=''">
+                    and t.caseguid = #{map.caseguid}
+                </if>
+            </if>
+        </where>
+    </select>
+
+    <select id="searchBusiness12315InfoBysystemsource" resultType="java.lang.String">
+        select t.caseguid
+        from ( select
+        a.id,a.caseguid,a.focus,a.serialnum,a.tserialnum,a.rqsttitle,a.accordtype,a.labelname,a.assigndate,a.expiredate,a.resulttimemin,a.systemsource,
+        a.issignin,a.signinaccount,a.signinname,a.signinuserid,a.signindeptid,a.signdate,a.formtype,a.operate,a.nextnodeid,a.state,a.updatedate,
+        b.ismain as ismain,a.isaccept,a.senderid,a.sdexpirationdate,a.worktype,'' as keyword,d.linkphonenumber as
+        tel,c.username,a.handledeptname,a.regdeptname,a.registrant,a.cwcs, a.dubcs, a.firstblqx, a.bustype,
+        a.complainant, a.complainanted, d.rqstcontent as content, a.blqx, a.handleorgname
+        from tasklist a inner join commomform d on d.caseguid=a.caseguid left join processinfo b on a.caseguid =
+        b.caseguid inner join t_users c on b.handleruserid = c.userid where a.state ='0' and b.status = '0' and
+        (a.isSignIn = '0' or a.issignin = null or a.signinaccount = null or (a.issignin = '1' and a.signinaccount =
+        c.username)) union all select
+        a.id,a.caseguid,a.focus,a.serialnum,a.tserialnum,a.rqsttitle,a.accordtype,a.labelname,a.assigndate,a.expiredate,a.resulttimemin,a.systemsource,
+        a.issignin,a.signinaccount,a.signinname,a.signinuserid,a.signindeptid,a.signdate,a.formtype,a.operate,a.nextnodeid,a.state,a.updatedate,
+        b.ismain as ismain,a.isaccept,a.senderid,a.sdexpirationdate,a.worktype,'' as keyword, d.linknumber as
+        tel,c.username,a.handledeptname,a.regdeptname,a.registrant,a.cwcs, a.dubcs, a.firstblqx, a.bustype,
+        a.complainant, a.complainanted, d.rqstcontent as content, a.blqx, a.handleorgname from tasklist a inner join
+        consultationform d on d.caseguid=a.caseguid left join processinfo b on a.caseguid = b.caseguid inner join
+        t_users c on b.handleruserid = c.userid where a.state ='0' and b.status = '0' and (a.isSignIn = '0' or
+        a.issignin = null or a.signinaccount = null or (a.issignin = '1' and a.signinaccount = c.username)) union all
+        select
+        a.id,a.caseguid,a.focus,a.serialnum,a.tserialnum,a.rqsttitle,a.accordtype,a.labelname,a.assigndate,a.expiredate,a.resulttimemin,a.systemsource,
+        a.issignin,a.signinaccount,a.signinname,a.signinuserid,a.signindeptid,a.signdate,a.formtype,a.operate,a.nextnodeid,a.state,a.updatedate,
+        b.ismain as ismain,a.isaccept,a.senderid,a.sdexpirationdate,a.worktype,d.keyword as keyword,d.linknumber as
+        tel,c.username,a.handledeptname,a.regdeptname,a.registrant,a.cwcs, a.dubcs, a.firstblqx, a.bustype,
+        a.complainant, a.complainanted, d.problemdescribe as content, a.blqx, a.handleorgname from tasklist a inner join
+        economyform d on d.caseguid=a.caseguid left join processinfo b on a.caseguid = b.caseguid inner join t_users c
+        on b.handleruserid = c.userid where a.state ='0' and b.status = '0' and (a.isSignIn = '0' or a.issignin = null
+        or a.signinaccount = null or (a.issignin = '1' and a.signinaccount = c.username)) union all select
+        a.id,a.caseguid,a.focus,a.serialnum,a.tserialnum,a.rqsttitle,a.accordtype,a.labelname,a.assigndate,a.expiredate,a.resulttimemin,a.systemsource,
+        a.issignin,a.signinaccount,a.signinname,a.signinuserid,a.signindeptid,a.signdate,a.formtype,a.operate,a.nextnodeid,a.state,a.updatedate,
+        b.ismain as ismain,a.isaccept,a.senderid,a.sdexpirationdate,a.worktype, d.keyword as keyword,d.linknumber as
+        tel,c.username,a.handledeptname,a.regdeptname,a.registrant,a.cwcs, a.dubcs, a.firstblqx, a.bustype,
+        a.complainant, a.complainanted, d.problemdescribe as content, a.blqx, a.handleorgname from tasklist a inner join
+        complaintform d on d.caseguid=a.caseguid left join processinfo b on a.caseguid = b.caseguid inner join t_users c
+        on b.handleruserid = c.userid where a.state ='0' and b.status = '0' and (a.isSignIn = '0' or a.issignin = null
+        or a.signinaccount = null or (a.issignin = '1' and a.signinaccount = c.username)) ) t
+        <where>
+            nextnodeid != 'end'
+            <if test="map.ename != null and map.ename != ''">
+                and t.username = #{map.ename}
+            </if>
+            <if test="map.keyword != null and map.keyword !=''">
+                and t.keyword like '%' || #{map.keyword} || '%'
+            </if>
+            <if test="map.rqsttitle != null and map.rqsttitle !=''">
+                and t.rqsttitle like '%' || #{map.rqsttitle} || '%'
+            </if>
+            <if test="map.tel != null and map.tel !=''">
+                and t.tel like '%' || #{map.tel} || '%'
+            </if>
+            <if test="map.serialnum != null and map.serialnum !=''">
+                and t.serialnum like '%' || #{map.serialnum} || '%'
+            </if>
+            <if test="map.tserialnum != null and map.tserialnum !=''">
+                and t.tserialnum like '%' || #{map.tserialnum} || '%'
+            </if>
+            <if test="map.currentLink != null and map.currentLink !=''">
+                and t.nextnodeid = #{map.currentLink}
+            </if>
+            <if test="map.systemsource != null and map.systemsource !=''">
+                and t.systemsource = #{map.systemsource}
+            </if>
+            <if test="map.beComplainant != null and map.beComplainant !=''">
+                and t.complainanted like '%' || #{map.beComplainant} || '%'
+            </if>
+            <if test="map.complainant != null and map.complainant !=''">
+                and t.complainant like '%' || #{map.complainant} || '%'
+            </if>
+            <if test="map.formType != null and map.formType !=''">
+                and t.formtype = #{map.formType}
+            </if>
+            <if test="map.begindate != null and map.begindate !=''">
+                <![CDATA[ and t.assigndate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+            <if test="map.enddate != null and map.enddate !=''">
+                <![CDATA[ and t.assigndate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+            </if>
+        </where>
+    </select>
+
+</mapper>

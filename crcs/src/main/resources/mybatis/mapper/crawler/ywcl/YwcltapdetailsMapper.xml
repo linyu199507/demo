@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.sdcs.crcs.crawler.ywcl.mapper.YwcltapdetailsMapper">
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.crawler.ywcl.entity.Ywcltapdetails">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="caseid" property="caseid" jdbcType="VARCHAR"/>
+        <result column="formtype" property="formtype" jdbcType="VARCHAR"/>
+        <result column="recorddate" property="recorddate" jdbcType="TIMESTAMP"/>
+        <result column="receivemode" property="receivemode" jdbcType="VARCHAR"/>
+        <result column="rqstnumber" property="rqstnumber" jdbcType="VARCHAR"/>
+        <result column="providername" property="providername" jdbcType="VARCHAR"/>
+        <result column="providertel" property="providertel" jdbcType="VARCHAR"/>
+        <result column="providergender" property="providergender" jdbcType="VARCHAR"/>
+        <result column="provideraddr" property="provideraddr" jdbcType="VARCHAR"/>
+        <result column="certype" property="certype" jdbcType="VARCHAR"/>
+        <result column="idnumber" property="idnumber" jdbcType="VARCHAR"/>
+        <result column="providertype" property="providertype" jdbcType="VARCHAR"/>
+        <result column="pertypename" property="pertypename" jdbcType="VARCHAR"/>
+        <result column="email" property="email" jdbcType="VARCHAR"/>
+        <result column="nationality" property="nationality" jdbcType="VARCHAR"/>
+        <result column="nation" property="nation" jdbcType="VARCHAR"/>
+        <result column="positionname" property="positionname" jdbcType="VARCHAR"/>
+        <result column="postalcode" property="postalcode" jdbcType="VARCHAR"/>
+        <result column="othercontactmethods" property="othercontactmethods" jdbcType="VARCHAR"/>
+        <result column="subjectname" property="subjectname" jdbcType="VARCHAR"/>
+        <result column="addr" property="addr" jdbcType="VARCHAR"/>
+        <result column="enttypename" property="enttypename" jdbcType="VARCHAR"/>
+        <result column="enttype" property="enttype" jdbcType="VARCHAR"/>
+        <result column="industrycategory" property="industrycategory" jdbcType="VARCHAR"/>
+        <result column="linknumber" property="linknumber" jdbcType="VARCHAR"/>
+        <result column="socialcode" property="socialcode" jdbcType="VARCHAR"/>
+        <result column="linkman" property="linkman" jdbcType="VARCHAR"/>
+        <result column="objtype" property="objtype" jdbcType="VARCHAR"/>
+        <result column="objname" property="objname" jdbcType="VARCHAR"/>
+        <result column="brand" property="brand" jdbcType="VARCHAR"/>
+        <result column="salemode" property="salemode" jdbcType="VARCHAR"/>
+        <result column="monetary" property="monetary" jdbcType="NUMERIC"/>
+        <result column="bidno" property="bidno" jdbcType="VARCHAR"/>
+        <result column="applbasquename" property="applbasquename" jdbcType="VARCHAR"/>
+        <result column="productname" property="productname" jdbcType="VARCHAR"/>
+        <result column="approvalnumber" property="approvalnumber" jdbcType="VARCHAR"/>
+        <result column="lotnumber" property="lotnumber" jdbcType="VARCHAR"/>
+        <result column="productstandard" property="productstandard" jdbcType="VARCHAR"/>
+        <result column="manufacturer" property="manufacturer" jdbcType="VARCHAR"/>
+        <result column="marketingcompany" property="marketingcompany" jdbcType="VARCHAR"/>
+        <result column="expirationdate" property="expirationdate" jdbcType="TIMESTAMP"/>
+        <result column="keyword" property="keyword" jdbcType="VARCHAR"/>
+        <result column="reportdeviation" property="reportdeviation" jdbcType="VARCHAR"/>
+        <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP"/>
+        <result column="controversytime" property="controversytime" jdbcType="TIMESTAMP"/>
+        <result column="accsce" property="accsce" jdbcType="VARCHAR"/>
+        <result column="appealcontent" property="appealcontent" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, caseid, formtype, 
+        recorddate, receivemode, rqstnumber, 
+        providername, providertel, providergender, 
+        provideraddr, certype, idnumber, 
+        providertype, pertypename, email, 
+        nationality, nation, positionname, 
+        postalcode, othercontactmethods, subjectname, 
+        addr, enttypename, enttype, 
+        industrycategory, linknumber, socialcode, 
+        linkman, objtype, objname, 
+        brand, salemode, monetary, 
+        bidno, applbasquename, productname, 
+        approvalnumber, lotnumber, productstandard, 
+        manufacturer, marketingcompany, expirationdate, 
+        keyword, reportdeviation, updatedate, 
+        controversytime, accsce, appealcontent
+    </sql>
+</mapper>

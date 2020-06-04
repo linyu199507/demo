@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinaweal.sdcs.crcs.system.mapper.RightsTransformRequestMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.system.entity.RightsTransformRequest">
+        <id column="id" property="id" />
+        <result column="rights_id" property="rightsId" />
+        <result column="reason" property="reason" />
+        <result column="branch_office" property="branchOffice" />
+        <result column="examine_status" property="examineStatus" />
+        <result column="examine_remark" property="examineRemark" />
+        <result column="create_time" property="createTime" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+        <result column="creator" property="creator" />
+        <result column="examine_time" property="examineTime" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+        <result column="updatetime" property="updatetime" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+        <result column="updater" property="updater" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, rights_id, reason, branch_office, examine_status, examine_remark, create_time, creator, examine_time, updatetime, updater
+    </sql>
+    <select id="selectLastOne" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List"/>
+        from rights_transform_request
+        where rights_id = #{rightId}
+        order by create_time desc
+        limit 1
+    </select>
+
+</mapper>

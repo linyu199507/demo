@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.sdcs.crcs.crawler.bmfw.mapper.SeatsMapper">
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.crawler.bmfw.entity.Seats">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="caseguid" property="caseguid" jdbcType="VARCHAR"/>
+        <result column="seatsname" property="seatsname" jdbcType="VARCHAR"/>
+        <result column="seatsregistrationtime" property="seatsregistrationtime" jdbcType="TIMESTAMP"/>
+        <result column="seatssex" property="seatssex" jdbcType="VARCHAR"/>
+        <result column="seatslanguage" property="seatslanguage" jdbcType="VARCHAR"/>
+        <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, caseguid, seatsname,
+        seatsregistrationtime, seatssex, seatslanguage,
+        updatedate
+    </sql>
+</mapper>

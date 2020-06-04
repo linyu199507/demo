@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinaweal.sdcs.crcs.system.mapper.RightsDetailsMapper">
+
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.system.entity.RightsDetails">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="caseguid" property="caseguid" jdbcType="VARCHAR"/>
+        <result column="region" property="region" jdbcType="VARCHAR"/>
+        <result column="enterprise" property="enterprise" jdbcType="VARCHAR"/>
+        <result column="registrationdate" property="registrationdate" jdbcType="TIMESTAMP"/>
+        <result column="staffname" property="staffname" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="gender" property="gender" jdbcType="VARCHAR"/>
+        <result column="phone" property="phone" jdbcType="VARCHAR"/>
+        <result column="vendorname" property="vendorname" jdbcType="VARCHAR"/>
+        <result column="problem" property="problem" jdbcType="VARCHAR"/>
+        <result column="isillegal" property="isillegal" jdbcType="VARCHAR"/>
+        <result column="rqstcontent" property="rqstcontent" jdbcType="VARCHAR"/>
+        <result column="processing" property="processing" jdbcType="VARCHAR"/>
+        <result column="serialnum" property="serialnum" jdbcType="VARCHAR"/>
+        <result column="rqsttitle" property="rqsttitle" jdbcType="VARCHAR"/>
+        <result column="address" property="address" jdbcType="VARCHAR"/>
+        <result column="vendorphone" property="vendorphone" jdbcType="VARCHAR"/>
+        <result column="vendoraddress" property="vendoraddress" jdbcType="VARCHAR"/>
+        <result column="vendorregion" property="vendorregion" jdbcType="VARCHAR"/>
+        <result column="vendortown" property="vendortown" jdbcType="VARCHAR"/>
+        <result column="goodsname" property="goodsname" jdbcType="VARCHAR"/>
+        <result column="goodsmodel" property="goodsmodel" jdbcType="VARCHAR"/>
+        <result column="goodstype" property="goodstype" jdbcType="VARCHAR"/>
+        <result column="nature" property="nature" jdbcType="VARCHAR"/>
+        <result column="number" property="number" jdbcType="VARCHAR"/>
+        <result column="money" property="money" jdbcType="NUMERIC"/>
+        <result column="shoppingdate" property="shoppingdate" jdbcType="TIMESTAMP"/>
+        <result column="happendate" property="happendate" jdbcType="TIMESTAMP"/>
+        <result column="appeal" property="appeal" jdbcType="VARCHAR"/>
+        <result column="requestmark" property="requestmark" jdbcType="VARCHAR"/>
+        <result column="feedbackmark" property="feedbackmark" jdbcType="VARCHAR"/>
+        <result column="userid" property="userid" jdbcType="VARCHAR"/>
+        <result column="requestcontent" property="requestcontent" jdbcType="VARCHAR"/>
+        <result column="processingdate" property="processingdate" jdbcType="TIMESTAMP"/>
+        <result column="requestdate" property="requestdate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, caseguid, region, enterprise,
+        registrationdate, staffname, name,
+        gender, phone, vendorname, problem,isillegal,rqstcontent,processing,requestcontent,processingdate,requestdate
+    </sql>
+
+
+    <select id="selectEnterpriseByRegion" parameterType="java.util.List" resultType="String">
+        select  enterprise  from  rights
+        <where>
+            <if test="map != null">
+                <if test="map.region != null and map.region !=''">
+                     region = #{ map.region }
+                </if>
+            </if>
+        </where>
+    </select>
+
+
+
+
+
+
+</mapper>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinaweal.sdcs.crcs.system.mapper.TOrgunitsMapper">
+
+
+    <select id="selectMessageCascadeData" resultType="java.util.HashMap">
+
+    select a.userid,b.orgunitid,b.orgdeptid,a.mobile from t_usersapp a inner join t_users b on a.userid=b.userid where a.mark='01'
+
+    </select>
+    <select id="selectMarkPerson" resultType="java.util.HashMap">
+        SELECT
+        A.realName realName,
+        d.mobile,
+        d.mark,
+        a.orgdeptid,
+        c.orgunitname
+        FROM
+        t_users A,
+        t_orgUnits b,
+        t_orgUnits C,
+        t_usersapp d
+        WHERE
+        A.orgUnitID = b.orgUnitID
+        AND A.orgDeptID = C.orgUnitID
+        AND A.deleted = '0'
+        AND A.locked = '0'
+        and d.mark='01'
+        and a.userid=d.userid
+        <if test="orgunitid != null">
+            and c.orgUnitID=#{orgunitid}
+        </if>
+    </select>
+
+    <select id="selectSMSPerson" resultType="java.util.HashMap">
+	SELECT
+	A.userID userID,
+	A.userName userName,
+	A.realName realName,
+	f.mobile mobile,
+	b.orgUnitId orgUnitId,
+	b.orgUnitName orgUnitName,
+	C.orgUnitID orgDeptId,
+	C.orgUnitName orgDeptName,
+	b.orgNumber orgNumber
+FROM
+	t_users A,
+	t_usersapp f,
+	t_orgUnits b,
+	t_orgUnits C,
+	sys_menu d,
+	t_userMenu e
+WHERE
+	A.orgUnitID = b.orgUnitID
+	AND A.orgDeptID = C.orgUnitID
+	AND d.sysMenuID = e.sysMenuID
+	and A.userid=f.userid
+	AND A.deleted = '0'
+	AND A.locked = '0'
+	AND A.userID = e.userID
+	and d.sysMenuFiled='SMS'
+	and c.orgUnitID=#{orgunitid}
+	</select>
+
+
+</mapper>

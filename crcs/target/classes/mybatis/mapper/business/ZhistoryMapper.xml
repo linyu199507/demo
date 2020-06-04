@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinaweal.sdcs.crcs.business.mapper.ZhistoryMapper">
+
+<!--经济-->
+    <select id="selectEconomyJson" resultType="java.util.HashMap">
+		select
+		'xfyb@fsgs' AS operateUsername,
+		'SD022' AS backfillUsername,
+		'economy' AS formType,
+		Registrationnumber AS caseguid,
+		Rqstperson,
+		Gender AS rqstsex,
+		linknumber AS rqstnumber,
+		linknumber AS linkphone,
+		Businesstypenew AS accordtypecode,
+		A.Rqsttitle,
+		providelb,
+		Usertype AS linknumber,
+		'互联网络' AS rqstsource,
+		A.Subjectname,
+		'联系电话' AS subjectphonetype,
+		linknumber AS subjectphone,
+		'顺德区' AS subjectaddresstype,
+		Subjectaddress,
+		'顺德区' AS subjectzcaddtype,
+		Subjectzcadd,
+		A.Objectcategory AS objclassify,
+		Objname,
+		Brand AS commoditybrand,
+		Objmoney,
+		Isweb,
+		'其他' AS problemfl,
+		'其他' as Illegalrules,
+		Problemdescribe AS rqstcontent,
+		Keyword,
+		C.Handleopinion
+		FROM
+		Economyform A
+		LEFT JOIN caseprocesform C ON A.caseguid = C.caseguid
+		LEFT JOIN tasklist T ON A.caseguid = T.caseguid
+		WHERE
+		T.isaccept='1'
+		AND T.nextnodeid != 'end'
+		AND T.nextnodeid !='noAccept'
+		AND T.formtype = '03'
+		AND T.systemsource = '03'
+		AND T.STATE = '0'
+		and T.assigndate&gt;='2019-12-01'
+		and T.assigndate&lt;'2020-04-12'
+		ORDER BY T.taskenddate
+    </select>
+	<!--&#45;&#45; 		T.nextnodeid = 'end'-->
+	<!--&#45;&#45; 		AND T.formtype = '03'-->
+	<!--&#45;&#45; 		AND T.systemsource = '03'-->
+	<!--&#45;&#45; 		AND T.STATE = '0'-->
+	<!--&#45;&#45; 		and T.taskenddate&gt;='2019-12-01'-->
+	<!--&#45;&#45; 		and T.taskenddate&lt;'2020-03-01'-->
+
+<!--投诉-->
+    <select id="selectComplaintJson" resultType="java.util.HashMap">
+        SELECT
+	'xfyb@fsgs' AS operateUsername,
+	'SD022' AS backfillUsername,
+	'consumption' AS formType,
+	'顺德区' AS subjectzcaddtype,
+	'顺德区' AS subjectaddresstype,
+	Registrationnumber AS caseguid,
+	receivemode AS rqstperson,
+	Gender AS rqstsex,
+	Linknumber AS rqstnumber,
+	Linknumber AS linkphone,
+	Businesstypenew AS accordtypecode,
+	A.Rqsttitle,
+	Providetype AS providelb,
+	Providelb AS category,
+	Usertype AS linknumber,
+	'互联网络' AS rqstsource,
+	A.Subjectname,
+	'联系电话' AS subjectphonetype,
+	Linknumber AS subjectphone,
+	Subjectaddress,
+	Subjectzcadd,
+	Objclassify,
+	Objname,
+	Brand AS commoditybrand,
+	Objmoney,
+	Isweb,
+	A.Complaintstype AS problemfl,
+	Problemdescribe AS rqstcontent,
+	Keyword,
+	C.Handleopinion
+FROM
+	complaintform A
+	LEFT JOIN caseprocesform C ON A.caseguid = C.caseguid
+	LEFT JOIN tasklist T ON A.caseguid = T.caseguid
+WHERE
+	T.isaccept='1'
+	AND T.nextnodeid != 'end'
+	AND T.nextnodeid !='noAccept'
+	AND T.formtype = '02'
+	AND T.systemsource = '03'
+	AND T.STATE = '0'
+	and T.assigndate&gt;='2019-12-01'
+	and T.assigndate&lt;'2020-04-12'
+	ORDER BY T.taskenddate
+
+    </select>
+	<!--T.nextnodeid = 'end'-->
+	<!--AND T.formtype = '02'-->
+	<!--AND T.systemsource = '03'-->
+	<!--AND T.STATE = '0'-->
+	<!--and T.taskenddate&gt;='2020-04-01'-->
+	<!--and T.taskenddate&lt;'2020-03-27'-->
+	<!--ORDER BY T.taskenddate-->
+
+	<!--select nextnodeid,* from tasklist where STATE = '0' and isaccept='1' and systemsource='03' and nextnodeid != 'end' and nextnodeid !='noAccept' and formtype='03'-->
+</mapper>

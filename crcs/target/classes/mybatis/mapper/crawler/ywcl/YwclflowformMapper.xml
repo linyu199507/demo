@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.sdcs.crcs.crawler.ywcl.mapper.YwclflowformMapper">
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.crawler.ywcl.entity.Ywclflowform">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="caseguid" property="caseguid" jdbcType="VARCHAR"/>
+        <result column="caseid" property="caseid" jdbcType="VARCHAR"/>
+        <result column="keyid" property="keyid" jdbcType="VARCHAR"/>
+        <result column="parentid" property="parentid" jdbcType="VARCHAR"/>
+        <result column="fldjr" property="fldjr" jdbcType="VARCHAR"/>
+        <result column="fldjrname" property="fldjrname" jdbcType="VARCHAR"/>
+        <result column="zcsj" property="zcsj" jdbcType="TIMESTAMP"/>
+        <result column="fllxname" property="fllxname" jdbcType="VARCHAR"/>
+        <result column="zxunitname" property="zxunitname" jdbcType="VARCHAR"/>
+        <result column="zxbmname" property="zxbmname" jdbcType="VARCHAR"/>
+        <result column="jsunitname" property="jsunitname" jdbcType="VARCHAR"/>
+        <result column="jsbmname" property="jsbmname" jdbcType="VARCHAR"/>
+        <result column="zcfy" property="zcfy" jdbcType="VARCHAR"/>
+        <result column="record" property="record" jdbcType="VARCHAR"/>
+        <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, caseguid, caseid, 
+        keyid, parentid, fldjr, 
+        fldjrname, zcsj, fllxname, 
+        zxunitname, zxbmname, jsunitname, 
+        jsbmname, zcfy, record, 
+        updatedate
+    </sql>
+</mapper>

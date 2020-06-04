@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinaweal.sdcs.crcs.bigScreenDisplay.mapper.EachTypeVOMapper">
+
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.bigScreenDisplay.entity.EachTypeVO">
+        <result column="type" property="type" jdbcType="VARCHAR"/>
+        <result column="value" property="value" jdbcType="INTEGER"/>
+        <!--<result column="endtotal" property="endtotal" jdbcType="INTEGER"/>-->
+        <!--<result column="toeconomytotal" property="toeconomytotal" jdbcType="INTEGER"/>-->
+        <!--<result column="recovermoney" property="recovermoney" jdbcType="NUMERIC"/>-->
+    </resultMap>
+
+
+    <select id="searchAppliancesTOP10ByMap" parameterType="java.util.List" resultMap="BaseResultMap">
+        select
+        count(1) as y, --业务总数（件）
+        count(case when a.nextnodeid='end' and c.resultsofmediation='达成调解协议' or c.resultsofmediation='1'
+        or c.resultsofmediation='2' or c.resultsofmediation='3' then 1 else null end) as z --调解总数（件）
+        from tasklist a
+        inner join complaintform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        <where>
+            b.objclassifycodeid LIKE '0101%'
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.type != null and map.type !=''">
+                    and  b.objclassifycodeid LIKE #{map.type}||'%'
+                </if>
+            </if>
+        </where>
+    </select>
+
+
+
+    <select id="searchTotalOfMounth" parameterType="java.util.List" resultMap="BaseResultMap">
+        select sum(value) as value from (
+
+        select count(1) as value from tasklist a
+        inner join commomform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        <where>
+            a.state='0'
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.formtype != null and map.formtype !=''">
+                    and   a.formtype = #{ map.formtype }
+                </if>
+            </if>
+        </where>
+        union all
+        select count(1) as value from tasklist a
+        inner join complaintform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        <where>
+            a.state='0'
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.formtype != null and map.formtype !=''">
+                    and   a.formtype = #{ map.formtype }
+                </if>
+            </if>
+        </where>
+        union all
+        select count(1) as value from tasklist a
+        inner join economyform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        <where>
+            a.state='0'
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.formtype != null and map.formtype !=''">
+                    and   a.formtype = #{ map.formtype }
+                </if>
+            </if>
+        </where>
+       ) a
+    </select>
+
+
+    <select id="searchTotalOfToday" parameterType="java.util.List" resultMap="BaseResultMap">
+        select sum(value) as value from (
+
+        select count(1) as value from tasklist a
+        inner join commomform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        <where>
+            a.state='0'
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.formtype != null and map.formtype !=''">
+                    and   a.formtype = #{ map.formtype }
+                </if>
+            </if>
+        </where>
+        union all
+        select count(1) as value from tasklist a
+        inner join complaintform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        <where>
+            a.state='0'
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.formtype != null and map.formtype !=''">
+                    and   a.formtype = #{ map.formtype }
+                </if>
+            </if>
+        </where>
+        union all
+        select count(1) as value from tasklist a
+        inner join economyform b on a.caseguid = b.caseguid
+        left join caseprocesform c on a.caseguid = c.caseguid
+        <where>
+            a.state='0'
+            <if test="map != null">
+                <if test="map.begindate != null and map.begindate !=''">
+                    <![CDATA[ and a.createdate  >=  to_timestamp(#{map.begindate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.enddate != null and map.enddate !=''">
+                    <![CDATA[ and a.createdate <= to_timestamp(#{map.enddate}, 'yyyy-MM-dd hh24:mi:ss')]]>
+                </if>
+                <if test="map.formtype != null and map.formtype !=''">
+                    and   a.formtype = #{ map.formtype }
+                </if>
+            </if>
+        </where>
+        ) a
+    </select>
+
+
+
+</mapper>

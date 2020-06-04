@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.chinaweal.sdcs.crcs.business.mapper.CaseprocesformMapper">
+
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.business.entity.Caseprocesform">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="caseguid" property="caseguid" jdbcType="VARCHAR"/>
+        <result column="nodeid" property="nodeid" jdbcType="VARCHAR"/>
+        <result column="subjectname" property="subjectname" jdbcType="VARCHAR"/>
+        <result column="subjecttype" property="subjecttype" jdbcType="VARCHAR"/>
+        <result column="isverified" property="isverified" jdbcType="VARCHAR"/>
+        <result column="verifiedopinion" property="verifiedopinion" jdbcType="VARCHAR"/>
+        <result column="isregister" property="isregister" jdbcType="VARCHAR"/>
+        <result column="ispursuit" property="ispursuit" jdbcType="VARCHAR"/>
+        <result column="handleopinion" property="handleopinion" jdbcType="VARCHAR"/>
+        <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP"/>
+        <result column="businessaddress" property="businessaddress" jdbcType="VARCHAR"/>
+        <result column="semaknama" property="semaknama" jdbcType="VARCHAR"/>
+        <result column="semakbusinessaddress" property="semakbusinessaddress" jdbcType="VARCHAR"/>
+        <result column="mediationnumber" property="mediationnumber" jdbcType="VARCHAR"/>
+        <result column="infringementtype" property="infringementtype" jdbcType="VARCHAR"/>
+        <result column="infringingmarks" property="infringingmarks" jdbcType="VARCHAR"/>
+        <result column="mediationmethods" property="mediationmethods" jdbcType="VARCHAR"/>
+        <result column="noobligation" property="noobligation" jdbcType="VARCHAR"/>
+        <result column="resultsofmediation" property="resultsofmediation" jdbcType="VARCHAR"/>
+        <result column="disputemoney" property="disputemoney" jdbcType="NUMERIC"/>
+        <result column="mentalmoney" property="mentalmoney" jdbcType="NUMERIC"/>
+        <result column="doublemoney" property="doublemoney" jdbcType="NUMERIC"/>
+        <result column="financialloss" property="financialloss" jdbcType="NUMERIC"/>
+        <result column="transferreddate" property="transferreddate" jdbcType="TIMESTAMP"/>
+        <result column="mediationis" property="mediationis" jdbcType="VARCHAR"/>
+        <result column="subjecttypecodeid" property="subjecttypecodeid" jdbcType="VARCHAR"/>
+        <result column="infringementtypecodeid" property="infringementtypecodeid" jdbcType="VARCHAR"/>
+        <result column="infringingmarkscodeid" property="infringingmarkscodeid" jdbcType="VARCHAR"/>
+        <result column="noobligationcodeid" property="noobligationcodeid" jdbcType="VARCHAR"/>
+        <result column="mediationmethodscodeid" property="mediationmethodscodeid" jdbcType="VARCHAR"/>
+        <result column="attachfilename" property="sattachfilename" jdbcType="VARCHAR"/>
+        <result column="applealtocase" property="applealtocase" jdbcType="VARCHAR"/>
+        <result column="caseno" property="caseno" jdbcType="VARCHAR"/>
+        <result column="casedate" property="casedate" jdbcType="TIMESTAMP"/>
+        <result column="casereason" property="casereason" jdbcType="VARCHAR"/>
+        <result column="unlicensed" property="unlicensed" jdbcType="VARCHAR"/>
+        <result column="handle_depart" property="handleDepart" jdbcType="VARCHAR"/>
+        <result column="operator" property="operator" jdbcType="VARCHAR"/>
+        <result column="operator_opinion" property="operatorOpinion" jdbcType="VARCHAR"/>
+        <result column="operator_phone" property="operatorPhone" jdbcType="VARCHAR"/>
+        <result column="leadership_audit" property="leadershipAudit" jdbcType="VARCHAR"/>
+        <result column="postscript" property="postscript" jdbcType="VARCHAR"/>
+        <result column="sale_district" property="saleDistrict" jdbcType="VARCHAR"/>
+        <result column="sale_addr" property="saleAddr" jdbcType="VARCHAR"/>
+        <result column="penalty_amount" property="penaltyAmount" jdbcType="NUMERIC"/>
+        <result column="confiscate_amount" property="confiscateAmount" jdbcType="NUMERIC"/>
+        <result column="compensate_mode" property="confiscateAmount" jdbcType="VARCHAR"/>
+        <result column="evidence" property="confiscateAmount" jdbcType="VARCHAR"/>
+        <result column="classification" property="classification" jdbcType="VARCHAR"/>
+        <result column="businesscircle" property="businesscircle" jdbcType="VARCHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, caseguid, nodeid,
+        subjectname, subjecttype,
+        isverified, verifiedopinion, isregister,
+        ispursuit, handleopinion, updatedate,
+        businessaddress,semaknama,semakbusinessaddress,
+        mediationnumber,infringementtype,
+        infringingmarks,mediationmethods,
+        noobligation,resultsofmediation,
+        disputemoney,mentalmoney,doublemoney,
+        financialloss,transferreddate, mediationis,
+        attachfilename,subjecttypecodeid,infringementtypecodeid,infringingmarkscodeid,
+        noobligationcodeid,mediationmethodscodeid,
+        applealtocase,caseno,casedate,casereason,handle_depart,operator,operator_opinion,operator_phone,
+        leadership_audit,postscript,sale_district,sale_addr,penalty_amount,confiscate_amount,compensate_mode,evidence,
+        confiscateAmount,businesscircle
+    </sql>
+
+
+</mapper>

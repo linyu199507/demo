@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.sdcs.crcs.business.mapper.ProcessinfoMapper">
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.business.entity.Processinfo">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="caseguid" property="caseguid" jdbcType="VARCHAR"/>
+        <result column="nodeid" property="nodeid" jdbcType="VARCHAR"/>
+        <result column="nodename" property="nodename" jdbcType="VARCHAR"/>
+        <result column="handler" property="handler" jdbcType="VARCHAR"/>
+        <result column="handleruserid" property="handleruserid" jdbcType="VARCHAR"/>
+        <result column="handledept" property="handledept" jdbcType="VARCHAR"/>
+        <result column="handledeptid" property="handledeptid" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="VARCHAR"/>
+        <result column="startdate" property="startdate" jdbcType="TIMESTAMP"/>
+        <result column="enddate" property="enddate" jdbcType="TIMESTAMP"/>
+        <result column="fromnodeid" property="fromnodeid" jdbcType="VARCHAR"/>
+        <result column="ismain" property="ismain" jdbcType="VARCHAR"/>
+        <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, caseguid, nodeid, nodename,
+        handler, handleruserid, handledept,
+        handledeptid, status, startdate,
+        enddate, fromnodeid, ismain, updatedate
+    </sql>
+
+
+    <select id="getProcessinfoByCaseguid" parameterType="java.util.List" resultMap="BaseResultMap">
+        select * from processinfo
+        <where>
+            <if test="map != null">
+                <if test="map.caseguid != null and map.caseguid !=''">
+                    and caseguid  = #{map.caseguid}
+                </if>
+                <if test="map.nodeid != null and map.nodeid !=''">
+                    and nodeid  = #{map.nodeid}
+                </if>
+            </if>
+        </where>
+        ORDER BY updatedate desc
+    </select>
+
+
+</mapper>

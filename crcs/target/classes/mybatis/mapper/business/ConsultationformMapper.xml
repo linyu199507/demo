@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinaweal.sdcs.crcs.business.mapper.ConsultationformMapper">
+    <resultMap id="BaseResultMap" type="com.chinaweal.sdcs.crcs.business.entity.Consultationform">
+        <id column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="caseguid" property="caseguid" jdbcType="VARCHAR"/>
+        <result column="formtype" property="formtype" jdbcType="VARCHAR"/>
+        <result column="businesstype" property="businesstype" jdbcType="VARCHAR"/>
+        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="gender" property="gender" jdbcType="VARCHAR"/>
+        <result column="rqstnumber" property="rqstnumber" jdbcType="VARCHAR"/>
+        <result column="linknumber" property="linknumber" jdbcType="VARCHAR"/>
+        <result column="informationopen" property="informationopen" jdbcType="VARCHAR"/>
+        <result column="address" property="address" jdbcType="VARCHAR"/>
+        <result column="usertype" property="usertype" jdbcType="VARCHAR"/>
+        <result column="focus" property="focus" jdbcType="VARCHAR"/>
+        <result column="appealsource" property="appealsource" jdbcType="VARCHAR"/>
+        <result column="rqsttitle" property="rqsttitle" jdbcType="VARCHAR"/>
+        <result column="rqstcontent" property="rqstcontent" jdbcType="VARCHAR"/>
+        <result column="reflectiontype" property="reflectiontype" jdbcType="VARCHAR"/>
+        <result column="attachfilename" property="attachfilename" jdbcType="VARCHAR"/>
+        <result column="tserialnum" property="tserialnum" jdbcType="VARCHAR"/>
+        <result column="region" property="region" jdbcType="VARCHAR"/>
+        <result column="updatedate" property="updatedate" jdbcType="TIMESTAMP"/>
+        <result column="businesstypecodeid" property="businesstypecodeid" jdbcType="VARCHAR"/>
+        <result column="transfernumber" property="transfernumber" jdbcType="VARCHAR"/>
+        <result column="incomingcommpany" property="incomingcommpany" jdbcType="VARCHAR"/>
+        <result column="isprofessional" property="isprofessional" jdbcType="VARCHAR"/>
+        <result column="consultantaddress" property="consultantaddress" jdbcType="VARCHAR"/>
+        <result column="processingunit" property="processingunit" jdbcType="VARCHAR"/>
+        <result column="keyword" property="keyword" jdbcType="VARCHAR"/>
+        <result column="entname" property="entname" jdbcType="VARCHAR"/>
+        <result column="finalfeedbackdate" property="ufinalfeedbackdate" jdbcType="TIMESTAMP"/>
+        <result column="acceptdate" property="acceptdate" jdbcType="TIMESTAMP"/>
+        <result column="complaintstype" property="complaintstype" jdbcType="VARCHAR"/>
+        <result column="complaintstypecodeid" property="complaintstypecodeid" jdbcType="VARCHAR"/>
+        <result column="registration" property="registration" jdbcType="VARCHAR"/>
+        <result column="undertake" property="undertake" jdbcType="VARCHAR"/>
+        <result column="satisfied" property="satisfied" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, caseguid, formtype,
+        businesstype, name, gender,
+        rqstnumber, linknumber, informationopen,
+        address, usertype, focus,
+        appealsource, rqsttitle, rqstcontent,reflectiontype,tserialnum,
+        attachfilename, updatedate,region, businesstypecodeid,entname,
+        transferNumber,incomingcommpany,isprofessional,keyword,
+        consultantaddress,processingunit,finalfeedbackdate,acceptdate,
+        complaintstype,complaintstypecodeid,registration,undertake,satisfied
+    </sql>
+
+    <select id="selectcountbyfinishregion" resultType="integer">
+        SELECT COUNT
+	( * )
+FROM
+	tasklist
+	A LEFT JOIN consultationform b ON A.caseguid = b.caseguid
+WHERE
+	A.formtype = '01'
+	AND nextnodeid = 'end'
+	AND b.region = #{regionstr}
+	AND A.updatedate BETWEEN #{begindate} and #{enddate}
+    </select>
+
+    <select id="searchConsultationformList" resultType="com.chinaweal.sdcs.crcs.business.entity.Consultationform">
+        select t.id, t.caseguid, t.formtype,
+        t.businesstype, t.name, t.gender,
+        t.rqstnumber, t.linknumber, t.informationopen,
+        t.address, t.usertype, t.focus,
+        t.appealsource, t.rqsttitle, t.rqstcontent,t.reflectiontype,t.tserialnum,
+        t.attachfilename, t.updatedate,t.region, t.businesstypecodeid,t.entname,
+        t.transferNumber,t.incomingcommpany,t.isprofessional,t.keyword,
+        t.consultantaddress,t.processingunit,t.finalfeedbackdate,t.acceptdate
+        from consultationform t inner join taskList a on t.caseguid = a.caseguid
+        <where>
+            <if test="map != null">
+                <if test="map.rqsttitle != null and map.rqsttitle !=''">
+                    and t.rqsttitle like '%' || #{map.rqsttitle} || '%'
+                </if>
+                <if test="map.entname != null and map.entname !=''">
+                    and t.entname like '%' || #{map.entname} || '%'
+                </if>
+            </if>
+            and systemsource = '01'
+        </where>
+    </select>
+</mapper>
